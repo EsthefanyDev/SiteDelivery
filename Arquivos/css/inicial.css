@@ -61,8 +61,7 @@ header {
 }
 
 .box-login {
-    display: flex;
-    align-items: cente;
+    display: flex;  
 }
 
 .box-login a {
@@ -98,14 +97,20 @@ header {
 }
 
 /* ------------- Conteúdo principal ------------- */
-.part1 img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    position: relative;
-    top: 100px;
-}
 
+/* ------------------ Banner ----------------- */
+.banner{
+    display:block;
+    height: 250px;
+    width: 100%;
+    position: relative;
+}
+.banner img {
+    margin-top: 100px;
+    height: 84.6vh;
+    width: 100%;
+    position: relative;
+}
 .texto-sobre-img {
     position: absolute;
     margin-left: 30px;
@@ -115,22 +120,60 @@ header {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     text-align: center;
 }
-
 .texto-sobre-img h1 {
     margin-top: 40%;
     font-size: 90px;
     font-weight: bold;
     color: #FFD700;
 }
-
 .texto-sobre-img h2 {
     font-size: 30px;
     font-weight: bold;
     color: white;
 }
 
+/* ----------------- Combos ----------------- */
+.combos{
+    display: block ;
+    position: relative;
+    top: 430px;
+    height: auto;
+    text-align: center;
+    margin-top: 21px;
+    
+}
+.combos h2{
+    color: var(--Roxo-medio);
+    font-size: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    margin-bottom: 30px;
+    mar
+}
+.ul{
+    padding: 0;
+    text-align: center;
+}
+li{
+    display: inline;
+    margin: 0 10px;
+}
+.combo-list img{
+   border-radius: 20px; 
+}
+button{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #FFD700;
+    color: #480048;
+    border: none;
+    padding: 10px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px;
+}
 
-/* ------------- Config de responsividade: celular ------------- */
+/* ------------ Config de responsividade: celular ------------ */
 
 @media screen and (max-width: 768px) {
     header {
