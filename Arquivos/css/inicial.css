@@ -173,6 +173,7 @@ button{
     border-radius: 50px;
 }
 
+
 /* ------------ Config de responsividade: celular ------------ */
 
 @media screen and (max-width: 768px) {
