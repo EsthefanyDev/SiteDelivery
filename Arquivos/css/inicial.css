@@ -19,6 +19,10 @@
     --Dourado: #FFD700;
     --Preto: #000;
     --Branco: #FFF;
+    --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+html{
+    scroll-behavior: smooth;
 }
 /* ------------- Barra de navegação superior ------------- */
 header {
@@ -98,59 +102,62 @@ header {
 
 /* ------------- Conteúdo principal ------------- */
 
-/* ------------------ Banner ----------------- */
+/* --------------- Banner -------------- */
+
+/* Estilos Gerais */
+
 .banner{
     display:block;
-    height: 250px;
+    height: auto;
     width: 100%;
     position: relative;
+    margin-bottom: 20px;  
 }
 .banner img {
-    margin-top: 100px;
-    height: 84.6vh;
+    margin-top: 10px;
+    height: auto;
     width: 100%;
-    position: relative;
 }
 .texto-sobre-img {
     position: absolute;
     margin-left: 30px;
-    top: 50%;
+    top: 40%;
     left: 20%;
     transform: translate(-50%, -50%);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     text-align: center;
 }
 .texto-sobre-img h1 {
-    margin-top: 40%;
-    font-size: 90px;
+    margin-top: 20%;
+    font-size: 40px;
     font-weight: bold;
-    color: #FFD700;
+    color: var(--Dourado);
+    text-shadow: var(--text-shadow);
 }
 .texto-sobre-img h2 {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: bold;
     color: white;
+    text-shadow: var(--text-shadow);
 }
 
 /* ----------------- Combos ----------------- */
 .combos{
     display: block ;
-    position: relative;
-    top: 430px;
     height: auto;
     text-align: center;
-    margin-top: 21px;
-    
+    padding-top: 30px;
+    padding-bottom: 20px;  
 }
 .combos h2{
     color: var(--Roxo-medio);
     font-size: 40px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin-top: 10px;
-    margin-bottom: 30px;
-    mar
+    text-shadow: var(--text-shadow);
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
+/* Lista de Combos */
 .ul{
+    list-style: none;
     padding: 0;
     text-align: center;
 }
@@ -161,16 +168,74 @@ li{
 .combo-list img{
    border-radius: 20px; 
 }
+/* Botão */
 button{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    background-color: #FFD700;
-    color: #480048;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color:var(--Dourado);
+    color: var(--Roxo-escuro);
     border: none;
     padding: 10px 40px;
     font-size: 16px;
     font-weight: bold;
     border-radius: 50px;
+}
+
+/* ----------------- Monte seu pedido----------------- */
+.monte-seu-pedido {
+    background-color: var(--Prata);
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    width: 100%;
+
+}
+
+.box-textos, .box-ingredientes {
+    display: inline-block;
+    margin: 0 1px;
+}
+
+.box-textos{
+    background-color: #800080;
+    padding: 20px;
+    height: 500px;
+    width: 40%;
+
+
+}
+.box-textos h2{
+    color: var(--Dourado);
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.box-ingredientes{
+    background-color:var(--Branco);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+    justify-content: center;
+    padding: 40px;
+    height: 500px;
+    width: 60%;
+    text-align: center;
+}
+.box{
+    text-align: center;
+    border-radius: 10px;
+    height: 100px;
+    width: 100px;
+}
+.box h3{
+    font-size: small;
+}
+.button-container {
+    text-align: center;
+    margin-top: 20px;
 }
 
 
