@@ -1,5 +1,5 @@
 # SiteDelivery
- Projeto de website para faculdade
+ Projeto em grupo de website para faculdade
 
 Meu primeiro repositório!
 
