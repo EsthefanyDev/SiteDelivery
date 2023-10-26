@@ -259,7 +259,17 @@ button{
     font-size: 40px;
     color: var(--Roxo-escuro);
     text-shadow: var(--text-shadow);
+}
+/* Rodapé */
+footer{
+    background-color: var(--Dourado);
+    margin: 0;
+    display: flex;
 
+}
+.logotipo{
+    margin: 20px;
+    margin-left: 90px;
 }
 
 /* ------------ Config de responsividade: celular ------------ */
