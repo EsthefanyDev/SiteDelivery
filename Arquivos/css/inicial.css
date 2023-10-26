@@ -142,7 +142,7 @@ header {
 
 /* ----------------- Combos ----------------- */
 .combos{
-    display: block ;
+    
     height: auto;
     text-align: center;
     padding-top: 30px;
@@ -150,7 +150,7 @@ header {
 }
 .combos h2{
     color: var(--Roxo-medio);
-    font-size: 40px;
+    font-size: 3rem;
     text-shadow: var(--text-shadow);
     margin-top: 20px;
     margin-bottom: 20px;
@@ -167,16 +167,16 @@ li{
 }
 .combo-list img{
    border-radius: 20px; 
+   max-width: 100%;
 }
 /* Botão */
 button{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0;
     background-color:var(--Dourado);
     color: var(--Roxo-escuro);
     border: none;
     padding: 10px 40px;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
     border-radius: 50px;
 }
@@ -188,14 +188,9 @@ button{
     text-align: left;
     display: flex;
     width: 100%;
+    flex-wrap: wrap; *
 
 }
-
-.box-textos, .box-ingredientes {
-    display: inline-block;
-    margin: 0 1px;
-}
-
 .box-textos{
     background-color: #800080;
     padding: 20px;
@@ -218,9 +213,7 @@ button{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 10px;
-    justify-content: center;
     padding: 40px;
-    height: 500px;
     width: 60%;
     text-align: center;
 }
@@ -235,7 +228,7 @@ button{
 }
 .button-container {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 /* -------------- Sobre ------------------*/
 .sobre{
@@ -296,6 +289,7 @@ footer{
 #direitos{
     text-align: center;
     background-color: var(--Roxo-medio);
+    padding: 10px 0;
 }
     
 
