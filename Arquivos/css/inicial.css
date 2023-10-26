@@ -260,17 +260,45 @@ button{
     color: var(--Roxo-escuro);
     text-shadow: var(--text-shadow);
 }
-/* Rodapé */
+/* ------------------ Rodapé -----------------*/
 footer{
     background-color: var(--Dourado);
-    margin: 0;
+    height: 230px;
     display: flex;
-
+    flex-direction: column;
+    padding: 0%;
 }
 .logotipo{
-    margin: 20px;
-    margin-left: 90px;
+    display: flex;
 }
+
+.logotipo p{
+    font-size: 13px;
+    font-weight:700;
+    margin: 10px;
+    color: var(--Roxo-medio);
+}
+.contatos{
+    display: flex;
+    gap: 200px;
+    align-items: center;
+}
+.fale-conosco{
+    margin-left: 300px;
+}
+.onde-encontrar{
+    margin-left: 100px;
+}    
+.contatos h4{
+    color: #800080;
+    font-weight: 300;
+}
+#direitos{
+    text-align: center;
+    background-color: var(--Roxo-medio);
+}
+    
+
 
 /* ------------ Config de responsividade: celular ------------ */
 
