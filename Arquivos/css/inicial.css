@@ -281,12 +281,21 @@ footer{
     gap: 35%;
 }
 .onde-encontrar{
-   width: 400px;
-   height: 30px;
-}    
+    text-align: center;
+    width: 400px;
+    height: 30px;
+}  
+.onde-encontrar i{
+    width: 40px;
+    font-size: 30px;
+    margin-top: 10px;
+}  
 .contatos h4{
     color: #800080;
-    font-weight: 300;
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 10px;
+
 }
 #direitos{
     text-align: center;
