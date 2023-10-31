@@ -261,26 +261,28 @@ footer{
     flex-direction: column;
     padding: 0%;
 }
-.logotipo{
+.logotipo {
     display: flex;
 }
-
+.logotipo img{
+    margin-left: 25%;
+}
 .logotipo p{
+    text-align: center;
     font-size: 13px;
     font-weight:700;
     margin: 10px;
     color: var(--Roxo-medio);
 }
 .contatos{
+    margin: auto;
     display: flex;
-    gap: 200px;
-    align-items: center;
-}
-.fale-conosco{
-    margin-left: 300px;
+    justify-content: space-between;
+    gap: 35%;
 }
 .onde-encontrar{
-    margin-left: 100px;
+   width: 400px;
+   height: 30px;
 }    
 .contatos h4{
     color: #800080;
