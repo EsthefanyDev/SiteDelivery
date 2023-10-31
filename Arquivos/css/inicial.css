@@ -143,10 +143,9 @@ header {
 /* ----------------- Combos ----------------- */
 .combos{
     
-    height: auto;
     text-align: center;
-    padding-top: 30px;
-    padding-bottom: 20px;  
+    padding-top: 10px;
+    padding-bottom: 10px;  
 }
 .combos h2{
     color: var(--Roxo-medio);
@@ -156,18 +155,25 @@ header {
     margin-bottom: 20px;
 }
 /* Lista de Combos */
+.combo-list{
+    display: flex;
+    margin: 60px;
+    margin-bottom: 15px;
+    justify-items: center;
+}
 .ul{
-    list-style: none;
-    padding: 0;
     text-align: center;
 }
-li{
-    display: inline;
+li{    
+    display: table-column;
     margin: 0 10px;
+}
+#combo-ami{
+    margin-left:40px;
 }
 .combo-list img{
    border-radius: 20px; 
-   max-width: 100%;
+   justify-items:
 }
 /* Botão */
 button{
@@ -175,8 +181,8 @@ button{
     background-color:var(--Dourado);
     color: var(--Roxo-escuro);
     border: none;
-    padding: 10px 40px;
-    font-size: 1rem;
+    padding: 10px 20px;
+    font-size: 0.8rem;
     font-weight: bold;
     border-radius: 50px;
 }
