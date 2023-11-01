@@ -3,62 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrinho</title>
+    <title>Carrinho </title>
     <link rel="stylesheet" href="css/carrinho.css">
 </head>
 <body>
-    <div class="container">
-        <section class="conteiner normal-section">
-            <h2 class="section-title">CARRINHO</h2>
-            <table class="cart-table">
-                <thead>
-                    <tr>
-                        <th class="teable-head-item p-colu">Item</th>
-                        <th class="teable-head-item s-colu">Preço</th>
-                        <th class="teable-head-item t-colu">Quantidade</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="cart-product">
-                        <td class="product-identification">
-                            <img class="cart-product-image" src="" alt="">
-                            <strong class="cart-product-title">miniatura</strong>
-                        </td>
-                        <td>
-                            <span class="cart-product-price">R$69,00</span>
-                        </td>
-                        <td>
-                            <input class="product-qtd-input" type="number" value="2" min="0">
-                            <button class="remove-product-button">Remover</button>
-                        </td>
-                    </tr>
-                    <tr class="cart-product">
-                        <td class="product-identification">
-                            <img class="cart-product-image" src="" alt="">
-                            <strong class="cart-product-title">miniatura</strong>
-                        </td>
-                        <td>
-                            <span class="cart-product-price">R$19,00</span>
-                        </td>
-                        <td>
-                            <input class="product-qtd-input" type="number" value="2" min="0">
-                            <button class="remove-product-button">Remover</button>
-                        </td>
-                    </tr>
-                    <tr class="cart-product"></tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="3" class="cart-total-container">
-                            <strong>total</strong>
-                            <span>R$89,00</span>
-                        </td>
+   <!---------- navbar ---------------->
+   <header>
+    <nav class="branco">
+       <div class="nav-wrapper">
+            <h1>CARRINHO DE COMPRAS</h1>
+            <!-- "PERFIL" DO USUÁRIO -->
+			<ul>
+				<li style="margin-top:10px">Olá, <span id="nome">Visitante</span>!</li>
+				<li>
+				<img src="img/user.png" id="image" width="60px" class="right">
+				</li>
+			</ul>
+       </div>
+    </nav>
+    <main>
+		<script type="text/javascript" src="js/script.js"></script>
 
-                    </tr>
-               </tfoot>
-            </table>
-            <button class="purchase-button" type="button">Finalizar Compra</button>
-        </section> 
-    </div>
+		<div class="container">
+			<form>
+				<div class="row">
+					<fieldset style="border: 1px solid rgb(121, 0, 151); padding: 1em">
+						
+
+							<!-- PRODUTOS -->
+						<table class="table">
+							<tbody id="carrinho">
+								<tr class="center" id="produto1">
+									<td><img width="100px" src="img/computer.png"></td>
+                                    <td>Computador<br>R$500,00</td>
+									<!-- ADICIONAR AO CARRINHO -->
+									<td><i onclick="adicionarItem(1)" class="material-icons green-text" style="cursor: pointer;">add_circle</i></td>
+									<td>
+										<p id="quantidade1">0</p>
+									</td>
+									<!-- REMOVER DO CARRINHO -->
+									<td><i onclick="removerItem(1)" class="material-icons red-text" style="cursor: pointer;">remove_circle</i></td>
+									<td>
+										Total<br>R$<span id="total1">00,00</span>
+									</td>
+									<!-- REMOVER PRODUTO DA LISTA -->
+									<td><i onclick="removerProduto(1)" class="material-icons blue-text text-darken-1" style="cursor: pointer">delete</i></td>
+								</tr>
+								<tr id="produto2" id="produto2">
+									<td><img width="100px" src="img/plant.png"></td>
+									<td>Planta<br>R$5,00</td>
+									<!-- ADICIONAR AO CARRINHO -->
+									<td><i onclick="adicionarItem(2)" class="material-icons green-text" style="cursor: pointer;">add_circle</i></td>
+									<td>
+										<p id="quantidade2">0</p>
+									</td>
+									<!-- REMOVER DO CARRINHO -->
+									<td><i onclick="removerItem(2)" class="material-icons red-text" style="cursor: pointer;">remove_circle</i></td>
+									<td>
+										Total<br>R$<span id="total2">00,00</span>
+									</td>
+									<!-- REMOVER PRODUTO DA LISTA -->
+									<td><i onclick="removerProduto(2)" class="material-icons blue-text text-darken-1" style="cursor: pointer">delete</i></td>
+								</tr>
+								<tr id="produto3" id="produto3">
+									<td><img width="100px" src="img/lightsaber.png"></td>
+									<td>Lightsaber<br>R$3000,00</td>
+									<!-- ADICIONAR AO CARRINHO -->
+									<td><i onclick="adicionarItem(3)" class="material-icons green-text" style="cursor: pointer;">add_circle</i></td>
+									<td>
+										<p id="quantidade3">0</p>
+									</td>
+									<!-- REMOVER DO CARRINHO -->
+									<td><i onclick="removerItem(3)" class="material-icons red-text" style="cursor: pointer;">remove_circle</i></td>
+									<!-- REMOVER PRODUTO DA LISTA -->
+									<td>Total<br>R$<span id="total3">00,00</span></td>
+									<td><i onclick="removerProduto(3)" class="material-icons blue-text text-darken-1" style="cursor: pointer">delete</i></td>
+								</tr>
+							</tbody>
+						</table>
+						<br>
+						
+						<!-- VALOR TOTAL DOS ITENS ADICIONADOS AO CARRINHO -->
+						<div class="s12 l6 offset-l6">
+							<h2 class="blue-text text-darken-1 flow-text">Valor Total da Compra: R$<span id="valorTotalCompra">00,00</span></h2>
+						</div>
+					</fieldset>
+					<br>
+					<!-- FINALIZA A COMPRA E RESETA O CARRINHO -->
+					<div class="col s12 l4 offset-l4">
+						<button class="btn waves-light waves-effect red white-text" onclick="finalizarCompra()">FINALIZAR COMPRA</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</main>
+   </header>
+
+
+    
 </body>
 </html>

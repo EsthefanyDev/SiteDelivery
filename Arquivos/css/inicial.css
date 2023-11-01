@@ -200,8 +200,9 @@ button{
 .box-textos{
     background-color: #800080;
     padding: 20px;
-    height: 600px;
+    height: 500px;
     width: 30%;
+    text-align: center;
 
 
 }
@@ -222,7 +223,7 @@ button{
     padding: 40px;
     width: 70%;
     text-align: center;
-    height: 600px;
+    height: 500px;
 }
 .box{
     text-align: center;
