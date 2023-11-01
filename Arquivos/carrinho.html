@@ -4,8 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho</title>
+    <link rel="stylesheet" href="css/carrinho.css">
 </head>
 <body>
-    
+    <div class="container">
+        <section class="conteiner normal-section">
+            <h2 class="section-title">CARRINHO</h2>
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th class="teable-head-item p-colu">Item</th>
+                        <th class="teable-head-item s-colu">Preço</th>
+                        <th class="teable-head-item t-colu">Quantidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="cart-product">
+                        <td class="product-identification">
+                            <img class="cart-product-image" src="" alt="">
+                            <strong class="cart-product-title">miniatura</strong>
+                        </td>
+                        <td>
+                            <span class="cart-product-price">R$69,00</span>
+                        </td>
+                        <td>
+                            <input class="product-qtd-input" type="number" value="2" min="0">
+                            <button class="remove-product-button">Remover</button>
+                        </td>
+                    </tr>
+                    <tr class="cart-product">
+                        <td class="product-identification">
+                            <img class="cart-product-image" src="" alt="">
+                            <strong class="cart-product-title">miniatura</strong>
+                        </td>
+                        <td>
+                            <span class="cart-product-price">R$19,00</span>
+                        </td>
+                        <td>
+                            <input class="product-qtd-input" type="number" value="2" min="0">
+                            <button class="remove-product-button">Remover</button>
+                        </td>
+                    </tr>
+                    <tr class="cart-product"></tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="cart-total-container">
+                            <strong>total</strong>
+                            <span>R$89,00</span>
+                        </td>
+
+                    </tr>
+               </tfoot>
+            </table>
+            <button class="purchase-button" type="button">Finalizar Compra</button>
+        </section> 
+    </div>
 </body>
 </html>
