@@ -159,9 +159,33 @@ html{
 /* ------------- Conteúdo principal ------------- */
 
 /* --------------- Banner -------------- */
+.pd-destaques{
+    padding: 0;
+}
+.pd-destaques .slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-size: cover !important;
+    background-position: center !important;
+}
+.pd-destaques .slide .content{
+    display: none;
+    width: 60rem;
+    text-align: center;
+}
+.pd-destaques .slide .content h3{
+    font-size: 6rem;
+    line-height: 1.3;
+    color: #FFF;
+}
 
-/* Estilos Gerais */
 
+
+
+
+/* 
 .banner{
     display:block;
     height: auto;
@@ -195,7 +219,7 @@ html{
     color: white;
     text-shadow: var(--text-shadow);
 }
-
+*/
 /* ----------------- Combos ----------------- */
 .combos{
     
@@ -231,6 +255,7 @@ li{
    border-radius: 20px; 
    justify-items:
 }
+
 /* Botão */
 button{
     margin: 20px 0;

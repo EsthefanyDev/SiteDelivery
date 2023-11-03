@@ -38,7 +38,7 @@
         <!-- INICIO ICONES -->
         <div class="icons">
             <div id="cart" class='bx bxs-cart'></div>
-            <div id="login" href="login.html" class='bx bxs-user-circle'></div>
+            <a href="login.html"><div id="login" class='bx bxs-user'></div></a>
             <div id="menu" class='bx bx-menu'></div>
         </div>
         <!-- FIM ICONES -->
@@ -94,21 +94,49 @@
         </div>
         <!-- FIM CARRINHO DE COMPRAS DO TOPO DO SITE -->
       
-        
-
     </header>
-    <!------------- FIM DA BARRA DE NAVEGAÇÃO SUPERIOR ------------->
+    <!---------- FIM DA BARRA DE NAVEGAÇÃO SUPERIOR ----------->
     
-    <!------------- Conteúdo principal ------------->
+    <!------------- INICIO DO BANNER ------------->
+     <section class="pd-destaques">
+        
+        <div class="swiper home-slider">
+            <div class="swiper-wrapper">
+
+                <!--- INICIO ITEM SLIDER HOME DO SITE --->
+                <div class="swiper-slide slide" style="background: url(img/Banner-1.png) no-repeat;">
+                    <div class="content">  
+                        <h3><span>Já Pediu</span><br>seu lanche hoje?</h3>
+                        <a href="" class="btn">Comprar Agora</a>
+                    </div>      
+                </div>
+                <!--- FIM ITEM SLIDER HOME DO SITE --->
+
+                <!--- INICIO ITEM SLIDER HOME DO SITE --->
+                <div class="swiper-slide slide" style="background: url(img/Banner-2.png) no-repeat;">
+                    <div class="content">  
+                        <h3><span>Já Pediu</span><br>seu lanche hoje?</h3>
+                        <a href="" class="btn">Comprar Agora</a>
+                    </div>      
+                </div>
+                <!--- FIM ITEM SLIDER HOME DO SITE --->
+
+                <!--- INICIO ITEM SLIDER HOME DO SITE --->
+                <div class="swiper-slide slide" style="background: url(img/Banner-3.png) no-repeat;">
+                    <div class="content">  
+                        <h3><span>Já Pediu</span><br>seu lanche hoje?</h3>
+                        <a href="" class="btn">Comprar Agora</a>
+                    </div>      
+                </div>
+                <!--- FIM ITEM SLIDER HOME DO SITE --->
+            </div> 
+        </div>
+     </section>
+    <!------------- FIM DO BANNER ------------->
+    
     <main class="page">
-        <div class="banner" id="inicio" style="position: relative;">
-            <img src="img/Banner-Test.png">
-            <div class="texto-sobre-img">
-                <h1>JÁ PEDIU </h1>
-                <h2>SEU LANCHE HOJE?</h2>
-            </div>
-        </div> 
-        <!-------------------- Combos -------------------->
+        
+        <!------------- INICIO DA AREA DE COMBOS ------------->
         <section class="combos" id="combos">
             <h2>Nossos Combos</h2>
             <ul class="combo-list"> 
@@ -140,7 +168,9 @@
             </ul>
             <button>Fazer Pedido</button>
         </section>
-        <!--------------- Monte seu pedido --------------->
+        <!------------- FIM DA AREA DE COMBOS ------------->
+
+        <!--------------- INICIO AREA MONTE SEU PEDIDO --------------->
         <section class="monte-seu-pedido" id="monte-pedido">
             <div class="box-textos">
                 <h2>Monte Seu Pedido</h2>
@@ -242,6 +272,9 @@
             </div>
             
         </section>
+        <!--------------- FIM DA AREA MONTE SEU PEDIDO --------------->
+
+        <!--------------- INICIO DA AREA SOBRE --------------->
         <section class="sobre" id="sobre">
             <div class="text">
                 <h2>Sobre Nós</h2>
@@ -251,8 +284,11 @@
                 <img src="img/Online_Shoping_29-768x614.jpg" alt="" width="600">
             </div>
         </section>
+        <!--------------- FIM DA AREA SOBRE --------------->
+
     </main>  
 
+    <!--------------- INICIO DO RODAPE --------------->
     <footer>
         <div class="logotipo">
             <a href="inicial.html"><img src="img/Prime-Delivery-Roxo-e-Branco-150x150.png" alt="Prime Delivery"><p>Sensação boa é pedir seu lanche a qualquer <br> hora e ter a melhor entrega da cidade.</p></a>
@@ -272,16 +308,14 @@
         </div>        
         <p id="direitos">&copy; 2023 - Todos os direitos reservados</p>
     </footer>
+    <!--------------- FIM DO RODAPE --------------->
 
 
-    
-    
-
-
-
-
-   <!-- INICIO LINK JAVASCRIPT -->
+   <!----------- INICIO LINK JAVASCRIPT ----------->
    <script src="js/script.js"></script>
+
+   <!----------- INICIO LINK BANNERS ----------->
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
  
 </body>
 

@@ -63,25 +63,25 @@ body {
     font-size: 20px;
 }
 
-.wrapper .remember-forgot{
+.wrapper .lembrar-senha{
     display: flex;
     justify-content:space-between;
     font-size: 14.5px;
     margin: -15px 0 15px;
 }
 
-.remember-forgot label input{
+.lembrar-senha label input{
     accent-color: #fff;
     margin-right: 3px;
 }
 
-.remember-forgot a{
+.lembrar-senha a{
     color:#fff;
     text-decoration: none;
 } 
 
 /*quando o mouse passa sobre eles (hover), indicando visualmente que são interativos. */
-.remember-forgot a:hover {
+.lembrar-senha a:hover {
    text-decoration: underline;/* Adiciona um sublinhado (underline)*/
 }
 
