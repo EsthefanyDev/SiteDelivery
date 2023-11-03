@@ -2,42 +2,102 @@
 <html lang="Pt-br">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Prime Delivery</title>
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!--INICIO CSS ICONES-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- INICIO LINK CSS -->
     <link rel="stylesheet" href="css/inicial.css">
-     <!-- link do JavaScript -->
-     <script async src="js/script.js"></script>
-
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    
 </head>
 
 <body>
 
-    <!------------- Barra de navegação superior ------------->
-    <header class="header">
-
+    <!------------- INICIO DA BARRA DE NAVEGAÇÃO SUPERIOR ------------->
+    <header class="topo-site">
+        <!-- INICIO DA LOGO MARCA -->
         <a href="inicial.html" class="logo">
-            <img src="img/logo-amarelo_roxo-removebg.png" alt="logo" width="100" height="100">
+            <img src="img/logos/logo-amarelo_roxo-removebg.png" alt="logo" width="80">
         </a>
+        <!-- FIM DA LOGO MARCA -->
 
-        <ul class="navbar">
-            <li><a href="#inicio">Ínicio</a></li>
-            <li><a href="#combos">Combos</a></li>
-            <li><a href="#monte-pedido">Monte seu Pedido</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#contato">contato</a></li>
-        </ul>
-        
-        <a href="#"><i class="bx bxs-cart" style="font-size: 30px;"></i></a>
+        <!-- INICIO MENU -->
+        <nav class="menu-site">
+            <a href="#inicio">Ínicio</a>
+            <a href="#combos">Combos</a>
+            <a href="#monte-pedido">Monte seu Pedido</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">contato</a>
+        </nav>
+        <!-- FIM MENU -->
 
-        <div class="box-login">
-            <a href="login.html" class="user"><i class='bx bxs-user-circle'></i>Login</a>
-            <div class="bx bx-menu" id="menu-icon"></div>
+        <!-- INICIO ICONES -->
+        <div class="icons">
+            <div id="cart" class='bx bxs-cart'></div>
+            <div id="login" href="login.html" class='bx bxs-user-circle'></div>
+            <div id="menu" class='bx bx-menu'></div>
         </div>
+        <!-- FIM ICONES -->
+
+          <!-- INICIO CARRINHO DE COMPRAS DO TOPO DO SITE -->
+          <div class="carrinho">
+
+            <!-- INICIO ITEM CARRINHO DE COMPRAS TOPO DO SITE -->
+            <div class="box">
+                
+                <img src="img/carrinho/Hamburguer-sf-01.png" alt="" >
+                <div class="content">
+                    <h3>Hamburguer/N</h3>
+                    <span class="quantidade">1</span>
+                    <span class="multiplica">x</span>
+                    <span class="valor">R$77,77</span>
+                </div>
+                <i class='bx bx-x'></i>
+            </div>
+            <!-- FIM ITEM CARRINHO DE COMPRAS TOPO DO SITE -->
+
+            <!-- INICIO ITEM CARRINHO DE COMPRAS TOPO DO SITE -->
+            <div class="box">
+                
+                <img src="img/carrinho/Pizza-sf-01.png" alt="" >
+                <div class="content">
+                    <h3>Pizza/Calabresa</h3>
+                    <span class="quantidade">1</span>
+                    <span class="multiplica">x</span>
+                    <span class="valor">R$77,77</span>
+                </div>
+                <i class='bx bx-x' ></i>
+            </div>
+            <!-- FIM ITEM CARRINHO DE COMPRAS TOPO DO SITE -->
+
+            <!-- INICIO ITEM CARRINHO DE COMPRAS TOPO DO SITE -->
+            <div class="box">
+                
+                <img src="img/carrinho/Pastel-sf-02.png" alt="" >
+                <div class="content">
+                    <h3>Pastel/Flango</h3>
+                    <span class="quantidade">1</span>
+                    <span class="multiplica">x</span>
+                    <span class="valor">R$77,77</span>
+                </div>
+                <i class='bx bx-x'></i>
+            </div>
+            <!-- FIM ITEM CARRINHO DE COMPRAS TOPO DO SITE -->
+
+            <h3 class="total">Total: R$77,77</h3>
+            <a href="" class="btn">Ir para o carrinho</a>
+
+        </div>
+        <!-- FIM CARRINHO DE COMPRAS DO TOPO DO SITE -->
+      
+        
 
     </header>
+    <!------------- FIM DA BARRA DE NAVEGAÇÃO SUPERIOR ------------->
     
     <!------------- Conteúdo principal ------------->
     <main class="page">
@@ -128,7 +188,7 @@
 
                 <div class="box">
                     <img src="img/Pastel-03.png" alt="Presunto" width="100" height="100">
-                    <h3>Pastel de vento</h3>
+                    <h3>Pastel </h3>
                     <p>R$8,00</p>
                     
                 </div>
@@ -220,7 +280,9 @@
 
 
 
-   
+   <!-- INICIO LINK JAVASCRIPT -->
+   <script src="js/script.js"></script>
+ 
 </body>
 
 </html>

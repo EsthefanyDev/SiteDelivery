@@ -6,9 +6,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     list-style: none;
     text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transform: .2 linear;
 }
 
 :root {
@@ -21,84 +25,136 @@
     --Branco: #FFF;
     --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
 html{
+    font-size: 62.5%;
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
-/* ------------- Barra de navegação superior ------------- */
-header {
-    background-color: var(--Preto);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    right: 0;
-    z-index: 1000;
+
+.btn{
+    display: inline-block;
+    font-size: 1.5rem;
+    color: var(--Roxo-escuro);
+    background-color:var(--Dourado);
+    margin-top: 1rem;
+    padding: .8rem 3rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.btn:hover{
+    background-color: #C0C0C0;
+    color:var(--Roxo-medio);
+}
+
+
+
+/* ------------- INICIO DA BARRA DE NAVEGAÇÃO SUPERIOR ------------- */
+.topo-site {
     display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     align-items: center;
     justify-content: space-between;
-    transition: all .50s ease;
+    padding: 1rem 9%;
+    z-index: 1000;
+    background-color:var(--Preto);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
-.logo {
-    display: flex;
-    align-items: center;
+.topo-site .menu-site a {
+    color: var(--Dourado);
+    font-size: 1.7rem;
+    margin: 0 3rem;
 }
 
-.navbar {
-    display: flex;
-}
-
-.navbar a {
+.topo-site .menu-site a:hover{
     color: var(--Roxo-medio);
-    font-size: 1.1rem;
-    font-weight: 500;
-    padding: 5px 0;
-    margin: 0px 30px;
-    transition: all .50s ease;
 }
 
-.navbar a:hover {
-    color: var(--Dourado);
-}
-
-.navbar a.active {
-    color: var(--Dourado);
-}
-
-.box-login {
-    display: flex;  
-}
-
-.box-login a {
-    margin-right: 25px;
-    margin-left: 10px;
-    color: var(--Roxo-medio);
-    font-size: 1.1rem;
-    font-weight: 500;
-    transition: all .50s ease;
-}
-
-.user {
-    display: flex;
-    align-items: center;
-}
-
-.user i {
-    color: var(--Dourado);
-    font-size: 25px;
-    margin-right: 7px;
-}
-
-.box-login a:hover {
-    color: var(--Dourado);
-}
-
-#menu-icon {
-    font-size: 35px;
-    color: var(--Roxo-medio);
+.topo-site .icons div{
+    color:var(--Dourado);
+    font-size: 2.5rem;
+    margin-left: 1.7rem;
     cursor: pointer;
-    z-index: 10001;
+}
+.topo-site .icons div:hover{
+    color: var(--Roxo-medio);
+}
+#menu{
     display: none;
 }
+
+.topo-site .carrinho {
+    width: 35rem;
+    background: #FFF;
+    border-radius: .5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 115%;
+    right: -105%;
+    padding: 2rem;
+}
+.topo-site .carrinho.active{
+    right: 2rem;
+    transition: .4s linear;
+}
+.topo-site .carrinho .box{
+    position: relative;
+    display: flex;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+    align-items: center;
+    
+}
+
+.topo-site .carrinho .box .bx-x{
+    position: absolute;
+    top: 50%;
+    left: 28rem;
+    transform: translateY(-50%);
+    font-size: 2.6rem;
+    font-weight: bolder;
+    color: #777;
+    cursor: pointer;
+    
+}
+.topo-site .carrinho .box .bx-x:hover{
+    color: red;
+}
+.topo-site .carrinho .box img{
+    height: 10rem;
+}
+.topo-site .carrinho .box .content h3 {
+    font-size: 1.7rem;
+    padding-bottom: .5rem;
+    color: var(--Preto);
+}
+.topo-site .carrinho .box .content span{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--Roxo-escuro);
+}
+.topo-site .carrinho .box .content span.multiplica{
+    max-width: 0.5rem;
+}
+.topo-site .carrinho .total {
+    font-size: 2.2rem;
+    color: var(--Roxo-escuro);
+    text-align: center;
+}
+.topo-site .carrinho .btn{
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
 
 /* ------------- Conteúdo principal ------------- */
 

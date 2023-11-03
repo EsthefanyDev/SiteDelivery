@@ -1,10 +1,5 @@
-/*let menu = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+let cart = document.querySelector(".carrinho");
 
-menu.onclick = () => {
-    menu.classList.toggle('bx-x');
-    navbar.classList.toggle('open');
-}*/
-
-const reoveProductButton = document.getElementsByClassName("remove-product-button")
-console.log(reoveProductButton)
+document.querySelector("#cart").onclick = () => {
+    carrinho.classList.toggle('active');
+}  
