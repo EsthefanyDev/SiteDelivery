@@ -11,7 +11,6 @@
     text-decoration: none;
     outline: none;
     border: none;
-    text-transform: capitalize;
     transform: .2 linear;
 }
 
@@ -90,6 +89,7 @@ html{
     display: none;
 }
 
+/*-- INICIO CARRINHO DE COMPRAS DO TOPO DO SITE --*/
 .topo-site .carrinho {
     width: 35rem;
     background: #FFF;
@@ -151,12 +151,8 @@ html{
     width: 100%;
     text-align: center;
 }
+/*-- FIM CARRINHO DE COMPRAS DO TOPO DO SITE --*/
 /*---------- FIM DA BARRA DE NAVEGAÇÃO SUPERIOR -----------*/
-
-
-
-
-/* ------------- Conteúdo principal ------------- */
 
 /* --------------- INICIO DO BANNER -------------- */
 .banner {
@@ -164,8 +160,7 @@ html{
     height: auto;
     width: 100%;
     position: relative;
-    margin-bottom: 20px;
-    
+    margin-bottom: 20px;   
 }
 .banner img {
     margin-top: 10rem;
@@ -197,107 +192,107 @@ html{
 
 /* ----------------- INICIO DA AREA DE COMBOS ----------------- */
 .combos{
-    
     text-align: center;
-    padding-top: 10px;
+    padding-top: 8px;
     padding-bottom: 10px;  
 }
 .combos h2{
     color: var(--Roxo-medio);
-    font-size: 3rem;
+    font-size: 4.5rem;
     text-shadow: var(--text-shadow);
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 /* Lista de Combos */
 .combo-list{
     display: flex;
-    margin: 60px;
+    margin: 50px;
     margin-bottom: 15px;
-    justify-items: center;
+
 }
-.ul{
+.combos ul li{
     text-align: center;
-}
-li{    
     display: table-column;
-    margin: 0 10px;
-}
-#combo-ami{
-    margin-left:40px;
-}
+    margin: 0 30px;
+} 
 .combo-list img{
    border-radius: 20px; 
-   justify-items:
+   justify-items:center;
 }
 
-/* Botão */
-button{
-    margin: 20px 0;
-    background-color:var(--Dourado);
-    color: var(--Roxo-escuro);
-    border: none;
-    padding: 10px 20px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    border-radius: 20px;
+.combos .combo-list p{
+    margin-top: .5rem;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--Roxo-escuro)
 }
+.combos .combo-list span{
+    font-size: 1.5rem;
+    color: var(--Preto);
+    
+}
+.combos .btn{
+    margin-bottom: 4.5rem;
+}
+/* ----------------- FIM DA AREA DE COMBOS ----------------- */
 
-/* ----------------- Monte seu pedido----------------- */
+/* -------------- INICIO DA AREA MONTE SEU PEDIDO -------------- */
 .monte-seu-pedido {
     background-color: var(--Prata);
     padding: 20px;
     text-align: left;
     display: flex;
     width: 100%;
-    
-
 }
-.box-textos{
+.monte-seu-pedido .box-textos{
     background-color: #800080;
     padding: 20px;
     height: 500px;
     width: 30%;
     text-align: center;
-
-
 }
-.box-textos h2{
+.monte-seu-pedido .box-textos h2{
     color: var(--Dourado);
-    font-size: 40px;
-    font-weight: bold;
-    margin-left: 25px;
-    margin-top: 10px;
-    margin-bottom: 30px;
+    text-shadow: var(--text-shadow);
+    font-size: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 0;
 }
+.monte-seu-pedido .box-textos h3{
+    color: var(--Branco);
+    text-shadow: var(--text-shadow);
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+.monte-seu-pedido .box-textos p{
+    color: var(--Branco);
+    text-shadow: var(--text-shadow);
+    font-size: 1.6rem;
+    text-align: justify;
+    padding: 1.3rem;
+}
+.monte-seu-pedido .box-textos .btn{
+    margin: 6rem;
+}
+/* --------- FIM DA CAIXA DE TEXTO MONTE SEU PEDIDO --------- */
 
-.box-ingredientes{
+/* ------ INICIO DA CAIXA DE INGREDIENTES MONTE SEU PEDIDO ------ */
+.monte-seu-pedido .box-ingredientes{
     background-color:var(--Branco);
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 30px;
-    padding: 40px;
+    padding: 30px;
     width: 70%;
     text-align: center;
-    height: 500px;
 }
-.box{
-    text-align: center;
-    border-radius: 10px;
-    height: 100px;
-    width: 100px;
+.monte-seu-pedido .box-ingredientes .box h3{
+    font-size: 1.2rem;
+    margin: 1rem;
 }
-.box h3{
-    font-size: small;
-}
-.button-container {
-    text-align: center;
-    margin-top: 40px;
-}
-i{
-    font-size: 20px;
-}
-/* -------------- Sobre ------------------*/
+/* ------ FIM DA CAIXA DE INGREDIENTES MONTE SEU PEDIDO ------ */
+
+/* -------------- INICIO DA AREA SOBRE ------------------*/
 .sobre{
     display: flex;
     justify-content: space-between;
@@ -312,15 +307,15 @@ i{
     padding: 40px;
     margin: 40px;
 }
-         
-
 .text h2{
     margin-bottom: 20px;
     font-size: 40px;
     color: var(--Roxo-escuro);
     text-shadow: var(--text-shadow);
 }
-/* ------------------ Rodapé -----------------*/
+/* -------------- FIM DA AREA SOBRE ------------------*/
+
+/* ------------------ INICIO DO RODAPÉ -----------------*/
 footer{
     background-color: var(--Dourado);
     height: 230px;
@@ -369,10 +364,10 @@ footer{
     background-color: var(--Roxo-medio);
     padding: 10px 0;
 }
-    
+/* ------------------ FIM DO RODAPÉ -----------------*/    
 
 
-/* ------------ Config de responsividade: celular ------------ */
+/* ------------ INICIO DAS CONFIG RESPOSIVIDADE ------------ */
 
 @media screen and (max-width: 768px) {
     header {
@@ -439,3 +434,4 @@ footer{
         padding-left: 1%;
     }
 }
+/* ------------ FIM DAS CONFIG RESPOSIVIDADE ------------ */
