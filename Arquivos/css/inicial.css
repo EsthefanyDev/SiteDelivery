@@ -297,70 +297,85 @@ html{
     display: flex;
     justify-content: space-between;
 }
-.motinha img{
-    padding: 0px;
-    margin: 0px;
+.sobre .motinha{
+    padding: 0;
+    margin: 0;
 }
-.text{
+.sobre .text{
     display: flex;
     flex-direction: column;
     padding: 40px;
     margin: 40px;
 }
-.text h2{
+.sobre .text h2{
     margin-bottom: 20px;
     font-size: 40px;
-    color: var(--Roxo-escuro);
+    color: var(--Roxo-medio);
     text-shadow: var(--text-shadow);
+}
+.sobre .text P{
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: justify;
+    color: var(--Roxo-escuro);
 }
 /* -------------- FIM DA AREA SOBRE ------------------*/
 
 /* ------------------ INICIO DO RODAPÉ -----------------*/
 footer{
     background-color: var(--Dourado);
-    height: 230px;
-    display: flex;
+    height: 200px;
     flex-direction: column;
-    padding: 0%;
+    align-items: center;
+    justify-content: space-between;  
 }
-.logotipo {
+.rodape {
     display: flex;
+    margin-bottom: 3rem;   
 }
-.logotipo img{
-    margin-left: 25%;
-}
-.logotipo p{
-    text-align: center;
-    font-size: 13px;
-    font-weight:700;
-    margin: 10px;
-    color: var(--Roxo-medio);
-}
-.contatos{
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    gap: 35%;
-}
-.onde-encontrar{
-    text-align: center;
-    width: 400px;
-    height: 30px;
-}  
-.onde-encontrar i{
-    width: 40px;
-    font-size: 30px;
-    margin-top: 10px;
-}  
-.contatos h4{
-    color: #800080;
-    font-size: 17px;
-    font-weight: 400;
-    margin-bottom: 10px;
+.rodape .contatos .logo-down{
+    margin-left: 3rem;
+    margin-right: 20%;
+}    
 
+.rodape .contatos{
+    display: flex;
+    width: 100%;  
 }
+.rodape .contatos .fale-conosco{
+    margin-top: 5rem;
+    margin-right: 17rem;
+    text-align: justify;  
+}
+.rodape .contatos .fale-conosco h4,
+.onde-encontrar h4{
+    font-size: 1.4rem;
+    color: var(--Roxo-escuro);
+    margin-bottom: .3rem;
+    
+}
+.rodape .contatos .onde-encontrar{
+    margin-top: 5rem;
+    margin-right: 17rem;
+    text-align: center;    
+}
+.rodape .contatos .fale-conosco i{
+    font-size: 1.5rem;
+    color: var(--Roxo-escuro);
+    
+}
+.rodape .contatos .fale-conosco{
+    margin-left: 10rem;
+}
+.rodape .contatos .onde-encontrar i{
+    width: 40px;
+    font-size: 30px;    
+}  
+
 #direitos{
     text-align: center;
+    font-size: 1.2rem;
+    color: var(--Branco);
     background-color: var(--Roxo-medio);
     padding: 10px 0;
 }
