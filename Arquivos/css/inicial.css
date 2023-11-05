@@ -218,6 +218,11 @@ html{
 .combo-list img{
    border-radius: 20px; 
    justify-items:center;
+   transition: .4s linear;
+   margin-bottom: 2rem;
+}
+.combo-list li:hover img{
+    transform: scale(1.1);
 }
 
 .combos .combo-list p{
@@ -227,12 +232,18 @@ html{
     color: var(--Roxo-escuro)
 }
 .combos .combo-list span{
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: var(--Preto);
+    font-weight: 500;
     
 }
 .combos .btn{
-    margin-bottom: 4.5rem;
+    margin: 2.5rem;
+}
+
+.combo-list .bx-cart-add{
+    font-size: 2rem;
+    margin-right: .5rem;
 }
 /* ----------------- FIM DA AREA DE COMBOS ----------------- */
 
@@ -289,6 +300,12 @@ html{
 .monte-seu-pedido .box-ingredientes .box h3{
     font-size: 1.2rem;
     margin: 1rem;
+}
+.monte-seu-pedido .box-ingredientes .box img{
+    transition: .4s linear;
+}
+.monte-seu-pedido .box-ingredientes .box:hover img{
+    transform: scale(1.1);
 }
 /* ------ FIM DA CAIXA DE INGREDIENTES MONTE SEU PEDIDO ------ */
 
