@@ -230,12 +230,7 @@ html{
     font-size: 15px;
     font-weight: 600;
     color: var(--Roxo-escuro)
-}
-.combos .combo-list span{
-    font-size: 1.4rem;
-    color: var(--Preto);
-    font-weight: 500;
-    
+   
 }
 .combos .btn{
     margin: 2.5rem;
@@ -254,7 +249,10 @@ html{
     text-align: left;
     display: flex;
     width: 100%;
+    padding: 4rem;
+   
 }
+
 .monte-seu-pedido .box-textos{
     background-color: #800080;
     padding: 20px;
@@ -339,57 +337,61 @@ html{
 /* -------------- FIM DA AREA SOBRE ------------------*/
 
 /* ------------------ INICIO DO RODAPÉ -----------------*/
-footer{
+.rodape{
     background-color: var(--Dourado);
-    height: 200px;
-    flex-direction: column;
+    text-align: center;
+
+}
+.rodape .box-conteiner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
     align-items: center;
-    justify-content: space-between;  
 }
-.rodape {
-    display: flex;
-    margin-bottom: 3rem;   
+.rodape .box-conteiner .box h3{
+    font-size: 1.5rem;;
+    text-transform: capitalize;
+    color: var(--Roxo-medio);
+    padding: 1rem ;
 }
-.rodape .contatos .logo-down{
-    margin-left: 3rem;
-    margin-right: 20%;
-}    
-
-.rodape .contatos{
-    display: flex;
-    width: 100%;  
-}
-.rodape .contatos .fale-conosco{
-    margin-top: 5rem;
-    margin-right: 17rem;
-    text-align: justify;  
-}
-.rodape .contatos .fale-conosco h4,
-.onde-encontrar h4{
-    font-size: 1.4rem;
+.rodape .box-conteiner .box p{
+    font-size: 1.3rem;
     color: var(--Roxo-escuro);
-    margin-bottom: .3rem;
-    
+    padding: .5rem;
 }
-.rodape .contatos .onde-encontrar{
-    margin-top: 5rem;
-    margin-right: 17rem;
-    text-align: center;    
-}
-.rodape .contatos .fale-conosco i{
-    font-size: 1.5rem;
-    color: var(--Roxo-escuro);
-    
-}
-.rodape .contatos .fale-conosco{
-    margin-left: 10rem;
-}
-.rodape .contatos .onde-encontrar i{
-    width: 40px;
-    font-size: 30px;    
-}  
+.rodape .box-conteiner .box .redes-sociais{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 
-#direitos{
+}
+.rodape .box-conteiner .box .redes-sociais a{
+    color: var(--Roxo-escuro);
+    border: .1rem solid var(--Roxo-escuro);
+    border-radius: 10%;
+    width: 4.5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+
+}
+.rodape .box-conteiner .box .redes-sociais a:hover{
+    background-color: var(--Roxo-medio);
+    color: #fff;
+    border: .1rem solid var(--Roxo-medio);
+}
+.rodape .box-conteiner .box .link{
+  display: block;
+  font-size: 1.3rem;
+  line-height: 2;
+  padding: .5rem 0;
+  text-decoration: underline;
+  color: var(--Roxo-escuro)  
+}
+.rodape .box-conteiner .box .link:hover{
+    text-shadow: var(--text-shadow);
+}
+.direitos p{
     text-align: center;
     font-size: 1.2rem;
     color: var(--Branco);
