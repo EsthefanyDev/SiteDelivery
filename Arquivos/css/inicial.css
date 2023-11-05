@@ -384,7 +384,117 @@ footer{
 
 /* ------------ INICIO DAS CONFIG RESPOSIVIDADE ------------ */
 
-@media screen and (max-width: 768px) {
+@media(max-width:991px){
+
+    html{
+        font-size: 55%;
+        padding: 0;
+    }
+    section{
+        padding: 3rem;
+    }
+    .topo-site{
+        padding: 1rem;
+    }
+}
+@media(max-width:768px){
+    .topo-site .icons #menu{
+        display: inline-block;
+    }
+    .topo-site .menu-site{
+        position: absolute;
+        top: 110%;
+        right: 110%;
+        width: 30rem;
+        background-color: var(--Branco);
+        border-radius: .5rem;
+        box-shadow: var(--text-shadow);
+    }
+    .topo-site .menu-site.active{
+        right: 2rem;
+        transition: .4s linear;
+    }
+    .topo-site .menu-site a{
+        display: block;
+        font-size: 2rem;
+        margin: 2rem 2.5rem;
+        color: #FFF;
+        border-bottom: 1px solid var(--Prata);
+        border-bottom-style: cotted;
+
+
+    }
+    .banner img{
+        margin-top: 10rem;
+        height: 250px;
+        width: 100%;
+    }
+    .banner .texto-sobre-img h1,
+    .banner .texto-sobre-img h2{
+        margin-top: 9rem;
+        font-size: 4rem;
+        margin-left: 20%;
+    } 
+    .combo-list{
+        display: grid;
+        
+    }
+    .combo-list img{
+        width:100%;
+        object-fit: cover;
+    }
+    .monte-seu-pedido{
+        display: flex;
+        flex-direction: column
+    }
+    .monte-seu-pedido .box-textos{
+        width: 100%;
+        height: 50%;
+    }
+    .monte-seu-pedido .box-ingredientes{
+        width: 100%;
+    }
+    .sobre{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0%;
+        
+    }
+    .sobre .text{
+        margin: .1rem;
+        text-align: center;
+    }
+    .sobre .motinha img{
+        width: 100%;
+        height: 90%;
+    }
+    footer{
+        height: 17rem;
+        margin-bottom: 0%;
+    }
+    .rodape{
+        height: 14rem;
+        margin-top: 0%;
+    }  
+    .rodape .logo-down img{
+        display: none;
+    }
+    
+    
+
+}   
+@media(max-width:450px){
+    html{
+        font-size: 15%;
+    }
+    .topo-site .menu-site a{
+        color: #FFF;
+        border-bottom: 1px solid var(--Prata);
+        border-bottom-style: cotted;
+    }  
+}
+    /*
     header {
         width: 100%;
         padding: 1px 2%;
