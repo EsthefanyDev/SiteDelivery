@@ -472,13 +472,18 @@ footer{
     footer{
         height: 17rem;
         margin-bottom: 0%;
+        margin: 0%;
+        
     }
     .rodape{
         height: 14rem;
         margin-top: 0%;
+        width: 60%;
     }  
     .rodape .logo-down img{
-        display: none;
+       width: 12rem;
+       height: 14rem;
+       margin-right: 0%;
     }
     
     
