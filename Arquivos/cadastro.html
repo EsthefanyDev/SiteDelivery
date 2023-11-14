@@ -9,22 +9,22 @@
 </head>
 <body>
     <div class="wrapper">
-        <form>
+        <form method="POST" action="cadastro.php">
             <h1>Cadastrar-se</h1>
             <div class="input-box">
-                <input type="text" placeholder="Digite o nome de usuário" required>
+                <input type="text" name="Nome_Cliente" placeholder="Digite o nome de usuário" required>
                 <i class="bx bxs-user-circle"></i>
             </div>
             <div class="input-box">
-                <input type="tel" placeholder="Digite o telefone" required>
+                <input type="tel" name="Celular" placeholder="Digite o telefone" required>
                 <i class="bx bx-phone"></i>
             </div>
             <div class="input-box">
-                <input type="text" placeholder="Digite seu endereço" required>
+                <input type="text" name="Endereco_Cliente" placeholder="Digite seu endereço" required>
                 <i class="bx bx-home"></i>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="Senha" required>
+                <input type="password" name="Senha_Cliente" placeholder="Senha" required>
                 <i class="bx bx-lock-alt"></i>
             </div>
             <button class="btn">Cadastrar</button>
