@@ -1,7 +1,6 @@
 <?php
     include('protecao.php');
 ?>
-
 <!DOCTYPE html>
 <html lang="Pt-br">
 
@@ -14,9 +13,8 @@
     <!--INICIO CSS ICONES-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- INICIO LINK CSS -->
-    <link rel="stylesheet" href="css/inicial.css">
-    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
-    
+    <link rel="stylesheet" href="css/index.css">
+
 </head>
 
 <body>
@@ -25,283 +23,132 @@
     <header class="topo-site">
         <!-- INICIO DA LOGO MARCA -->
         <a href="inicial.html" class="logo">
-            <img src="img/logos/logo-amarelo_roxo-removebg.png" alt="logo" width="80">
+            <img src="img/logo-amarelo_roxo-removebg.png" alt="logo" width="80">
         </a>
         <!-- FIM DA LOGO MARCA -->
 
         <!-- INICIO MENU -->
         <nav class="menu-site">
-            <a href="#inicio">Ínicio</a>
-            <a href="#combos">Combos</a>
-            <a href="#monte-pedido">Monte seu Pedido</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#contato">contato</a>
+            <a id="inicio" href="index.html">Ínicio</a>
+            <a href="produtos.php">Produtos</a>
+            <a href="#cadastro-produtos">Registre Produtos</a>
+            <a id="sobre1" href="#sobre">Sobre</a>
+            <a id="contato1" href="#contato">contato</a>
         </nav>
         <!-- FIM MENU -->
 
         <!-- INICIO ICONES -->
         <div class="icons">
-            <div id="cart" class='bx bxs-cart'></div>
+            
             <a href="login.html"><div id="login" class='bx bxs-user'></div></a>
-            <div id="menu" class='bx bx-menu'></div>
+
+            <a href="sair.php"><div id="logout" class='bx bxs-out'>Sair</div></a>
+
+            <a href="Database_Cliente.php"><div id="Database" class='bx bxs-out'>Tabela do Cliente</div></a>
+
         </div>
         <!-- FIM ICONES -->
-
-          <!-- INICIO CARRINHO DE COMPRAS DO TOPO DO SITE -->
-          <div class="carrinho">
-
-            <!-- INICIO ITEM CARRINHO DE COMPRAS TOPO DO SITE -->
-            <div class="box">
-                
-                <img src="img/carrinho/Hamburguer-sf-01.png" alt="" >
-                <div class="content">
-                    <h3>Hamburguer/N</h3>
-                    <span class="quantidade">1</span>
-                    <span class="multiplica">x</span>
-                    <span class="valor">R$77,77</span>
-                </div>
-                <i class='bx bx-x'></i>
-            </div>
-            <!-- FIM ITEM CARRINHO DE COMPRAS TOPO DO SITE -->
-
-            <!-- INICIO ITEM CARRINHO DE COMPRAS TOPO DO SITE -->
-            <div class="box">
-                
-                <img src="img/carrinho/Pizza-sf-01.png" alt="" >
-                <div class="content">
-                    <h3>Pizza/Calabresa</h3>
-                    <span class="quantidade">1</span>
-                    <span class="multiplica">x</span>
-                    <span class="valor">R$77,77</span>
-                </div>
-                <i class='bx bx-x' ></i>
-            </div>
-            <!-- FIM ITEM CARRINHO DE COMPRAS TOPO DO SITE -->
-
-            <!-- INICIO ITEM CARRINHO DE COMPRAS TOPO DO SITE -->
-            <div class="box">
-                
-                <img src="img/carrinho/Pastel-sf-02.png" alt="" >
-                <div class="content">
-                    <h3>Pastel/Flango</h3>
-                    <span class="quantidade">1</span>
-                    <span class="multiplica">x</span>
-                    <span class="valor">R$77,77</span>
-                </div>
-                <i class='bx bx-x'></i>
-            </div>
-            <!-- FIM ITEM CARRINHO DE COMPRAS TOPO DO SITE -->
-
-            <h3 class="total">Total: R$77,77</h3>
-            <a href="" class="btn">Ir para o carrinho</a>
-
-        </div>
-        <!-- FIM CARRINHO DE COMPRAS DO TOPO DO SITE -->
-      
     </header>
     <!---------- FIM DA BARRA DE NAVEGAÇÃO SUPERIOR ----------->
-    
+
     <!------------- INICIO DO BANNER ------------->
-     
-    <div class="banner" id="inicio" style="position: relative;">
-        <img src="img/Banner-1.png">
+
+    <div class="banner" id="inicio"  style="position: relative;">
+        <img src="img/Banner para site de frete grátis colorido roxo (1).svg">
         <div class="texto-sobre-img">
-            <h1>JÁ PEDIU </h1>
-            <h2>SEU LANCHE HOJE?</h2>
-        </div>
-    </div> 
-        
+            <h1> SEJA BEM-VINDO(A)!</h1>
+            <h2>ao Prime Delivery</h2>
+            <h3>"Variedade de produtos exclusivos"<h3>
+        </div>    
+    </div>
+
     <!------------- FIM DO BANNER HOME DO SITE ------------->
-    
+
     <main class="page">
-        
-        <!------------- INICIO DA AREA DE COMBOS ------------->
-        <section class="combos" id="combos">
 
-            <h2>Nossos Combos</h2>
-           
-            <ul class="combo-list"> 
-                <li>
+        <!--------------- INICIO AREA CADASTRO DE PRODUTOS--------------->
+        <section class="cadastro-produtos" id="cadastro-produtos">
 
-                    <img src="img/combos/Combo-Love-00-300x300.png" alt="" width="230">
-                    <p>Hamburguer + Fritas + Refrigerante</p>
-                    <a href="" class="btn"><i class="bx bx-cart-add"></i><span>R$15,00</span></a>
-                    
-                </li>
-                <li>
-
-                    <img src="img/combos/Combo-Full-00-300x300.png" alt="" width="230">
-                    <p>Porções de FastFood + Fritas + Refrigerante</p>
-                    <a href="" class="btn"><i class="bx bx-cart-add"></i><span>R$12,00</span></a>
-                    
-                </li>
-                <li>
-
-                    <a href=""><img src="img/combos/Combo-Familia-00-300x300.png" alt="" width="230"></a>
-                    <p>2 Pizzas Tradicionais + Refrigerante </p>
-                    <a href="" class="btn"><i class="bx bx-cart-add"></i><span class="valor">R$38,00</span></a>
-                    
-                </li>
-                <li>
-
-                    <img src="img/combos/Combo-amigos-00-300x300.png" alt="" width="230">
-                    <p>2 Porções de Pasteis + Refrigerante</p>
-                    <a href="" class="btn"><i class="bx bx-cart-add"></i><span>R$16,00</span></a>
-                    
-                </li>
-                
-            </ul>
-            
-        </section>
-        <!------------- FIM DA AREA DE COMBOS ------------->
-
-        <!--------------- INICIO AREA MONTE SEU PEDIDO --------------->
-        <section class="monte-seu-pedido" id="monte-pedido">
             <div class="box-textos">
-                <h2>Monte Seu Pedido</h2>
-                <h3> Quem manda é você, monte o seu!</h3>
-                <p>"Confira a variedade que temos para montar um pedido do seu jeito! Na nossa plataforma, personalize as opções e crie a experiência que mais combina com o seu gosto. "</p>  
-                <button class="btn">Fazer pedido</button>         
+                <h2>Cadastre seu Produto</h2>
+                <p>Compartilhe a qualidade dos seus produtos conosco! Preencha o formulário abaixo para adicionar seus
+                itens ao nosso catálogo.</p>
+
+                <a href="produtos.php" class="btn">Ver Produtos</a>
             </div>
-            
-            <div class="box-ingredientes">
 
-                <div class="box">
-                    <img src="img/lanches-r/Hamburguer-01.png" alt="" width="120">
-                    <h3>Hamburguer Tradicional</h3>
-                    <a href="" class="btn1"><i class="bx bx-cart-add"></i><span>R$8,00</span></a>
-                    
-                </div>
-                    
-                <div class="box">
-                    <img src="img/lanches-r/Hamburguer-02.png" alt="" width="120">
-                    <h3> X - Bacon</h3>
-                    <p>R$8,00</p>
-                    
-                </div>
+            <form class="box-cadastro" action="salvar_produto.php" method="post" enctype="multipart/form-data">
+                
+                <label for="nome">Nome do Produto:</label>
+                <input type="text" id="nome" name="nome" required>
 
-                <div class="box">
-                    <img src="img/lanches-r/Hamburguer-03.png" alt="" width="120">
-                    <h3>X-Frango</h3>
-                    <p>R$8,00</p>
-                    
-                </div>
+                <label for="preco">Preço:</label>
+                <input type="number" id="preco" name="preco" step="0.01" required>
 
-                <div class="box">
-                    <img src="img/lanches-r/Hamburguer-04.png" alt="" width="120">
-                    <h3>X-Tudo</h3>
-                    <p>R$8,00</p>
-                    
-                </div>
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao" name="descricao" required></textarea>
 
-                <div class="box">
-                    <img src="img/lanches-r/Batatas-01.png" alt="" width="120">
-                    <h3>Batata Frita</h3>
-                    <p>R$8,00</p>
-                    
-                </div>
+                <!-- Adicione um campo de upload de imagem -->
+                <label for="imagem">Imagem do Produto:</label>
+                <input type="file" id="imagem" name="imagem" accept="image/*" required>
 
-                <div class="box">
-                    <img src="img/lanches-r/Refrigerante-01.png" alt="Presunto" width="120">
-                    <h3>Coca-cola</h3>
-                    <p>R$8,00</p>
-                    
-                </div>
-
-                <div class="box">
-                    <img src="img/lanches-r/Pizza-01.png" alt="" width="120">
-                    <h3>Pizza</h3>
-                    <p>R$8,00</p>
-                   
-                    
-                </div>
-
-                <div class="box">
-                    <img src="img/lanches-r/Pizza-02.png" alt="" width="120">
-                    <h3>Pizza</h3>
-                    <p>R$8,00</p>
-                    
-                   
-                </div>
-
-                <div class="box">
-                    <img src="img/lanches-r/Pizza-03.png" alt="" width="120">
-                    <h3>Pizza</h3>
-                    <p>R$8,00</p>
-                    
-                   
-                </div>
-                    
-                <div class="box">
-                    <img src="img/lanches-r/pizza-04.png" alt="" width="120">
-                    <h3>Pizza</h3>
-                    <p>R$8,00</p>
-                    
-                    
-                </div>
-                    
-                <div class="box">
-                    <img src="img/lanches-r/Pastel-03.png" alt="" width="120">
-                    <h3>Pastel</h3>
-                    <p>R$8,00</p>
-                    
-                </div>
-
-                <div class="box">
-                    <img src="img/lanches-r/Refrigerante-02.png" alt="" width="120">
-                    <h3>Pepsi</h3>
-                    <p>R$8,00</p>
-                     
-                </div>
-            </div>
-            
+                <input type="submit" value="Cadastrar Produto">
+            </form>
         </section>
-        <!--------------- FIM DA AREA MONTE SEU PEDIDO --------------->
+        <!--------------- FIM DA AREA CADASTRO DE PRODUTOS  --------------->
 
         <!--------------- INICIO DA AREA SOBRE --------------->
         <section class="sobre" id="sobre">
             <div class="text">
                 <h2>Sobre Nós</h2>
-                <p>"Bem-vindo ao Prime Delivery! Nós existimos para satisfazer sua fome por comidas deliciosas e práticas. Com um cardápio diversificado e uma entrega rápida, estamos comprometidos em tornar suas refeições mais convenientes e saborosas. Aqui acreditamos que a boa comida deve estar ao alcance de todos. Conte conosco para satisfazer seus desejos de fast food sempre que você precisar. Obrigado por escolher a nossa equipe para suas refeições. Estamos ansiosos para continuar servindo você da melhor maneira possível."</p>
+                <p>
+                    Bem-vindo ao [Nome do Seu Site] - Seu Destino para Compras Online e Delivery Rápido! Descubra uma variedade   única de produtos em um só lugar. Simplificamos o   processo de cadastro e compra para oferecer a você uma  experiência fácil e rápida, com a conveniência adicional de entrega rápida no seu endereço. <br> <br>
+                    <strong>O Que Oferecemos:</strong> <br> <br>
+                    <strong>Variedade Única:</strong> Encontre desde itens essenciais até produtos exclusivos. <br> 
+                    <strong>Cadastro Simples:</strong> Torne-se um vendedor em poucos passos fáceis. <br> 
+                    <strong>Entrega Rápida:</strong> Receba seus produtos no conforto da sua casa. <br> 
+                    <strong>Compras Confiáveis:</strong> Compromisso com qualidade e segurança na compra.
+                </p> <br>
+            
+
             </div>
             <div class="motinha">
-                <img src="img/Online_Shoping_29-768x614.jpg" alt="" width="600">
+                <img src="img/Post para Instagram Delivery Vermelho Simples.svg" alt="" width="600">
             </div>
         </section>
         <!--------------- FIM DA AREA SOBRE --------------->
 
-    </main>  
+    </main>
 
     <!--------------- INICIO DO RODAPE --------------->
     <footer>
-        <section class="rodape">    
+        <section class="rodape">
             <div class="box-conteiner" id="contato">
 
                 <!--------------- INICIO ITEM DO RODAPE --------------->
                 <div class="box">
-                    <img src="img/logos/Prime-Delivery-Roxo-e-Branco-150x150.png" alt="Prime Delivery" width="120">
-                    <p>"Saboreie o melhor da cidade sem sair de casa."</p>
+                    <img src="img/Prime-Delivery-Roxo-e-Branco-150x150.png" alt="Prime Delivery" width="120">
 
-                    <div class="redes-sociais">    
+                    <div class="redes-sociais">
                         <a href="" class="bx bxl-facebook-circle"></a>
                         <a href="" class="bx bxl-twitter"></a>
-                        <a href="" class="bx bxl-linkedin"></a>  
+                        <a href="" class="bx bxl-linkedin"></a>
                         <a href="" class="bx bxl-instagram-alt"></a>
                     </div>
-                </div>    
+                </div>
                 <!--------------- FIM ITEM DO RODAPE --------------->
 
                 <!--------------- INICIO ITEM DO RODAPE --------------->
-                <div class="box">    
-                    <h3>Faça seu pedido</h3>
+                <div class="box" id="contato">
+                    <h3>Contatos</h3>
                     <p class="bx bx-phone">(91) 6666 - 6666</p> <br>
                     <p class="bx bxl-whatsapp">(91) 6666 - 6666</p> <br>
                     <a href="" class="link"><i class="bx bx-envelope"></i>contato@primedelivery.com</a>
-                </div>    
+                </div>
                 <!--------------- FIM ITEM DO RODAPE --------------->
-                
+
                 <!--------------- INICIO ITEM DO RODAPE --------------->
-                <div class="box">    
+                <div class="box">
                     <h3>Localização</h3>
                     <p>
                         Rua da desesperança, nº66 <br>
@@ -309,18 +156,16 @@
                         Cidade do Lamento Noturno
 
                     </p>
-                </div>    
+                </div>
                 <!--------------- FIM ITEM DO RODAPE --------------->
             </div>
             <div class="direitos">
                 <p>&copy; 2023 - Todos os direitos reservados</p>
             </div>
-        </section>         
+        </section>
     </footer>
     <!--------------- FIM DO RODAPE --------------->
 
-   <!----------- INICIO LINK JAVASCRIPT ----------->
-   <script src="js/script.js"></script>
 </body>
 
 </html>

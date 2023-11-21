@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+:root {
+    /* Palheta de cores */
+    --roxo-claro:#9B5CB5;
+    --Roxo-medio: #581A84;
+    --Roxo-escuro: #480048;
+    --Prata: #C0C0C0;
+    --Dourado: #FFD700;
+    --Preto: #000;
+    --Branco: #FFF;
+    --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+
+/* ------------- INICIO DA BARRA DE NAVEGAÇÃO SUPERIOR ------------- */
+.topo-site {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 9%;
+    z-index: 1000;
+    background-color:var(--Preto);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    
+}
+
+.menu-site a {
+    color: var(--Dourado);
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0 3rem;
+}
+.menu-site a:hover{
+    color: var(--Roxo-medio);
+}
+
+.icons div{
+    color:var(--Dourado);
+    font-size: 2.5rem;
+    margin-left: 1.7rem;
+    cursor: pointer;
+}
+.icons div:hover{
+    color: var(--Roxo-medio);
+}
+
+
+/*---------- FIM DA BARRA DE NAVEGAÇÃO SUPERIOR -----------*/
+
+h1{
+    color: var(--Dourado);
+    text-shadow: var(--text-shadow);
+    font-size: 5rem;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+body {
+    margin-top: 15rem;
+    background-color: var(--Roxo-medio);
+}
+
+
+
+.container-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 3rem;
+    background-color:var(--Branco);
+    margin: 6rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0.4, 0.4);
+}
+
+.produto {
+    border: 5px solid var(--roxo-claro);
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px;
+    width: 250px;
+    text-align: center;
+}
+
+.produto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.preco {
+    font-weight: bold;
+    color: #27ae60; /* Cor verde, ajuste conforme necessário */
+}
+
+.descricao {
+    color: #555; /* Cor cinza, ajuste conforme necessário */
+}
+
+/* Estilos para o botão Ver Produtos no index.html */
+
+.ver-produtos-btn {
+    display: block;
+    text-align: center;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #3498db; /* Cor azul, ajuste conforme necessário */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.ver-produtos-btn:hover {
+    background-color: #2980b9; /* Cor azul mais escura, ajuste conforme necessário */
+}
+/* ------------------ INICIO DO RODAPÉ -----------------*/
+.rodape{
+    background-color: var(--Dourado);
+    text-align: center;
+
+}
+.box-conteiner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    align-items: center;
+}
+.box-conteiner .box h3{
+    font-size: 1.5rem;;
+    text-transform: capitalize;
+    color: var(--Roxo-medio);
+    padding: 1rem ;
+}
+.box-conteiner .box p{
+    font-size: 1.3rem;
+    color: var(--Roxo-escuro);
+    padding: .5rem;
+}
+.redes-sociais{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+.redes-sociais a{
+    color: var(--Roxo-escuro);
+    border: .1rem solid var(--Roxo-escuro);
+    border-radius: 10%;
+    width: 4.5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+
+}
+.redes-sociais a:hover{
+    background-color: var(--Roxo-medio);
+    color: #fff;
+    border: .1rem solid var(--Roxo-medio);
+}
+.link{
+  display: block;
+  font-size: 1.3rem;
+  line-height: 2;
+  padding: .5rem 0;
+  text-decoration: underline;
+  color: var(--Roxo-escuro)  
+}
+.link:hover{
+    text-shadow: var(--text-shadow);
+}
+.direitos p{
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--Roxo-escuro);
+    background-color: var(--Dourado);
+    padding: 10px 0;
+}
