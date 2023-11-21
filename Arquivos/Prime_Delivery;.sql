@@ -15,7 +15,7 @@ CREATE TABLE Cliente (
 desc Cliente;
 
 CREATE TABLE Pedidos (
-	ID_pedidos int NOT NULL auto_increment,
+    ID_pedidos int NOT NULL auto_increment,
     Data_pedido date NOT NULL,
     fk_Cliente_ID_Cliente int,
     primary key(ID_pedidos)
@@ -23,11 +23,13 @@ CREATE TABLE Pedidos (
 desc Pedidos;
 
 CREATE TABLE produtos (
-    ID_Produto int NOT NULL auto_increment,
-    Preco_Produto decimal(6,3) NOT NULL,
-    Nome_Produto varchar(90) NOT NULL,
-    PRIMARY KEY(ID_Produto)
-)default charset = utf8;
+   ID_Produto int NOT NULL AUTO_INCREMENT,
+   Preco_Produto decimal(10,2) NOT NULL,
+   Descricao_Produto text,
+   Imagem_Path varchar(255) DEFAULT NULL,
+   Nome_Produto varchar(90) NOT NULL,
+  PRIMARY KEY (ID_Produto)
+) DEFAULT CHARSET=utf8mb4;
 desc Produtos;
 
 CREATE TABLE Contem (
