@@ -8,8 +8,8 @@ if ($conexao->connect_error) {
 }
 
 // Consultar produtos no banco de dados
-$sql = "SELECT * FROM Produtos";
-$resultado = $conexao->query($sql);
+$consultaDosProdutos = "SELECT * FROM Produtos";
+$resultadoConsulta = $conexao->query($consultaDosProdutos);
 ?>
 
 <!DOCTYPE html>
@@ -53,19 +53,16 @@ $resultado = $conexao->query($sql);
 
 <body>
 
-
-    <!-- Barra de navegação e outros elementos comuns podem ser reutilizados aqui -->
-
     <section class="produtos">
         <div class="container-produtos">
             <?php
-            // Exibir os produtos
-            while ($row = $resultado->fetch_assoc()) {
+            // codigo pra exibir os produtos
+            while ($linhaProduto = $resultadoConsulta->fetch_assoc()) {
                 echo '<div class="produto">';
-                echo '<img src="' . $row['Imagem_Path'] . '" alt="Imagem do Produto">';
-                echo '<h3>' . $row['Nome_Produto'] . '</h3>';
-                echo '<p class="preco">Preço: R$ ' . $row['Preco_Produto'] . '</p>';
-                echo '<p class="descricao">' . $row['Descricao_Produto'] . '</p>';
+                echo '<img src="' . $linhaProduto['Imagem_Path'] . '" alt="Imagem do Produto">';
+                echo '<h3>' . $linhaProduto['Nome_Produto'] . '</h3>';
+                echo '<p class="preco">Preço: R$ ' . $linhaProduto['Preco_Produto'] . '</p>';
+                echo '<p class="descricao">' . $linhaProduto['Descricao_Produto'] . '</p>';
                 echo '</div>';
             }
             ?>
