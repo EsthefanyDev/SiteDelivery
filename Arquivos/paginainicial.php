@@ -108,7 +108,7 @@ $resultado = $conexaoD->query($sql);
                 <p>"Bem-vindo ao Prime Delivery! Nós existimos para satisfazer sua fome por comidas deliciosas e práticas. Com um cardápio diversificado e uma entrega rápida, estamos comprometidos em tornar suas refeições mais convenientes e saborosas. Aqui acreditamos que a boa comida deve estar ao alcance de todos. Conte conosco para satisfazer seus desejos de fast food sempre que você precisar. Obrigado por escolher a nossa equipe para suas refeições. Estamos ansiosos para continuar servindo você da melhor maneira possível."</p>
             </div>
             <div class="motinha">
-                <img src="img/Online_Shoping_29-768x614.jpg" alt="" width="600">
+                <img src="" alt="" width="600">
             </div>
         </section>
         <!--------------- FIM DA AREA SOBRE --------------->

@@ -106,7 +106,7 @@ nav a:hover{
 /* --------------- INICIO DO BANNER -------------- */
 .banner {
     display: flex;
-    height: 700px;
+    height: 100vh;
     width: 100%;
     position: relative; 
     background: url('banner01.png') no-repeat center center fixed;
@@ -174,7 +174,7 @@ nav a:hover{
     padding: 3rem;
     margin: 2.5rem;
     border-style: double;
-    color: var(--Dourado);
+    color: var(--roxo);
     box-shadow: 0 4px 8px rgba(0, 0, 0.4, 0.4);
     margin-top: .2rem;
     border-radius: 3px;
@@ -231,7 +231,7 @@ nav a:hover{
 .sobre .text h2{
     margin-bottom: 20px;
     font-size: 40px;
-    color: var(--Roxo-medio);
+    color: var(--Roxo);
     text-shadow: var(--text-shadow);
 }
 .sobre .text P{
@@ -282,9 +282,9 @@ nav a:hover{
 
 }
 .rodape .box-conteiner .box .redes-sociais a:hover{
-    background-color: var(--Roxo-medio);
+    background-color: var(--Roxo);
     color: #fff;
-    border: .1rem solid var(--Roxo-medio);
+    border: .1rem solid var(--Roxo);
 }
 .rodape .box-conteiner .box .link{
   display: block;
@@ -301,7 +301,7 @@ nav a:hover{
     text-align: center;
     font-size: 1.2rem;
     color: var(--Branco);
-    background-color: var(--Roxo-medio);
+    background-color: var(--Roxo);
     padding: 10px 0;
 }
 /* ------------------ FIM DO RODAPÉ -----------------*/    
