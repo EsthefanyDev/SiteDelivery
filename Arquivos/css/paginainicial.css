@@ -1,0 +1,372 @@
+/* Fonte importada */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transform: .2 linear;
+}
+
+:root {
+    /* Palheta de cores */
+    --Roxo:  #581A84;
+    --Roxo-escuro: #480048;
+    --Prata: #C0C0C0;
+    --Dourado: #FFD700;
+    --Preto: #000;
+    --Branco: #FFF;
+    --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+   --RoxoProfundo: #581A84; 
+    --VermelhoCoral:#FF5E5B;
+    --AmareloPêssego:#FDCB82;
+    --VerdeEsmeralda:#63B598;
+    --RoxoAvermelhado:#4F345A;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.btn{
+    display: inline-block;
+    font-size: 1.5rem;
+    color: var(--Roxo-escuro);
+    background-color:var(--Dourado);
+    margin-top: 1rem;
+    padding: .8rem 3rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.btn:hover{
+    background-color: #C0C0C0;
+    color:var(--roxo);
+}
+
+
+
+/* --------- INICIO DA BARRA DE NAVEGAÇÃO SUPERIOR --------- */
+.topo-site {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 9%;
+    z-index: 1000;
+    background-color:var(--Preto);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+
+/* INICIO MENU */
+nav a {
+    color: var(--Dourado);
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin: 0 3rem;
+}
+nav a:hover{
+    color: var(--Roxo);
+}
+/* FIM MENU */
+
+/* INICIO ICONES */
+.icons i{
+    font-size: 2rem;
+    margin: .4rem;
+    align-items: center;
+}
+.icons a{
+    color:var(--Dourado);
+    font-size: 1.7rem;
+    margin-left: 1.7rem;
+    cursor: pointer;
+}
+.icons a:hover{
+    color: var(--Roxo);
+}
+/* FIM ICONES */
+
+/*------- FIM DA BARRA DE NAVEGAÇÃO SUPERIOR --------*/
+
+/* --------------- INICIO DO BANNER -------------- */
+.banner {
+    display: flex;
+    height: 700px;
+    width: 100%;
+    position: relative; 
+    background: url('banner01.png') no-repeat center center fixed;
+    background-size: cover; 
+}
+
+
+.texto-sobre-img {
+    position: absolute;
+    top: 42%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.texto-sobre-img h1 {
+    margin-top: 30%;
+    font-size: 65px;
+    font-weight: bold;
+    color: var(--Dourado);
+    text-shadow: var(--text-shadow);
+}
+.texto-sobre-img h2 {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    text-shadow: var(--text-shadow);
+}
+/* --------------- FIM DO BANNER -------------- */
+
+/*---------INICIO DA AREA DE PRODUTOS-----------*/
+.nossosLanches{
+    margin-bottom: 0%;
+    padding: 2rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    justify-content: center;
+    background-color: var(--Roxo);
+    text-align: center;
+    font-size: 2.3rem;
+    color: var(--Dourado);
+    text-shadow: var(--text-shadow);
+    border-style:double;
+    border-radius: 3px;
+}
+.combos{
+    background: url('background-02.png') no-repeat center center;
+    background-size: cover;
+    padding: 2.5rem;
+}
+.combos h2{
+    text-align: center;
+    font-size: 3rem;
+    color: var(--Roxo-medio);
+    text-shadow: var(--text-shadow);
+}
+.produtos{
+    display: flex;
+   
+}
+.container-produtos {
+    background-color: #FFF;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 3rem;
+    margin: 2.5rem;
+    border-style: double;
+    color: var(--Dourado);
+    box-shadow: 0 4px 8px rgba(0, 0, 0.4, 0.4);
+    margin-top: .2rem;
+    border-radius: 3px;
+}
+
+.produto {
+    padding: 15px;
+    margin: 15px;
+    width: 250px;
+    text-align: center;
+}
+
+.produto img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.produto h3{
+    font-size: 1.8rem;
+    color: var(--);
+    
+}
+
+.preco {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: green;
+}
+
+.descricao {
+    color: #555;
+    font-size: 1.5rem;
+}
+
+/*---------------FIM DA AREA DE PRODUTOS----------------*/
+
+/* -------------- INICIO DA AREA SOBRE ------------------*/
+.sobre{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+.sobre .motinha{
+    padding: 0;
+    margin: 0;
+}
+.sobre .text{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    margin: 40px;
+}
+.sobre .text h2{
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: var(--Roxo-medio);
+    text-shadow: var(--text-shadow);
+}
+.sobre .text P{
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: justify;
+    color: var(--Roxo-escuro);
+}
+/* -------------- FIM DA AREA SOBRE ------------------*/
+
+/* ------------------ INICIO DO RODAPÉ -----------------*/
+.rodape{
+    background-color: var(--Dourado);
+    text-align: center;
+
+}
+.rodape .box-conteiner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    align-items: center;
+}
+.rodape .box-conteiner .box h3{
+    font-size: 1.5rem;;
+    text-transform: capitalize;
+    color: var(--Roxo-medio);
+    padding: 1rem ;
+}
+.rodape .box-conteiner .box p{
+    font-size: 1.3rem;
+    color: var(--Roxo-escuro);
+    padding: .5rem;
+}
+.rodape .box-conteiner .box .redes-sociais{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+.rodape .box-conteiner .box .redes-sociais a{
+    color: var(--Roxo-escuro);
+    border: .1rem solid var(--Roxo-escuro);
+    border-radius: 10%;
+    width: 4.5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+
+}
+.rodape .box-conteiner .box .redes-sociais a:hover{
+    background-color: var(--Roxo-medio);
+    color: #fff;
+    border: .1rem solid var(--Roxo-medio);
+}
+.rodape .box-conteiner .box .link{
+  display: block;
+  font-size: 1.3rem;
+  line-height: 2;
+  padding: .5rem 0;
+  text-decoration: underline;
+  color: var(--Roxo-escuro)  
+}
+.rodape .box-conteiner .box .link:hover{
+    text-shadow: var(--text-shadow);
+}
+.direitos p{
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--Branco);
+    background-color: var(--Roxo-medio);
+    padding: 10px 0;
+}
+/* ------------------ FIM DO RODAPÉ -----------------*/    
+
+
+/* ------------ INICIO DAS CONFIG RESPOSIVIDADE ------------ */
+
+@media(max-width:991px){
+
+    html{
+        font-size: 55%;
+        padding: 0;
+    }
+    section{
+        padding: 3rem;
+    }
+    .topo-site{
+        padding: 1rem;
+    }
+}
+@media(max-width:768px){
+    
+    .banner img{
+        margin-top: 10rem;
+        height: 250px;
+        width: 100%;
+    }
+    .banner .texto-sobre-img h1,
+    .banner .texto-sobre-img h2{
+        margin-top: 9rem;
+        font-size: 4rem;
+        margin-left: 20%;
+    } 
+    
+    .sobre{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0%;
+        
+    }
+    .sobre .text{
+        margin: .1rem;
+        text-align: center;
+    }
+    .sobre .motinha img{
+        width: 100%;
+        height: 90%;
+    }
+    
+    .box-conteiner{
+        background-color: #FFD700;
+        
+    }
+    
+}   
+@media(max-width:450px){
+    html{
+        font-size: 15%;
+    }
+    .topo-site .menu-site a{
+        color: #FFF;
+        border-bottom: 1px solid var(--Prata);
+        border-bottom-style: cotted;
+    }  
+}
+    
+/* ------------ FIM DAS CONFIG RESPOSIVIDADE ------------ */

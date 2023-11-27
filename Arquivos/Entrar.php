@@ -6,7 +6,7 @@ if(isset($_POST['Nome_Cliente']) || isset($_POST['Senha_Cliente'])) {
     if(strlen($_POST['Nome_Cliente'])==0) {
         echo "Preencha seu Nome";
     } else if(strlen($_POST['Senha_Cliente'])==0) {
-        echo "Preench sua Senha";
+        echo "Preencha sua Senha";
     } else {
         
         $Nome_Cliente = $mysqli->real_escape_string($_POST['Nome_Cliente']);
@@ -27,7 +27,7 @@ if(isset($_POST['Nome_Cliente']) || isset($_POST['Senha_Cliente'])) {
             $_SESSION['ID_Cliente'] = $usuario['ID_Cliente'];
             $_SESSION['Nome_Cliente'] = $usuario['Nome_Cliente'];
     
-            header("Location: inicial.html");
+            header("Location: RegistreProdutos");
 
             
         } else {

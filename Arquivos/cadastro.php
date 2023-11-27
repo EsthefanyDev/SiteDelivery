@@ -16,7 +16,7 @@ $sql_code = "SELECT * FROM Cliente WHERE Nome_Cliente = '$Nome_Cliente' OR Senha
 $retorno = mysqli_query($conexao, $sql_code);
 
 if(mysqli_num_rows($retorno)>0) {
-    echo 'Esses usuário já existe, clique aqui pra fazer o  <a href="login.html"> Login</a>';;
+    echo 'Esse usuário já existe, clique aqui pra fazer o  <a href="login.html"> Login</a>';;
 } else {
 
     $Nome_Cliente = $_POST['Nome_Cliente'];
@@ -24,7 +24,8 @@ if(mysqli_num_rows($retorno)>0) {
     $Endereco_Cliente = $_POST['Endereco_Cliente'];
     $Celular = $_POST['Celular'];
 
-    $sql_code = "INSERT INTO cliente (ID_Cliente, Nome_Cliente, Senha_Cliente, Endereco_Cliente, Celular) VALUES (NULL, '$Nome_Cliente', '$Senha_Cliente', '$Endereco_Cliente', '$Celular')";
+    $sql_code = "INSERT INTO cliente (ID_Cliente, Nome_Cliente, Senha_Cliente, Endereco_Cliente, Celular) 
+    VALUES (NULL, '$Nome_Cliente', '$Senha_Cliente', '$Endereco_Cliente', '$Celular')";
     $resultado = mysqli_query($conexao, $sql_code);
     echo"Usuario cadastrado";
     header("Location: login.html");
