@@ -45,10 +45,10 @@
                                 <td><?php echo $dados['Preco_Produto'];?></td>
                                 <td><?php echo $dados['Descricao_Produto'];?></td>
                                 <td>
-                                    <a href="pg-editarT_Produto.php?ID_Cliente=<?php echo $dados['ID_Produto'];?>">
+                                    <a href="pg-editarT_Produto.php?ID_Produto=<?php echo $dados['ID_Produto'];?>">
                                     <i class='bx bx-edit'></i>
                                     </a>
-                                    <a href="excluirProduto .php?ID_Produto=<?php echo $dados['ID_Produto'];?>">
+                                    <a href="ExcluirProdutos.php?ID_Produto=<?php echo $dados['ID_Produto'];?>">
                                     <i class='bx bx-trash'></i>
                                     </a>
                                     

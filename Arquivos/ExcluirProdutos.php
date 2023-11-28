@@ -1,14 +1,15 @@
 <?php
-    include "conexaoDB";
+    include "conexaoDB.php";
 
-    $Id_Produto = $_POST['id'];
+    $ID_Produto = $_POST['ID_Produto'];
     
 
     $SQL = "DELETE FROM produtos
-            WHERE id = $Id_Produto";
+            WHERE id = $ID_Produto";
 
-    $db->query($SQL) or die("Query falhou");
+    $mysqli->query($SQL) or die("Query falhou");
 
-    header("Location: produtos.php");
+    // header("Location: pg-Database_Produtos.php");
+    header("Location: teste.php");
 
 ?>

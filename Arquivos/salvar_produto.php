@@ -31,11 +31,12 @@
             text-align: center;
             margin-top: 20px;
         }
-        a{
+
+        a {
             color: white;
             text-decoration: none;
             padding: 10px;
-            background-color:#581A84;
+            background-color: #581A84;
             border-radius: 5px;
             bo
 
@@ -70,9 +71,8 @@
     <div class="mensagem">
         <p><?php echo $mensagem; ?></p>
         <a href="pg-RegistreProdutos.html">OK</a>
-    </div>        
+    </div>
 
 </body>
 
 </html>
-
