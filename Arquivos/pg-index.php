@@ -1,4 +1,3 @@
-
 <?php
 // Conectar ao banco de dados
 $conexaoD = mysqli_connect("localhost", "root", "", "prime_delivery");
@@ -34,11 +33,11 @@ $resultado = $conexaoD->query($sql);
 
     <!------------- INICIO DA BARRA DE NAVEGAÇÃO SUPERIOR ------------->
     <header class="topo-site">
-        <!-- INICIO DA LOGO MARCA -->
+        <!-- INICIO DA LOGO -->
         <a   href="index.php" class="logo">
             <img src="img/logos/logo-amarelo_roxo-removebg.png" alt="logo" width="80">
         </a>
-        <!-- FIM DA LOGO MARCA -->
+        <!-- FIM DA LOGO  -->
 
         <!-- INICIO MENU -->
         <nav>
@@ -163,8 +162,7 @@ $resultado = $conexaoD->query($sql);
     </footer>
     <!--------------- FIM DO RODAPE --------------->
 
-   <!----------- INICIO LINK JAVASCRIPT ----------->
-   <script src="js/script.js"></script>
+   
 </body>
 
 </html>
