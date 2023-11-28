@@ -1,4 +1,3 @@
-
 <?php
 // Conectar ao banco de dados
 $conexaoD = mysqli_connect("localhost", "root", "", "prime_delivery");
