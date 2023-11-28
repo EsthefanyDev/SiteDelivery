@@ -163,8 +163,7 @@ $resultado = $conexaoD->query($sql);
     </footer>
     <!--------------- FIM DO RODAPE --------------->
 
-   <!----------- INICIO LINK JAVASCRIPT ----------->
-   <script src="js/script.js"></script>
+   
 </body>
 
 </html>
