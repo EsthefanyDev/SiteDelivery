@@ -23,14 +23,6 @@
     --Preto: #000;
     --Branco: #FFF;
     --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-
-   --RoxoProfundo: #581A84; 
-    --VermelhoCoral:#FF5E5B;
-    --AmareloPêssego:#FDCB82;
-    --VerdeEsmeralda:#63B598;
-    --RoxoAvermelhado:#4F345A;
-}
-
 html{
     font-size: 62.5%;
     overflow-x: hidden;

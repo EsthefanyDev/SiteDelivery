@@ -100,12 +100,23 @@ html{
 /*---------- FIM DA BARRA DE NAVEGAÇÃO SUPERIOR -----------*/
 
 /* --------------- INICIO DO BANNER -------------- */
+body{
+    background: url('background-02.png') no-repeat center center fixed;
+    background-size: cover; 
+}
+
 
 .texto-sobre-img {
-    position: absolute;
-    top: 35%;
-    right: 7%;
     text-align: center;
+    margin-top: 10%;
+    padding: 2rem;
+    border-style: double;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    border-color: #FFD700;
+    background-color: ;
+
+    
 }
 .texto-sobre-img h1 {
     font-size: 50px;
@@ -119,20 +130,13 @@ html{
     color: white;
     text-shadow: var(--text-shadow);
 }
-.texto-sobre-img h3{
-    margin: 3rem;
-    text-shadow: var(--text-shadow);
-    font-size: 1.7rem;
-    font-style: italic;
-    color: var(--Prata);
-}
+
 
 /* --------------- FIM DO BANNER -------------- */
 
 /* -------------- INICIO DA AREA DE TEXTO CADASTRO DE PRODUTOS -------------- */
 
 .cadastro-produtos {
-    background-color: var(--Prata);
     padding: 20px;
     text-align: left;
     display: flex;
@@ -192,9 +196,10 @@ html{
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 2px solid var(--Dourado);
     border-radius: 4px;
     box-sizing: border-box;
+    font-size: 16px;
 }
 
 .box-cadastro textarea {
