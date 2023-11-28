@@ -26,5 +26,5 @@ echo ($mysqli->query($sql)) ? 'Produto cadastrado com sucesso.' : 'Erro ao cadas
 // Fechar a conexão
 $mysqli->close();
 echo '<br> <br>';
-echo '<a href="inicial.html">Voltar à Página Inicial</a>';
+echo '<a href="index.php">Voltar à Página Inicial</a>';
 ?>

@@ -27,7 +27,7 @@ $resultado = $conexao->query($sql);
 <!------------- INICIO DA BARRA DE NAVEGAÇÃO SUPERIOR ------------->
 <header class="topo-site">
     <!-- INICIO DA LOGO MARCA -->
-    <a href="paginainicial.php" class="logo">
+    <a href="index.php" class="logo">
         <img src="img/logo-amarelo_roxo-removebg.png" alt="logo" width="80">
     </a>
     <!-- FIM DA LOGO MARCA -->
