@@ -32,7 +32,7 @@
                             <th width="200">Nome do produto</th>
                             <th>Preço</th>
                             <th>Descrição</th>
-                            <th></th>
+                            <th>imagem</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -44,6 +44,8 @@
                                 <td><?php echo $dados['Nome_Produto'];?></td>
                                 <td><?php echo $dados['Preco_Produto'];?></td>
                                 <td><?php echo $dados['Descricao_Produto'];?></td>
+                                <td>
+                                <!-- <td><?php echo $dados['Imagem_path'];?></td> -->
                                 <td>
                                     <a href="pg-editarT_Produto.php?ID_Produto=<?php echo $dados['ID_Produto'];?>">
                                     <i class='bx bx-edit'></i>
