@@ -15,36 +15,30 @@
     --Dourado: #FFD700;
     --Preto: #000;
     --Branco: #FFF;
-    --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 body{
     background-image: url(background-02.png);
 }
 
-div{
+
+.topo {
+    background-color: var(--Preto);
+    color: white;
+    padding: 10px;
     display: flex;
-    padding: 20px;
-    background-color: #000;
-    justify-items: center;
-   
-    
+    justify-content: space-around;
+    align-items: center;
 }
-div a, i{
-    font-size: 20px;
-    font-weight: 600;
-    color: #FFD700;
-    margin:2px;
+
+.topo a {
+    color: var(--Dourado);
+    text-decoration: none;
+    margin: 0 10px;
 }
-div a:hover{
+.topo a:hover {
     text-decoration: underline;
 }
 
-div h1{
-    margin-left: 35%;
-    color: var(--Dourado);
-    font-size: 30px;
-    text-decoration:underline;
-}
 table{
     border-collapse: collapse;
     width: 80%;
@@ -64,13 +58,9 @@ th {
 tr:hover {
     background-color: var(--Prata);
 }
-
-a .novoC{
-    text-decoration: none;
-    color: #333;
-    margin-left: 30px;
+.topo{
+    display: flex;
 }
-
 .bx-edit{
     font-size: 30px;
     color: #581A84;

@@ -1,9 +1,9 @@
 <?php 
     include "conexaoDB.php";
 
-    $sql = "SELECT * FROM Cliente ORDER BY Nome_Cliente";
+    $sql = "SELECT * FROM produtos ORDER BY Nome_Produto";
    
-    $Cliente = $mysqli->query($sql) or die("Erro na busca dos Clientes"); 
+    $produtos = $mysqli->query($sql) or die("Erro na busca dos Produtos"); 
 ?>
 
 <!DOCTYPE html>
@@ -17,11 +17,11 @@
 <body>
     <div class="topo">
         <a href="pg-RegistreProdutos.html"><i class='bx bx-left-arrow-circle'></i>Voltar</a><br><br>
-        <h1>Clientes cadastrados</h1>
-        <a href="pg-cadastroClientes.html" class="novoC">Adicionar novo cliente</a>
+        <h1>Produtos cadastrados</h1>
+        <a href="pg-cadastroClientes.html" class="novoC">Adicionar novo Produto</a>
     </div> 
     <?php
-       if ($Cliente->num_rows == 0) echo "<p>Não existem Cliente cadastrados</p>";
+       if ($produtos->num_rows == 0) echo "<p>Não existem produtos cadastrados</p>";
        else{
      ?>   
 
@@ -29,28 +29,26 @@
                     <thead>
                         <tr>
                             <th>Código</th>
-                            <th width="200">Nome_Cliente</th>
-                            <th>Senha_Cliente</th>
-                            <th>Endereco_Cliente</th>
-                            <th>Celular</th>
+                            <th width="200">Nome do produto</th>
+                            <th>Preço</th>
+                            <th>Descrição</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
-                            while ($dados = $Cliente->fetch_assoc()) {
+                            while ($dados = $produtos->fetch_assoc()) {
                         ?>  
                             <tr>
-                                <td><?php echo $dados['ID_Cliente'];?></td>
-                                <td><?php echo $dados['Nome_Cliente'];?></td>
-                                <td><?php echo $dados['Senha_Cliente'];?></td>
-                                <td><?php echo $dados['Endereco_Cliente'];?></td>
-                                <td><?php echo $dados['Celular'];?></td>
+                                <td><?php echo $dados['ID_Produto'];?></td>
+                                <td><?php echo $dados['Nome_Produto'];?></td>
+                                <td><?php echo $dados['Preco_Produto'];?></td>
+                                <td><?php echo $dados['Descricao_Produto'];?></td>
                                 <td>
-                                    <a href="pg-editarT_Cliente.php?ID_Cliente=<?php echo $dados['ID_Cliente'];?>">
+                                    <a href="pg-editarT_Produto.php?ID_Cliente=<?php echo $dados['ID_Produto'];?>">
                                     <i class='bx bx-edit'></i>
                                     </a>
-                                    <a href="excluirT_Cliente.php?ID_Cliente=<?php echo $dados['ID_Cliente'];?>">
+                                    <a href="excluirProduto .php?ID_Produto=<?php echo $dados['ID_Produto'];?>">
                                     <i class='bx bx-trash'></i>
                                     </a>
                                     

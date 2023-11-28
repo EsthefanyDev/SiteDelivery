@@ -9,6 +9,5 @@
 
     $mysqli->query($SQL) or die("Query falhou");
 
-    header("Location: Database_Cliente.php");
-
+    header("Location: pg-Database_Cliente.php");
 ?>
