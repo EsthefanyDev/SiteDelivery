@@ -1,7 +1,7 @@
 <?php
-// Iniciar a sessão no início do código
+
 session_start();
-// Conecta ao Banco de dados
+
 $conexao = mysqli_connect("localhost", "root", "", "prime_delivery");
 if(!$conexao) {
     echo"Nao conectado ";

@@ -13,7 +13,7 @@
     <!--INICIO CSS ICONES-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- INICIO LINK CSS -->
-    <link rel="stylesheet" href="css/registreProdutos.css">
+    <link rel="stylesheet" href="style-registreProdutos.css">
 
 </head>
 
@@ -22,16 +22,17 @@
     <!------------- INICIO DA BARRA DE NAVEGAÇÃO SUPERIOR ------------->
     <header class="topo-site">
         <!-- INICIO DA LOGO MARCA -->
-        <a href="index.php" class="logo">
+        <a href="pg-index.php" class="logo">
             <img src="img/logo-amarelo_roxo-removebg.png" alt="logo" width="80">
         </a>
         <!-- FIM DA LOGO MARCA -->
 
         <!-- INICIO MENU -->
         <nav class="menu-site">
-            <a id="inicio" href="paginainicial.php">Voltar ao Ínicio</a>
+            <a id="inicio" href="pg-index.php">Voltar ao Ínicio</a>
             <a href="#cadastro-produtos">Registre Produtos</a>
-            <a href="produtos.php">Produtos</a>
+            <a href="pg-produtos.php">Produtos</a>
+            <a href="pg-Database_Cliente.php">Clientes</a>
         </nav>
         <!-- FIM MENU -->
 
@@ -66,7 +67,7 @@
                 <p>Compartilhe a qualidade dos seus produtos conosco! Preencha o formulário abaixo para adicionar seus
                 itens ao nosso catálogo.</p>
 
-                <a href="produtos.php" class="btn">Ver Produtos</a>
+                <a href="pg-produtos.php" class="btn">Ver Produtos</a>
             </div>
 
             <form class="box-cadastro" action="salvar_produto.php" method="post" enctype="multipart/form-data">
@@ -80,7 +81,6 @@
                 <label for="descricao">Descrição:</label>
                 <textarea id="descricao" name="descricao" required></textarea>
 
-                <!-- Adicione um campo de upload de imagem -->
                 <label for="imagem">Imagem do Produto:</label>
                 <input type="file" id="imagem" name="imagem" accept="image/*" required>
 

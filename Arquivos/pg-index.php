@@ -25,7 +25,7 @@ $resultado = $conexaoD->query($sql);
     <!--INICIO CSS ICONES-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- INICIO LINK CSS -->
-    <link rel="stylesheet" href="css/paginainicial.css">
+    <link rel="stylesheet" href="style-index.css">
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
     
 </head>
@@ -51,7 +51,7 @@ $resultado = $conexaoD->query($sql);
 
         <!-- INICIO ICONES -->
         <div class="icons">
-            <a href="login.html" id="login"><i class='bx bxs-user'></i>Entrar</a>
+            <a href="pg-login.html" id="login"><i class='bx bxs-user'></i>Entrar</a>
 
             <a href="sair.php" id="logout"><i class='bx bx-log-out'>Sair</i></a>
             

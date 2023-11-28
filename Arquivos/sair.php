@@ -5,5 +5,5 @@ if(!isset($_SESSION)) {
 
 session_destroy();
 
-header("Location: login.html");
+header("Location: pg-login.html");
 ?>

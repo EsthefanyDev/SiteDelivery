@@ -11,10 +11,14 @@
 <head>
     <meta charset="utf-8"/>
     <title>CRUD</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./style-Database_Cliente.css">
 </head>
 <body>
-    <a href="cadastro.html">Cadastrar cliente</a><br><br>
-    <a href="inicial.html">Voltar para a pagina principal</a><br><br>
+    <div>
+        <a href="pg-RegistreProdutos.html"><i class='bx bx-left-arrow-circle'></i>Voltar</a><br><br>
+        <h1>Clientes cadastrados</h1>
+    </div>
     <?php
        if ($Cliente->num_rows == 0) echo "<p>Não existem Cliente cadastrados</p>";
        else{
@@ -43,10 +47,10 @@
                                 <td><?php echo $dados['Celular'];?></td>
                                 <td>
                                     <a href="editarT_Cliente.php?ID_Cliente=<?php echo $dados['ID_Cliente'];?>">
-                                        <img src="img/edit.png" width="20">
+                                    <i class='bx bx-edit'></i>
                                     </a>
                                     <a href="excluirT_Cliente.php?ID_Cliente=<?php echo $dados['ID_Cliente'];?>">
-                                        <img src="img/trash.png" width="20">
+                                    <i class='bx bx-trash'></i>
                                     </a>
                                     
                                 </td>

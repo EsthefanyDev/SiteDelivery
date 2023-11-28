@@ -20,8 +20,7 @@ $resultadoConsulta = $conexao->query($consultaDosProdutos);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Produtos - Prime Delivery</title>
-    <link rel="stylesheet" href="css/inicial.css">
-    <link rel="stylesheet" href="css/produtos.css">
+    <link rel="stylesheet" href="style-produtos.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <!------------- INICIO DA BARRA DE NAVEGAÇÃO SUPERIOR ------------->
@@ -34,7 +33,7 @@ $resultadoConsulta = $conexao->query($consultaDosProdutos);
 
     <!-- INICIO MENU -->
     <nav class="menu-site">
-        <a href="RegistreProdutos.html"> Voltar</a>
+        <a href="pg-RegistreProdutos.html"> Voltar</a>
         <a href="EditarProdutos.php">Editar Tabela</a>
     </nav>
     <!-- FIM MENU -->

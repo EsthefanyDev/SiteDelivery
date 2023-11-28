@@ -27,7 +27,7 @@ if(isset($_POST['Nome_Cliente']) || isset($_POST['Senha_Cliente'])) {
             $_SESSION['ID_Cliente'] = $usuario['ID_Cliente'];
             $_SESSION['Nome_Cliente'] = $usuario['Nome_Cliente'];
     
-            header("Location: RegistreProdutos");
+            header("Location: pg-RegistreProdutos");
 
             
         } else {
