@@ -1,0 +1,383 @@
+/* Fonte importada */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transform: .2 linear;
+}
+
+
+:root {
+    font-size: 62.5%;/* font-size: 16px; */
+    
+    /* Palheta de cores */
+    --roxo-claro:#9B5CB5;
+    --Roxo-medio: #581A84;
+    --Roxo-escuro: #480048;
+    --Prata: #C0C0C0;
+    --Dourado: #FFD700;
+    --Preto: #000;
+    --Branco: #FFF;
+    --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.btn{
+    display: inline-block;
+    font-size: 1.5rem;
+    color: var(--Roxo-escuro);
+    background-color:var(--Dourado);
+    margin-top: 1rem;
+    padding: .8rem 3rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.btn:hover{
+    background-color: #C0C0C0;
+    color:var(--Roxo-medio);
+}
+
+
+
+/* ------------- INICIO DA BARRA DE NAVEGAÇÃO SUPERIOR ------------- */
+.topo-site {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 9%;
+    z-index: 1000;
+    background-color:var(--Preto);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.menu-site a {
+    color: var(--Dourado);
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0 3rem;
+}
+
+.topo-site .menu-site a:hover{
+    color: var(--Roxo-medio);
+}
+
+.topo-site .icons div{
+    color:var(--Dourado);
+    font-size: 2.5rem;
+    margin-left: 1.7rem;
+    cursor: pointer;
+}
+.topo-site .icons div:hover{
+    color: var(--Roxo-medio);
+}
+
+
+
+/*---------- FIM DA BARRA DE NAVEGAÇÃO SUPERIOR -----------*/
+
+/* --------------- INICIO DO BANNER -------------- */
+.banner {
+    display:block;  
+}
+.banner img {
+    margin-top: 5rem;
+    width: 100%;
+}
+.texto-sobre-img {
+    position: absolute;
+    margin-right: 30px;
+    top: 35%;
+    right: 7%;
+    text-align: center;
+}
+.texto-sobre-img h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--Dourado);
+    text-shadow: var(--text-shadow);
+}
+.texto-sobre-img h2 {
+    font-size: 44px;
+    font-weight: bold;
+    color: white;
+    text-shadow: var(--text-shadow);
+}
+.texto-sobre-img h3{
+    margin: 3rem;
+    text-shadow: var(--text-shadow);
+    font-size: 1.7rem;
+    font-style: italic;
+    color: var(--Prata);
+}
+
+/* --------------- FIM DO BANNER -------------- */
+
+/* -------------- INICIO DA AREA DE TEXTO CADASTRO DE PRODUTOS -------------- */
+
+.cadastro-produtos {
+    background-color: var(--Prata);
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    width: 100%;
+    padding: 4rem; 
+}
+
+.box-textos{
+    background-color: var(--Roxo-medio);
+    padding: 20px;
+    height: 500px;
+    width: 40%;
+    text-align: center;
+  
+    
+}
+.cadastro-produtos .box-textos h2{
+    color: var(--Dourado);
+    text-shadow: var(--text-shadow);
+    font-size: 2.7rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.cadastro-produtos .box-textos p{
+    color: var(--Branco);
+    text-shadow: var(--text-shadow);
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 2rem;
+}
+.cadastro-produtos .box-textos .btn{
+    margin: 6rem;
+}
+/* --------- FIM DA AREA DE TEXTO CADASTRO DE PRODUTOS --------- */
+
+/* ------ INICIO DO FORMULARIO CADASTRO DE PRODUTOS ------ */
+
+.box-cadastro {
+    background-color: #fff; 
+    padding: 30px;
+    width: 60%;
+    max-height: 500px;
+}
+
+.box-cadastro label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    color: var(--Roxo-medio);
+    text-shadow: var(--text-shadow);
+}
+
+.box-cadastro input,
+.box-cadastro textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.box-cadastro textarea {
+    resize: vertical;
+    height: 60px;
+}
+
+.box-cadastro input[type="submit"] {
+    background-color: var(--Roxo-medio);
+    color: var(--Dourado);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-weight:500;
+}
+
+.box-cadastro input[type="submit"]:hover {
+    background-color: var(--Dourado);
+    color: #581A84;
+}
+
+/* ------ FIM DO FORMULARIO CADASTRO DE PRODUTOS ------ */
+
+/* -------------- INICIO DA AREA SOBRE ------------------*/
+.sobre{
+    display: flex;
+    justify-content: space-between;
+}
+.motinha{
+    padding: 0;
+    margin: 0;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    margin: 40px;
+}
+.text h2{
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: var(--Roxo-medio);
+    text-shadow: var(--text-shadow);
+}
+.text P{
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: justify;
+    color: var(--Roxo-escuro);
+}
+/* -------------- FIM DA AREA SOBRE ------------------*/
+
+/* ------------------ INICIO DO RODAPÉ -----------------*/
+.rodape{
+    background-color: var(--Dourado);
+    text-align: center;
+
+}
+.box-conteiner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    align-items: center;
+}
+.box-conteiner .box h3{
+    font-size: 1.5rem;;
+    text-transform: capitalize;
+    color: var(--Roxo-medio);
+    padding: 1rem ;
+}
+.box-conteiner .box p{
+    font-size: 1.3rem;
+    color: var(--Roxo-escuro);
+    padding: .5rem;
+}
+.redes-sociais{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+.redes-sociais a{
+    color: var(--Roxo-escuro);
+    border: .1rem solid var(--Roxo-escuro);
+    border-radius: 10%;
+    width: 4.5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+
+}
+.redes-sociais a:hover{
+    background-color: var(--Roxo-medio);
+    color: #fff;
+    border: .1rem solid var(--Roxo-medio);
+}
+.link{
+  display: block;
+  font-size: 1.3rem;
+  line-height: 2;
+  padding: .5rem 0;
+  text-decoration: underline;
+  color: var(--Roxo-escuro)  
+}
+.link:hover{
+    text-shadow: var(--text-shadow);
+}
+.direitos p{
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--Branco);
+    background-color: var(--Roxo-medio);
+    padding: 10px 0;
+}
+/* ------------------ FIM DO RODAPÉ -----------------*/    
+
+
+/* ------------ INICIO DAS CONFIG RESPOSIVIDADE ------------ */
+@media only screen and (max-width: 768px) {
+    .topo-site {
+        padding: 1rem 5%;
+    }
+
+    .menu-site {
+        display: flex;
+        justify-content:center;
+        width: 100%;
+        background-color: var(--Preto);
+        z-index: 999;
+        text-align: center;
+    }
+    #contato1,
+    #sobre1{
+        display: none;
+    }
+    .menu-site a {
+        margin: 0;
+        padding: 1rem;
+        color: var(--Dourado);
+        font-size: 1.2rem;
+    }
+
+    .icons {
+        display: block;
+    }
+
+    .banner img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .cadastro-produtos {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .box-textos {
+        width: 100%;
+        height: auto;
+    }
+
+    .box-cadastro {
+        width: 100%;
+    }
+
+    .sobre {
+        flex-direction: column;
+    }
+
+    .text {
+        padding: 2rem;
+        margin: 2rem;
+    }
+
+    .motinha img {
+        width: 100%;
+    }
+}
+
+/* ------------ FIM DAS CONFIG RESPOSIVIDADE ------------ */
