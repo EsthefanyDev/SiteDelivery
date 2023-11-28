@@ -15,9 +15,10 @@
     <link rel="stylesheet" href="./style-Database_Cliente.css">
 </head>
 <body>
-    <div>
+    <div class="topo">
         <a href="pg-RegistreProdutos.html"><i class='bx bx-left-arrow-circle'></i>Voltar</a><br><br>
         <h1>Clientes cadastrados</h1>
+        <a href="pg-cadastro.html" class="novoC">Adicionar novo cliente</a>
     </div>
     <?php
        if ($Cliente->num_rows == 0) echo "<p>Não existem Cliente cadastrados</p>";
@@ -46,7 +47,7 @@
                                 <td><?php echo $dados['Endereco_Cliente'];?></td>
                                 <td><?php echo $dados['Celular'];?></td>
                                 <td>
-                                    <a href="editarT_Cliente.php?ID_Cliente=<?php echo $dados['ID_Cliente'];?>">
+                                    <a href="pg-editarT_Cliente.php?ID_Cliente=<?php echo $dados['ID_Cliente'];?>">
                                     <i class='bx bx-edit'></i>
                                     </a>
                                     <a href="excluirT_Cliente.php?ID_Cliente=<?php echo $dados['ID_Cliente'];?>">

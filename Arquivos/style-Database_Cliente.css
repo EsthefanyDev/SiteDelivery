@@ -65,9 +65,10 @@ tr:hover {
     background-color: var(--Prata);
 }
 
-a{
+a .novoC{
     text-decoration: none;
     color: #333;
+    margin-left: 30px;
 }
 
 .bx-edit{
@@ -78,3 +79,4 @@ a{
     font-size: 30px;
     color: red;
 }
+
