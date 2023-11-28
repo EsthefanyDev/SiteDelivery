@@ -114,9 +114,8 @@ body{
     margin-left: 4rem;
     margin-right: 4rem;
     border-color: #FFD700;
-    background-color: ;
+    background:var(--Roxo-medio);
 
-    
 }
 .texto-sobre-img h1 {
     font-size: 50px;
