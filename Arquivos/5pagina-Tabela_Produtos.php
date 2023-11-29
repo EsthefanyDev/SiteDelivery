@@ -9,13 +9,13 @@
     <meta charset="utf-8"/>
     <title>CRUD</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style-Databases.css">
+    <link rel="stylesheet" href="Style-Tabelas.css">
 </head>
 <body>
     <div class="topo">
-        <a href="pg-RegistreProdutos.html"><i class='bx bx-left-arrow-circle'></i>Voltar</a><br><br>
+        <a href="4pagina-Cadastro_Produtos.html"><i class='bx bx-left-arrow-circle'></i>Voltar</a><br><br>
         <h1>Produtos cadastrados</h1>
-        <a href="pg-RegistreProdutos" class="novoC">Adicionar novo Produto</a>
+        <a href="4pagina-Cadastro_Produtos.html" class="novoC">Adicionar novo Produto</a>
     </div> 
     <?php
        if ($produtos->num_rows == 0) echo "<p>Não existem produtos cadastrados</p>";
