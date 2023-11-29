@@ -12,7 +12,7 @@
     <meta charset="utf-8"/>
     <title>CRUD</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="./style-Database_Cliente.css">
+    <link rel="stylesheet" href="./style-Databases.css">
 </head>
 <body>
     <div class="topo">
