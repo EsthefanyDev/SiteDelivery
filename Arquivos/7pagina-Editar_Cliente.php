@@ -9,12 +9,11 @@
 
     if ($Cliente->num_rows > 0){
 
-           $dados = $Cliente->fetch_assoc();
-
-           $Nome_Cliente = $dados['Nome_Cliente'];
-           $Senha_Cliente = $dados['Senha_Cliente'];
-           $Endereco_Cliente = $dados['Endereco_Cliente'];
-           $Celular = $dados['Celular'];
+        $dados = $Cliente->fetch_assoc();
+        $Nome_Cliente = $dados['Nome_Cliente'];
+        $Senha_Cliente = $dados['Senha_Cliente'];
+        $Endereco_Cliente = $dados['Endereco_Cliente'];
+        $Celular = $dados['Celular'];
 
     }
     else die("Cliente não encontrado");
@@ -53,8 +52,6 @@
     div a:hover {
         text-decoration: underline;
     }
-    
-
     form {
         background-color: #fff;
         width: 300px;
@@ -82,7 +79,6 @@
         border: 1px solid #ccc;
         border-radius: 4px;
     }
-
     input[type="submit"] {
         background-color: #581A84;
         color: white;
@@ -90,17 +86,16 @@
         font-size: 16px;
         font-weight:normal;
     }
-
     input[type="submit"]:hover {
         background-color: #480048;
     }
     </style>
 <body>
     <div>
-        <a href="pg-Database_Cliente.php"><i class='bx bx-left-arrow-circle'></i>Voltar</a><br><br>
+        <a href="5pagina-Tabela_Clientes.php"><i class='bx bx-left-arrow-circle'></i>Voltar</a><br><br>
     </div>
 
-    <form action="editar.php" method="post">
+    <form action="Codigo-Editar_Cliente.php" method="post">
         <h1>Editar Cadastro</h1>
 
         <input type="hidden" name="ID_Cliente" value="<?php echo $ID_Cliente; ?>">
@@ -122,6 +117,5 @@
         <input type="submit" value="Salvar" >
         
     </form>
-
 </body>
 </html>

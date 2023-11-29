@@ -9,15 +9,12 @@
 
     if ($Cliente->num_rows > 0){
 
-           $dados = $Cliente->fetch_assoc();
-
-           $Nome_Cliente = $dados['Nome_Cliente'];
+        $dados = $Cliente->fetch_assoc();
+        $Nome_Cliente = $dados['Nome_Cliente'];
            
-
     }
     else die("Cliente não encontrado");
 ?>
-
 <!DOCTYPE html>
 <html lang="ptbr">
 <head>
@@ -66,7 +63,7 @@
 </style>
 <body>
 
-    <form action="excluir.php" method="post">
+    <form action="Codigo-Excluir_Cliente.php" method="post">
         <input type="hidden" name="ID_Cliente" value="<?php echo $ID_Cliente; ?>">
 
         <label>Deseja mesmo excluir o cliente <?php echo $Nome_Cliente;?>?</label><br>

@@ -15,9 +15,9 @@
 </head>
 <body>
     <div class="topo">
-        <a href="pg-RegistreProdutos.html"><i class='bx bx-left-arrow-circle'></i>Voltar</a><br><br>
+        <a href="4pagina-Cadastro_Produtos.html"><i class='bx bx-left-arrow-circle'></i>Voltar</a><br><br>
         <h1>Clientes cadastrados</h1>
-        <a href="pg-cadastroClientes.html" class="novoC">Adicionar novo cliente</a>
+        <a href="3pagina-Cadastro_Clientes.html" class="novoC">Adicionar novo cliente</a>
     </div> 
     <?php
        if ($Cliente->num_rows == 0) echo "<p>Não existem Cliente cadastrados</p>";
@@ -45,8 +45,8 @@
                 <td><?php echo $dados['Endereco_Cliente'];?></td>
                 <td><?php echo $dados['Celular'];?></td>
                 <td>
-                    <a href="pg-editarT_Cliente.php?ID_Cliente=<?php echo $dados['ID_Cliente'];?>"><i class='bx bx-edit'></i></a>
-                    <a href="excluirT_Cliente.php?ID_Cliente=<?php echo $dados['ID_Cliente'];?>"><i class='bx bx-trash'></i></a>
+                    <a href="7pagina-Editar_Cliente.php?ID_Cliente=<?php echo $dados['ID_Cliente'];?>"><i class='bx bx-edit'></i></a>
+                    <a href="6pagina-Excluir_Cliente.php?ID_Cliente=<?php echo $dados['ID_Cliente'];?>"><i class='bx bx-trash'></i></a>
                 </td>
             </tr>
             <?php

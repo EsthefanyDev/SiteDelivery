@@ -9,5 +9,5 @@
 
     $mysqli->query($SQL) or die("Query falhou");
 
-    header("Location: pg-Database_Cliente.php");
+    header("Location: 5pagina-Tabela_Clientes.php");
 ?>
