@@ -4,7 +4,7 @@
 
     $ID_Produto = $_POST['ID_Produto'];
     $Nome_Produto = $_POST['Nome_Produto'];
-    $Peco_Produto = $_POST['Preco_Produto'];
+    $Preco_Produto = $_POST['Preco_Produto'];
     $Descricao_Produto = $_POST['Descricao_Produto'];
     $Imagem_Path = $_POST['Imagem_Path'];
 

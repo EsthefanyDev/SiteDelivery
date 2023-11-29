@@ -18,7 +18,7 @@
     <div class="topo">
         <a href="pg-RegistreProdutos.html"><i class='bx bx-left-arrow-circle'></i>Voltar</a><br><br>
         <h1>Produtos cadastrados</h1>
-        <a href="pg-cadastroClientes.html" class="novoC">Adicionar novo Produto</a>
+        <a href="pg-RegistreProdutos" class="novoC">Adicionar novo Produto</a>
     </div> 
     <?php
        if ($produtos->num_rows == 0) echo "<p>Não existem produtos cadastrados</p>";
@@ -50,7 +50,7 @@
                                     <a href="pg-editarT_Produto.php?ID_Produto=<?php echo $dados['ID_Produto'];?>">
                                     <i class='bx bx-edit'></i>
                                     </a>
-                                    <a href="ExcluirProdutos.php?ID_Produto=<?php echo $dados['ID_Produto'];?>">
+                                    <a href="excluirT_Produto.php?ID_Produto=<?php echo $dados['ID_Produto'];?>">
                                     <i class='bx bx-trash'></i>
                                     </a>
                                     
