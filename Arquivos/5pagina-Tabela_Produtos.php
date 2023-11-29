@@ -20,49 +20,41 @@
     <?php
        if ($produtos->num_rows == 0) echo "<p>Não existem produtos cadastrados</p>";
        else{
-     ?>   
-
-               <table border="1">
-                    <thead>
-                        <tr>
-                            <th>Código</th>
-                            <th width="200">Nome do produto</th>
-                            <th>Preço</th>
-                            <th>Descrição</th>
-                            <th>imagem</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                            while ($dados = $produtos->fetch_assoc()) {
-                        ?>  
-                            <tr>
-                                <td><?php echo $dados['ID_Produto'];?></td>
-                                <td><?php echo $dados['Nome_Produto'];?></td>
-                                <td><?php echo $dados['Preco_Produto'];?></td>
-                                <td><?php echo $dados['Descricao_Produto'];?></td>
-                                <td>
-                                <!-- <td><?php echo $dados['Imagem_path'];?></td> -->
-                                <td>
-                                    <a href="pg-editarT_Produto.php?ID_Produto=<?php echo $dados['ID_Produto'];?>">
-                                    <i class='bx bx-edit'></i>
-                                    </a>
-                                    <a href="excluirT_Produto.php?ID_Produto=<?php echo $dados['ID_Produto'];?>">
-                                    <i class='bx bx-trash'></i>
-                                    </a>
-                                    
-                                </td>
-                            </tr>
-                          <?php
-                           }
-                          ?>   
-                    </tbody>
-                    </table>    
-
-     <?php
-       }
-       $mysqli->close();
-    ?>
-    
-</body>
+    ?>   
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th width="200">Nome do produto</th>
+                <th>Preço</th>
+                <th>Descrição</th>
+                <!-- <th>imagem</th> -->
+            </tr>
+            </thead>
+            <tbody>
+                <?php
+                    while ($dados = $produtos->fetch_assoc()) {
+                ?>  
+                <tr>
+                    <td><?php echo $dados['ID_Produto'];?></td>
+                    <td><?php echo $dados['Nome_Produto'];?></td>
+                    <td><?php echo $dados['Preco_Produto'];?></td>
+                    <td><?php echo $dados['Descricao_Produto'];?></td>
+                    
+                    <!-- <td><?php echo $dados['Imagem_path'];?></td> -->
+                    <td>
+                        <a href="pg-editarT_Produto.php?ID_Produto=<?php echo $dados['ID_Produto'];?>"><i class='bx bx-edit'></i></a>
+                        <a href="6pagina-Excluir_Produto.php?ID_Produto=<?php echo $dados['ID_Produto'];?>"><i class='bx bx-trash'></i></a>
+                    </td>
+                </tr>
+                <?php
+                    }
+                ?>   
+            </tbody>
+        </table>    
+        <?php
+            }
+            $mysqli->close();
+        ?>
+    </body>
 </html>

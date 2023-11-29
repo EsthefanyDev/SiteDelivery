@@ -9,20 +9,18 @@
 
     if ($produtos->num_rows > 0){
 
-           $dados = $produtos->fetch_assoc();
+        $dados = $produtos->fetch_assoc();
 
-           $Nome_Produto = $dados['Nome_Produto'];
+        $Nome_Produto = $dados['Nome_Produto'];
            
-
     }
     else die("Produto não encontrado");
 ?>
-
 <!DOCTYPE html>
 <html lang="ptbr">
 <head>
     <meta charset="utf-8"/>
-    <title>Meu primeiro script PHP</title>
+    <title>Excluir Produto?</title>
 </head>
 <style>
     body {
@@ -65,19 +63,13 @@
     }
 </style>
 <body>
-
-    <form action="excluirP.php" method="post">
+    <form action="Codigo-Excluir_Produto.php" method="post">
         <input type="hidden" name="ID_Produto" value="<?php echo $ID_Produto; ?>">
-
         <label>Deseja mesmo excluir o produto <?php echo $Nome_Produto;?>?</label><br>
-        
         <br><br>
-
         <input type="submit" value="Sim">
         <input type="button" onclick="history.go(-1)" value="Não">
-        
     </form>
-
 </body>
 </html>
 
