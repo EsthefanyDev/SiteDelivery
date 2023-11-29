@@ -3,17 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url(background-02.png);
+    background-image: url(Z-Background.png);
     background-size: cover;
     background-position: center;
 }
-
 .wrapper {
     width: 450px;
     background: transparent;
@@ -25,19 +23,16 @@ body {
     padding: 30px 40px;
     font-size: 18px;
 }
-
 .wrapper h1 {
     font-size: 38px;
     text-align: center;
 }
-
 .wrapper .input-box {
     position: relative;
     width: 100%;
     height: 50px;
     margin: 20px 0;
 }
-
 .input-box input {
     width: 100%;
     height: 100%;
@@ -50,11 +45,9 @@ body {
     color: #fff;
     padding: 20px 45px 20px 20px;
 }
-
 .input-box input::placeholder {
     color: #c0c0c0;
 }
-
 .input-box i {
     position: absolute;
     right: 20px;
@@ -86,8 +79,7 @@ body {
 .register-link a{
     color: #FFD700;
     padding: 8px;
-    text-decoration:none;
-    
+    text-decoration:none;   
 }
 .register-link a:hover{
     text-decoration:underline;
