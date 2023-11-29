@@ -9,11 +9,11 @@
 
     if ($produto->num_rows > 0){
 
-           $dados = $produto->fetch_assoc();
-           $Nome_Produto = $dados['Nome_Produto'];
-           $Preco_Produto = $dados['Preco_Produto'];
-           $Descricao_Produto = $dados['Descricao_Produto'];
-           $Imagem_Path = $dados['Imagem_Path'];
+        $dados = $produto->fetch_assoc();
+        $Nome_Produto = $dados['Nome_Produto'];
+        $Preco_Produto = $dados['Preco_Produto'];
+        $Descricao_Produto = $dados['Descricao_Produto'];
+        $Imagem_Path = $dados['Imagem_Path'];
 
     }
     else die("Produto não encontrado");
@@ -22,7 +22,7 @@
 <html lang="ptbr">
 <head>
 	<meta charset="utf-8"/>
-	<title>Meu primeiro script PHP</title>
+	<title>Editar Produto</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <style>
@@ -34,7 +34,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        background-image: url(background-02.png);
+        background-image: url(Z-Background.png);
     }
     div {
         display: flex;
@@ -52,8 +52,6 @@
     div a:hover {
         text-decoration: underline;
     }
-    
-
     form {
         background-color: #fff;
         width: 300px;
@@ -81,7 +79,6 @@
         border: 1px solid #ccc;
         border-radius: 4px;
     }
-
     input[type="submit"] {
         background-color: #581A84;
         color: white;
@@ -89,7 +86,6 @@
         font-size: 16px;
         font-weight:normal;
     }
-
     input[type="submit"]:hover {
         background-color: #480048;
     }
@@ -98,13 +94,12 @@
         height: auto;
         margin-bottom: 15px;
     }
-    </style>
+</style>
 <body>
     <div>
-        <a href="teste-Database_Produtos.php"><i class='bx bx-left-arrow-circle'></i>Voltar</a><br><br>
+        <a href="5pagina-Tabela_Produtos.php"><i class='bx bx-left-arrow-circle'></i>Voltar</a><br><br>
     </div>
-
-    <form action="editarP.php" method="post">
+    <form action="Codigo-Editar_Produto.php" method="post">
         <h1>Editar Produto</h1>
 
         <input type="hidden" name="ID_Produto" value="<?php echo $ID_Produto; ?>">
@@ -124,8 +119,6 @@
         <br><br>
 
         <input type="submit" value="Salvar" >
-        
     </form>
-
 </body>
 </html>

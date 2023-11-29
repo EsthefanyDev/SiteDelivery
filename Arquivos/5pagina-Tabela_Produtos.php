@@ -43,7 +43,7 @@
                     
                     <!-- <td><?php echo $dados['Imagem_path'];?></td> -->
                     <td>
-                        <a href="pg-editarT_Produto.php?ID_Produto=<?php echo $dados['ID_Produto'];?>"><i class='bx bx-edit'></i></a>
+                        <a href="7pagina-Editar_Produto.php?ID_Produto=<?php echo $dados['ID_Produto'];?>"><i class='bx bx-edit'></i></a>
                         <a href="6pagina-Excluir_Produto.php?ID_Produto=<?php echo $dados['ID_Produto'];?>"><i class='bx bx-trash'></i></a>
                     </td>
                 </tr>
