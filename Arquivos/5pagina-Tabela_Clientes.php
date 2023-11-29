@@ -46,7 +46,7 @@
                 <td><?php echo $dados['Celular'];?></td>
                 <td>
                     <a href="7pagina-Editar_Cliente.php?ID_Cliente=<?php echo $dados['ID_Cliente'];?>"><i class='bx bx-edit'></i></a>
-                    <a href="6pagina-Excluir_Cliente.php?ID_Cliente=<?php echo $dados['ID_Cliente'];?>"><i class='bx bx-trash'></i></a>
+                    <a href="6pagina-Excluir_Cliente.php.php?ID_Cliente=<?php echo $dados['ID_Cliente'];?>"><i class='bx bx-trash'></i></a>
                 </td>
             </tr>
             <?php
