@@ -18,4 +18,5 @@ $sql = "INSERT INTO Produtos (Nome_Produto, Preco_Produto, Descricao_Produto, Im
 $mensagem = ($mysqli->query($sql)) ? 'Produto cadastrado com sucesso.' : 'Erro ao cadastrar o produto: ' . $mysqli->error;
 
 $mysqli->close();
+
 ?>

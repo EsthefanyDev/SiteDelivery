@@ -1,18 +1,15 @@
 <?php 
     include "conexaoDB.php";
-
-    $sql = "SELECT * FROM produtos ORDER BY Nome_Produto";
-   
+    $sql = "SELECT * FROM produtos ORDER BY Nome_Produto"; 
     $produtos = $mysqli->query($sql) or die("Erro na busca dos Produtos"); 
 ?>
-
 <!DOCTYPE html>
 <html lang="ptbr">
 <head>
     <meta charset="utf-8"/>
     <title>CRUD</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="./style-Databases.css">
+    <link rel="stylesheet" href="style-Databases.css">
 </head>
 <body>
     <div class="topo">

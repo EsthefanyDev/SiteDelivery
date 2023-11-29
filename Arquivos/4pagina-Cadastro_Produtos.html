@@ -3,102 +3,65 @@
 ?>
 <!DOCTYPE html>
 <html lang="Pt-br">
-
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Prime Delivery</title>
-    <!--INICIO CSS ICONES-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- INICIO LINK CSS -->
-    <link rel="stylesheet" href="style-registreProdutos.css">
-
+    <link rel="stylesheet" href="Style-Cadastro_Produtos.css">
 </head>
-
 <body>
-
     <!------------- INICIO DA BARRA DE NAVEGAÇÃO SUPERIOR ------------->
     <header class="topo-site">
-        <a href="pg-index.php" class="logo">
+        <a href="1pagina-Index.php" class="logo">
             <img src="img/logo-amarelo_roxo-removebg.png" alt="logo" width="80">
         </a>
-        <!-- FIM DA LOGO MARCA -->
-
-        <!-- INICIO MENU -->
         <nav class="menu-site">
-            <a id="inicio" href="pg-index.php">Voltar ao Ínicio</a>
+            <a id="inicio" href="1pagina-Index.php">Voltar ao Ínicio</a>
             <a href="#cadastro-produtos">Registre Produtos</a>
-            <a href="teste-Database_Produtos.php">Produtos</a>
-            <a href="pg-Database_Cliente.php">Clientes</a>
+            <a href="5pagina-Tabela_Produtos.php">Produtos</a>
+            <a href="6pagina-Tabela_Clientes.php">Clientes</a>
         </nav>
-        <!-- FIM MENU -->
-
-        <!-- INICIO ICONES -->
         <div class="icons">
-            <a href="sair.php" id="logout"><i class='bx bx-log-out'>Sair</i></a>
-            
+            <a href="Codigo-Sair_da_Conta.php" id="logout"><i class='bx bx-log-out'>Sair</i></a>
         </div>
-        <!-- FIM ICONES -->
     </header>
-    <!---------- FIM DA BARRA DE NAVEGAÇÃO SUPERIOR ----------->
-
     <!------------- INICIO DO BANNER ------------->
-
     <div class="banner" id="inicio" >
         <div class="texto-sobre-img">
             <h1> SEJA BEM-VINDO(A),</h1>
             <h2>Registre seu produto aqui!</h2>
-         
         </div>    
     </div>
-
-    <!------------- FIM DO BANNER HOME DO SITE ------------->
-
     <main class="page">
-
-        <!--------------- INICIO AREA CADASTRO DE PRODUTOS--------------->
+        <!--------------- INICIO CADASTRO DE PRODUTOS--------------->
         <section class="cadastro-produtos" id="cadastro-produtos">
-
             <div class="box-textos">
                 <h2>Cadastre seu Produto</h2>
                 <p>Compartilhe a qualidade dos seus produtos conosco! Preencha o formulário abaixo para adicionar seus
                 itens ao nosso catálogo.</p>
-
-                <a href="teste-Database_Produtos.php" class="btn">Ver Produtos</a>
+                <a href="5pagina-Tabela_Produtos.php" class="btn">Ver Produtos</a>
             </div>
-
-            <form class="box-cadastro" action="salvar_produto.php" method="post" enctype="multipart/form-data">
-                
+            <form class="box-cadastro" action="Codigo-Cadastro_Produtos.php" method="post" enctype="multipart/form-data">
                 <label for="nome">Nome do Produto:</label>
                 <input type="text" id="nome" name="nome" required>
-
                 <label for="preco">Preço:</label>
                 <input type="number" id="preco" name="preco" step="0.01" required>
-
                 <label for="descricao">Descrição:</label>
                 <textarea id="descricao" name="descricao" required></textarea>
-
                 <label for="imagem">Imagem do Produto:</label>
                 <input type="file" id="imagem" name="imagem" accept="image/*" required>
-
                 <input type="submit" value="Cadastrar Produto">
             </form>
         </section>
-        <!--------------- FIM DA AREA CADASTRO DE PRODUTOS  --------------->
-
     </main>
-
     <!--------------- INICIO DO RODAPE --------------->
     <footer>
         <section class="rodape">
             <div class="box-conteiner" id="contato">
-
-                <!--------------- INICIO ITEM DO RODAPE --------------->
                 <div class="box">
                     <img src="img/Prime-Delivery-Roxo-e-Branco-150x150.png" alt="Prime Delivery" width="120">
-
                     <div class="redes-sociais">
                         <a href="" class="bx bxl-facebook-circle"></a>
                         <a href="" class="bx bxl-twitter"></a>
@@ -106,36 +69,25 @@
                         <a href="" class="bx bxl-instagram-alt"></a>
                     </div>
                 </div>
-                <!--------------- FIM ITEM DO RODAPE --------------->
-
-                <!--------------- INICIO ITEM DO RODAPE --------------->
                 <div class="box" id="contato">
                     <h3>Contatos</h3>
                     <p class="bx bx-phone">(91) 6666 - 6666</p> <br>
                     <p class="bx bxl-whatsapp">(91) 6666 - 6666</p> <br>
                     <a href="" class="link"><i class="bx bx-envelope"></i>contato@primedelivery.com</a>
                 </div>
-                <!--------------- FIM ITEM DO RODAPE --------------->
-
-                <!--------------- INICIO ITEM DO RODAPE --------------->
                 <div class="box">
                     <h3>Localização</h3>
                     <p>
                         Rua da desesperança, nº66 <br>
                         Bairro da Desolação <br>
                         Cidade do Lamento Noturno
-
                     </p>
                 </div>
-                <!--------------- FIM ITEM DO RODAPE --------------->
             </div>
             <div class="direitos">
                 <p>&copy; 2023 - Todos os direitos reservados</p>
             </div>
         </section>
     </footer>
-    <!--------------- FIM DO RODAPE --------------->
-
 </body>
-
 </html>

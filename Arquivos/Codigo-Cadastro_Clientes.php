@@ -16,7 +16,7 @@ $sql_code = "SELECT * FROM Cliente WHERE Nome_Cliente = '$Nome_Cliente' OR Senha
 $retorno = mysqli_query($conexao, $sql_code);
 
 if(mysqli_num_rows($retorno)>0) {
-    echo 'Esse usuário já existe, clique aqui pra fazer o  <a href="pg-login.html"> Login</a>';;
+    echo 'Esse usuário já existe, clique aqui pra fazer o  <a href="2pagina-Login.html"> Login</a>';;
 } else {
 
     $Nome_Cliente = $_POST['Nome_Cliente'];
@@ -28,7 +28,6 @@ if(mysqli_num_rows($retorno)>0) {
     VALUES (NULL, '$Nome_Cliente', '$Senha_Cliente', '$Endereco_Cliente', '$Celular')";
     $resultado = mysqli_query($conexao, $sql_code);
     echo"Usuario cadastrado";
-    header("Location: pg-login.html");
-
+    header("Location: 2pagina-Login.html");
 }
 ?>

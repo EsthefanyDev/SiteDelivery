@@ -7,6 +7,6 @@
 
         $mysqli->query($SQL) or die("Query falhou");
 
-        header("Location: teste-Database_Produtos.php");
+        header("Location: 5pagina-Tabela_Produtos.php");
 
     ?>
