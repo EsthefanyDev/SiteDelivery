@@ -27,9 +27,8 @@ if(isset($_POST['Nome_Cliente']) || isset($_POST['Senha_Cliente'])) {
             $_SESSION['ID_Cliente'] = $usuario['ID_Cliente'];
             $_SESSION['Nome_Cliente'] = $usuario['Nome_Cliente'];
     
-            header("Location: pg-RegistreProdutos.html");
+            header("Location: 4pagina-Cadastro_Produtos.html");
 
-            
         } else {
             echo "Falha: Usuário ou Senha incorretos";
         }
