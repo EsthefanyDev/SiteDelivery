@@ -35,43 +35,51 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--Prata);
-    height: 150px;
+    background-color: var(--Roxo-escuro);
+    height: 110px;
+    border-bottom:5px solid var(--Dourado) ;
 }
 
 
 .box-0 img {
-    width: 160px;
-    margin: 0 3rem;
+    width: 120px;
+    margin: 0 70px;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3)); /* Adiciona uma sombra ao logotipo */
 }
 
 .box-1-2 {
     display: flex;
-    height: 150px;
-    
+
 }
 
 .box-1, .box-2 {
+    display: flex;
+    width: auto;
     background-color: #f9f9f9;
     color: var(--Roxo-escuro);
     border-radius: 20px;
     border-style:groove;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: .5rem;
+    padding: 5px;
     text-align: center;
     align-items: center;
     margin: 20px;
     font-size: 0.1rem;
 }
+.box-1, .box-2 a{
+    font-size: 12px;
+}
 .box-1 i{
-    font-size: 1rem;
+    font-size: 20px;
+    margin-right: 5px;
 }
 .box-2 i{
-    font-size: 1.5rem;
+    font-size: 25px;
+    margin-right: 5px;
 }
 
 .cta-button {
+    width: auto;
     display: inline-block;
     background-color: var(--vermelho);
     color: #fff;
@@ -82,7 +90,7 @@ body {
 }
 
 .cta-button:hover {
-    background-color: #0056b3;
+    background-color: var(--Roxo-escuro);
 }
 /* ------ */
 /* Estilos para a seção de categorias */
@@ -90,14 +98,14 @@ body {
     background-image: url(/img/Z-Background.png);
     padding: 5rem;
     text-align: center;
-    height: 500px;
+    height: auto;
 }
 
 .categorias h2 {
     color: var(--Dourado);
     text-shadow: var(--text-shadow);
     font-size: 2.5rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .lista-categorias {
@@ -112,10 +120,16 @@ body {
 }
 
 .categoria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
     border: 2px solid #490148;
     background-color: #FFF;
     border-radius: 20px; 
     transition: transform 0.3s;
+    
 }
 
 .categoria:hover {
@@ -123,9 +137,11 @@ body {
 }
 
 .categoria img {
-    display: block;
-    width: 130px;
-    
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    align-items: center;
+   
 }
 
 .categoria a {
