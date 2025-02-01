@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="Pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin_Prime Delivery</title>
+    <link rel="stylesheet" href="../css/style-0Admin.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="wrapper">
+        <form method="POST" action="../php/0Admin.php">
+            <h1>Admin</h1>
+            <div class="input-box">
+                <input type="text" name="Usuario" placeholder="Nome do Admin" required>
+                <i class="bx bxs-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="text" name="CPF" placeholder="CPF do Admin" required>
+                <i class="bx bxs-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" name="Senha" placeholder="Senha" required>
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="lembrar-senha">
+                <label for="remember"><input type="checkbox" id="remember">Me lembre</label>
+            </div>
+            <button class="btn">Entrar</button>
+        </form>
+    </div>  
+</body>
+</html>
