@@ -26,6 +26,10 @@ html{
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
+body{
+    background: url('Z-Background.png') no-repeat center center fixed;
+    background-size: cover; 
+}
 .btn{
     display: inline-block;
     font-size: 1.5rem;
@@ -45,79 +49,74 @@ html{
 /* ------------- INICIO DA BARRA DE NAVEGAÇÃO SUPERIOR ------------- */
 .topo-site {
     display: flex;
-    position: fixed;
+    position: static;
     top: 0;
     left: 0;
     right: 0;
     align-items: center;
-    justify-content: space-between;
-    padding: 1rem 9%;
+    justify-content: center;
     z-index: 1000;
     background-color:var(--Preto);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
 }
-.menu-site a {
-    color: var(--Dourado);
-    font-size: 1.6rem;
-    font-weight: bold;
-    margin: 0 3rem;
+
+.topo-site h1{
+    color: var(--Branco);
+    margin: 5px;
+    border-left: 2px solid var(--Dourado);
+    padding: 10px;
 }
-.menu-site a:hover{
-    color: var(--Roxo-medio);
+
+.topo-site .sair{
+   position: absolute;
+   margin-left: 90%;
+   justify-content: center;
+   align-items: center;
 }
-.icons i{
-    font-size: 2rem;
-    margin: .4rem;
-    align-items: center;
+.sair i{
+    font-size: 28px;
 }
-.icons a{
+.sair a{
     color:var(--Dourado);
     font-size: 1.7rem;
     margin-left: 1.7rem;
     cursor: pointer;
 }
-.icons a:hover{
+.sair a:hover{
     color: var(--Roxo-medio);
 }
-/* --------------- INICIO DO BANNER -------------- */
-body{
-    background: url('Z-Background.png') no-repeat center center fixed;
-    background-size: cover; 
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    background: linear-gradient(to bottom, #480048, #000);
 }
-.texto-sobre-img {
-    text-align: center;
-    margin-top: 10%;
-    padding: 2rem;
-    border-style: double;
-    margin-left: 4rem;
-    margin-right: 4rem;
-    border-color: #FFD700;
-    background:var(--Roxo-medio);
-}
-.texto-sobre-img h1 {
-    font-size: 50px;
-    font-weight: bold;
+
+.menu a {
     color: var(--Dourado);
-    text-shadow: var(--text-shadow);
+    font-size: 1.6rem;
+    margin: 0 3rem;
+    padding: 10px;
+    
 }
-.texto-sobre-img h2 {
-    font-size: 44px;
-    font-weight: bold;
-    color: white;
-    text-shadow: var(--text-shadow);
+.menu a:hover{
+    color: var(--Roxo-medio);
 }
+
+
 /* -------------- INICIO DA AREA DE TEXTO CADASTRO DE PRODUTOS -------------- */
 .cadastro-produtos {
-    padding: 20px;
+    padding: 0px;
     text-align: left;
     display: flex;
-    width: 100%;
-    padding: 4rem; 
+    padding: 10px; 
 }
 .box-textos{
     background-color: var(--Roxo-medio);
     padding: 20px;
-    height: 500px;
+    height: 480px;
     width: 40%;
     text-align: center;   
 }
@@ -136,14 +135,14 @@ body{
     padding: 2rem;
 }
 .cadastro-produtos .box-textos .btn{
-    margin: 6rem;
+    margin: ;
 }
 /* ------ INICIO DO FORMULARIO CADASTRO DE PRODUTOS ------ */
 .box-cadastro {
     background-color: #fff; 
     padding: 30px;
     width: 60%;
-    max-height: 500px;
+    height: 480px;
 }
 .box-cadastro label {
     display: block;
@@ -182,66 +181,7 @@ body{
     background-color: var(--Dourado);
     color: #581A84;
 }
-/* ------------------ INICIO DO RODAPÉ -----------------*/
-.rodape{
-    background-color: var(--Dourado);
-    text-align: center;
 
-}
-.box-conteiner {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 2rem;
-    align-items: center;
-}
-.box-conteiner .box h3{
-    font-size: 1.5rem;;
-    text-transform: capitalize;
-    color: var(--Roxo-medio);
-    padding: 1rem ;
-}
-.box-conteiner .box p{
-    font-size: 1.3rem;
-    color: var(--Roxo-escuro);
-    padding: .5rem;
-}
-.redes-sociais{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-.redes-sociais a{
-    color: var(--Roxo-escuro);
-    border: .1rem solid var(--Roxo-escuro);
-    border-radius: 10%;
-    width: 4.5rem;
-    height: 4.5rem;
-    line-height: 4.5rem;
-    text-align: center;
-    font-size: 1.8rem;
-}
-.redes-sociais a:hover{
-    background-color: var(--Roxo-medio);
-    color: #fff;
-    border: .1rem solid var(--Roxo-medio);
-}
-.link{
-  display: block;
-  font-size: 1.3rem;
-  line-height: 2;
-  padding: .5rem 0;
-  text-decoration: underline;
-  color: var(--Roxo-escuro)  
-}
-.link:hover{
-    text-shadow: var(--text-shadow);
-}
-.direitos p{
-    text-align: center;
-    font-size: 1.2rem;
-    color: var(--Branco);
-    background-color: var(--Roxo-medio);
-    padding: 10px 0;
-}
 /* ------------ INICIO DAS CONFIG RESPOSIVIDADE ------------ */
 @media only screen and (max-width: 768px) {
     .topo-site {

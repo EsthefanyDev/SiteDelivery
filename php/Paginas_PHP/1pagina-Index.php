@@ -17,14 +17,14 @@ $resultado = $conexaoD->query($sql);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Prime Delivery</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="Style-Index.css">
+    <link rel="stylesheet" href="../../css/Style-Index.css">
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
 </head>
 <body>
     <!------------- INICIO DA BARRA DE NAVEGAÇÃO SUPERIOR ------------->
     <header class="topo-site">
         <a   href="1pagina-Index.php" class="logo">
-            <img src="img/logo-amarelo_roxo-removebg.png" alt="logo" width="80">
+            <img src="../../img/logo-amarelo_roxo-removebg.png" alt="logo" width="80">
         </a>
         <nav>
             <a href="#inicio">Ínicio</a>
@@ -33,8 +33,8 @@ $resultado = $conexaoD->query($sql);
             <a href="#contato">contato</a>
         </nav>
         <div class="icons">
-            <a href="2pagina-Login.html" id="login"><i class='bx bxs-user'></i>Entrar</a>
-            <a href="Codigo-Sair_da_Conta.php" id="logout"><i class='bx bx-log-out'>Sair</i></a>  
+            <a href="../../html/pagina-Login.html" id="login"><i class='bx bxs-user'></i>Entrar</a>
+            <a href="../Cliente/Codigo-Sair_da_Conta.php" id="logout"><i class='bx bx-log-out'>Sair</i></a>  
         </div>
     </header>
     <!------------- INICIO DO BANNER ------------->
@@ -51,20 +51,22 @@ $resultado = $conexaoD->query($sql);
                 <h2>Nossos Lanches</h2>
             </div>
             <div class="produtos">
-                <div class="container-produtos">
-                    <?php
-                        while ($row = $resultado->fetch_assoc()) {
-                            echo '<div class="produto">';
-                            echo '<img src="' . $row['Imagem_Path'] . '" alt="Imagem do Produto">';
-                            echo '<h3>' . $row['Nome_Produto'] . '</h3>';
-                            echo '<p class="preco">Preço: R$ ' . $row['Preco_Produto'] . '</p>';
-                            echo '<p class="descricao">' . $row['Descricao_Produto'] . '</p>';
-                            echo '</div>';
-                        }
-                    ?>
-                </div>
+            <div class="container-produtos">
+                <?php
+                // Supondo que $resultado já foi obtido de uma consulta ao banco de dados
+                while ($row = $resultado->fetch_assoc()) {
+                    echo '<div class="produto">';
+                    // Chama o script exibir_imagem.php passando o ID do produto
+                    echo '<img src="../Produto/exibir_imagem.php?id=' . $row['ID_Produto'] . '" alt="Imagem do Produto">';
+                    echo '<h3>' . $row['Nome_Produto'] . '</h3>';
+                    echo '<p class="preco">Preço: R$ ' . number_format($row['Preco_Produto'], 2, ',', '.') . '</p>';
+                    echo '<p class="descricao">' . $row['Descricao_Produto'] . '</p>';
+                    echo '</div>';
+                }
+                ?>
             </div>
-        </section>
+        </div>
+    </section>
        
     </main>  
     <!--------------- INICIO DO RODAPE --------------->
@@ -72,7 +74,7 @@ $resultado = $conexaoD->query($sql);
         <section class="rodape">    
             <div class="box-conteiner" id="contato">
                 <div class="box">
-                    <img src="img/Prime-Delivery-Roxo-e-Branco-150x150.png" alt="Prime Delivery" width="120">
+                    <img src="../../img/Prime-Delivery-Roxo-e-Branco-150x150.png" alt="Prime Delivery" width="120">
                     <p>"Saboreie o melhor da cidade sem sair de casa."</p>
 
                     <div class="redes-sociais">    
