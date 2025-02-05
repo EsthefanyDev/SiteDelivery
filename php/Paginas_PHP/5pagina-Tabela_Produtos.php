@@ -1,5 +1,5 @@
 <?php 
-    include "conexaoDB.php";
+    include "../conexaoDB.php";
     $sql = "SELECT * FROM produtos ORDER BY Nome_Produto"; 
     $produtos = $mysqli->query($sql) or die("Erro na busca dos Produtos"); 
 ?>
@@ -9,11 +9,11 @@
     <meta charset="utf-8"/>
     <title>CRUD</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="Style-Tabelas.css">
+    <link rel="stylesheet" href="../../css/Style-Tabelas.css">
 </head>
 <body>
     <div class="topo">
-        <a href="4pagina-Cadastro_Produtos.html"><i class='bx bx-left-arrow-circle'></i>Voltar</a><br><br>
+        <a href="pagina-Cadastro_Produtos.html"><i class='bx bx-left-arrow-circle'></i>Voltar</a><br><br>
         <h1>Produtos cadastrados</h1>
         <a href="4pagina-Cadastro_Produtos.html" class="novoC">Adicionar novo Produto</a>
     </div> 

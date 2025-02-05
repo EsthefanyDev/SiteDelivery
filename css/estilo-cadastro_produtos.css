@@ -27,24 +27,22 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background: url('Z-Background.png') no-repeat center center fixed;
-    background-size: cover; 
+    background: url(../img/Z-Background.png);
 }
 .btn{
     display: inline-block;
     font-size: 1.5rem;
     color: var(--Roxo-escuro);
     background-color:var(--Dourado);
-    margin-top: 1rem;
+    margin:20px;
     padding: .8rem 3rem;
     border: none;
-    border-radius: 20px;
+    border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
 }
 .btn:hover{
-    background-color: #C0C0C0;
-    color:var(--Roxo-medio);
+    background-color: rgba(255, 217, 0, 0.788);
 }
 /* ------------- INICIO DA BARRA DE NAVEGAÇÃO SUPERIOR ------------- */
 .topo-site {
@@ -105,19 +103,24 @@ body{
     color: var(--Roxo-medio);
 }
 
-
-/* -------------- INICIO DA AREA DE TEXTO CADASTRO DE PRODUTOS -------------- */
-.cadastro-produtos {
-    padding: 0px;
-    text-align: left;
-    display: flex;
-    padding: 10px; 
+a.active {
+    border-bottom: 3px solid var(--Dourado);
 }
+
+.cadastro-produtos {
+    display: flex;
+    max-width: 90%;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* -------------- INICIO DA AREA DE TEXTO CADASTRO DE PRODUTOS -------------- */
 .box-textos{
-    background-color: var(--Roxo-medio);
+    background-color: var(--Roxo-escuro);
     padding: 20px;
-    height: 480px;
-    width: 40%;
+    width: 30%;
+    border-radius: 8px;
     text-align: center;   
 }
 .cadastro-produtos .box-textos h2{
@@ -127,36 +130,29 @@ body{
     margin-top: 3rem;
     margin-bottom: 2rem;
 }
-.cadastro-produtos .box-textos p{
-    color: var(--Branco);
-    text-shadow: var(--text-shadow);
-    font-size: 1.8rem;
-    text-align: center;
-    padding: 2rem;
-}
 .cadastro-produtos .box-textos .btn{
-    margin: ;
+    margin:5px;
 }
+
 /* ------ INICIO DO FORMULARIO CADASTRO DE PRODUTOS ------ */
 .box-cadastro {
+    display: grid;
     background-color: #fff; 
-    padding: 30px;
-    width: 60%;
-    height: 480px;
+    padding: 60px;
+    margin: auto;
 }
+
 .box-cadastro label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 14px;
     color: var(--Roxo-medio);
-    text-shadow: var(--text-shadow);
 }
 .box-cadastro input,
 .box-cadastro textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 5px;
+    margin-bottom: 10px;
     border: 2px solid var(--Dourado);
     border-radius: 4px;
     box-sizing: border-box;
@@ -166,21 +162,30 @@ body{
     resize: vertical;
     height: 60px;
 }
+
+
+/* Botão */
 .box-cadastro input[type="submit"] {
+    width: 600px;
+    margin: 10px auto;
     background-color: var(--Roxo-medio);
-    color: var(--Dourado);
+    color: white;
     padding: 12px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-size: 16px;
     font-weight:500;
 }
 .box-cadastro input[type="submit"]:hover {
-    background-color: var(--Dourado);
-    color: #581A84;
+    background-color: var(--Roxo-escuro);
+    color: white;
 }
+
+
+
+
 
 /* ------------ INICIO DAS CONFIG RESPOSIVIDADE ------------ */
 @media only screen and (max-width: 768px) {

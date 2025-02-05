@@ -27,7 +27,7 @@ if(isset($_POST['Nome_Cliente']) || isset($_POST['Senha_Cliente'])) {
             $_SESSION['ID_Cliente'] = $usuario['ID_Cliente'];
             $_SESSION['Nome_Cliente'] = $usuario['Nome_Cliente'];
     
-            header("Location: ../../html/4pagina-Cadastro_Produtos.html");
+            header("Location: ../../html/pagina-Cadastro_Produtos.html");
 
         } else {
             echo "Falha: Usuário ou Senha incorretos";
