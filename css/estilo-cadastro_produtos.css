@@ -4,153 +4,135 @@
     padding:0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    list-style: none;
     text-decoration: none;
-    outline: none;
-    border: none;
-    transform: .2 linear;
 }
 :root {
-    font-size: 62.5%;/*font-size: 16px;*/
     --roxo-claro:#9B5CB5;
-    --Roxo-medio: #581A84;
+    --Roxo: #581A84;
     --Roxo-escuro: #480048;
     --Prata: #C0C0C0;
     --Dourado: #FFD700;
     --Preto: #000;
     --Branco: #FFF;
-    --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    --text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
 }
-html{
-    font-size: 62.5%;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
+
 body{
     background: url(../img/Z-Background.png);
 }
-.btn{
-    display: inline-block;
-    font-size: 1.5rem;
-    color: var(--Roxo-escuro);
-    background-color:var(--Dourado);
-    margin:20px;
-    padding: .8rem 3rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
-.btn:hover{
-    background-color: rgba(255, 217, 0, 0.788);
-}
+
+
 /* ------------- INICIO DA BARRA DE NAVEGAÇÃO SUPERIOR ------------- */
-.topo-site {
+.topo-site{
     display: flex;
-    position: static;
-    top: 0;
-    left: 0;
-    right: 0;
+    background-color: var(--Preto);
     align-items: center;
     justify-content: center;
-    z-index: 1000;
-    background-color:var(--Preto);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
-}
 
+}
 .topo-site h1{
-    color: var(--Branco);
-    margin: 5px;
-    border-left: 2px solid var(--Dourado);
+    color: whitesmoke;
+    font-size: 18px;
     padding: 10px;
+    border-left: 4px solid var(--Dourado);
+    margin: 5px;
 }
-
-.topo-site .sair{
-   position: absolute;
-   margin-left: 90%;
-   justify-content: center;
-   align-items: center;
-}
-.sair i{
-    font-size: 28px;
-}
+.sair{
+    position: absolute;
+    margin-left: 90%;
+    justify-content: center;
+    align-items: center;
+ }
 .sair a{
     color:var(--Dourado);
     font-size: 1.7rem;
     margin-left: 1.7rem;
     cursor: pointer;
 }
-.sair a:hover{
-    color: var(--Roxo-medio);
+.sair i{
+    font-size: 28px;
 }
-
+.sair a:hover{
+    color: var(--Roxo);
+}
 .menu{
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: auto;
-    background: linear-gradient(to bottom, #480048, #000);
+    background: linear-gradient(to bottom, #581A84, #000);
 }
-
 .menu a {
     color: var(--Dourado);
-    font-size: 1.6rem;
-    margin: 0 3rem;
+    font-size: 16px;
+    margin: 0 30px;
     padding: 10px;
     
 }
 .menu a:hover{
-    color: var(--Roxo-medio);
+    color: rgb(226, 192, 0);
 }
 
 a.active {
     border-bottom: 3px solid var(--Dourado);
 }
-
 .cadastro-produtos {
     display: flex;
-    max-width: 90%;
-    margin: 20px auto;
+    max-width: 85%;
+    margin: 15px auto;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 /* -------------- INICIO DA AREA DE TEXTO CADASTRO DE PRODUTOS -------------- */
-.box-textos{
-    background-color: var(--Roxo-escuro);
+.box{
+    background-color: var(--Roxo);
     padding: 20px;
     width: 30%;
     border-radius: 8px;
     text-align: center;   
 }
-.cadastro-produtos .box-textos h2{
-    color: var(--Dourado);
-    text-shadow: var(--text-shadow);
-    font-size: 2.7rem;
-    margin-top: 3rem;
-    margin-bottom: 2rem;
+.box img{
+    margin: 60px auto;
 }
-.cadastro-produtos .box-textos .btn{
-    margin:5px;
+.btn{
+    display: inline-block;
+    font-size: 16px;
+    color: var(--Roxo);
+    background-color:var(--Dourado);
+    margin-bottom:30px;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
 }
+.btn:hover{
+    background-color: rgba(255, 217, 0, 0.788);
+}
+
 
 /* ------ INICIO DO FORMULARIO CADASTRO DE PRODUTOS ------ */
 .box-cadastro {
     display: grid;
     background-color: #fff; 
-    padding: 60px;
+    padding:20px;
     margin: auto;
 }
-
+.box-cadastro h2{
+    color: var(--Roxo);
+    text-shadow: var(--text-shadow);
+    font-size: 25px;
+    margin-bottom: 20px;
+}
 .box-cadastro label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    font-size: 14px;
-    color: var(--Roxo-medio);
+    font-size: 16px;
+    color: var(--Roxo);
 }
 .box-cadastro input,
 .box-cadastro textarea {
+    width: auto;
     padding: 5px;
     margin-bottom: 10px;
     border: 2px solid var(--Dourado);
@@ -168,7 +150,7 @@ a.active {
 .box-cadastro input[type="submit"] {
     width: 600px;
     margin: 10px auto;
-    background-color: var(--Roxo-medio);
+    background-color: var(--Roxo);
     color: white;
     padding: 12px 20px;
     border: none;

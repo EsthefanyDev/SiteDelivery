@@ -1,5 +1,5 @@
     <?php
-        include "conexaoDB.php";
+        include "../conexaoDB.php";
 
         $ID_Produto = $_POST['ID_Produto'];
 

@@ -1,9 +1,9 @@
 <?php
-    include "conexaoDB.php";
+    include "../conexaoDB.php";
 
     $ID_Produto = $_GET['ID_Produto'];
 
-    $SQL = "SELECT  Nome_Produto FROM produtos WHERE ID_Produto=$ID_Produto";
+    $SQL = "SELECT  Nome_Produto FROM produtos WHERE ID_Produto=$ID_Produto"; 
 
     $produtos = $mysqli->query($SQL) or die("Erro na busca do produto");
 
@@ -63,7 +63,7 @@
     }
 </style>
 <body>
-    <form action="Codigo-Excluir_Produto.php" method="post">
+    <form action="../Produto/Codigo-Excluir_Produto.php" method="post">
         <input type="hidden" name="ID_Produto" value="<?php echo $ID_Produto; ?>">
         <label>Deseja mesmo excluir o produto <?php echo $Nome_Produto;?>?</label><br>
         <br><br>

@@ -1,10 +1,11 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
     text-decoration: none;
+    border: none;
 }
 
 :root {
@@ -17,56 +18,126 @@
     --Branco: #FFF;
 }
 body{
-    background-image: url(background-02.png);
+    background-image: url(../img/Z-Background.png);
 }
 
-
-.topo {
-    background-color: var(--Preto);
-    color: white;
-    padding: 10px;
+/* ------------- INICIO DA BARRA DE NAVEGAÇÃO SUPERIOR ------------- */
+.topo-site{
     display: flex;
-    justify-content: space-around;
+    background-color: var(--Preto);
     align-items: center;
-}
+    justify-content: center;
 
-.topo a {
+}
+.topo-site h1{
+    color: whitesmoke;
+    font-size: 18px;
+    padding: 10px;
+    border-left: 4px solid var(--Dourado);
+    margin: 5px;
+}
+.sair{
+    position: absolute;
+    margin-left: 90%;
+    justify-content: center;
+    align-items: center;
+ }
+.sair a{
+    color:var(--Dourado);
+    font-size: 1.7rem;
+    margin-left: 1.7rem;
+    cursor: pointer;
+}
+.sair i{
+    font-size: 28px;
+}
+.sair a:hover{
+    color: var(--Roxo);
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to bottom, #581A84, #000);
+}
+.menu a {
     color: var(--Dourado);
-    text-decoration: none;
-    margin: 0 10px;
+    font-size: 16px;
+    margin: 0 30px;
+    padding: 10px;
+    
 }
-.topo a:hover {
-    text-decoration: underline;
+.menu a:hover{
+    color: rgb(226, 192, 0);
 }
 
-table{
-    border-collapse: collapse;
-    width: 80%;
+a.active {
+    border-bottom: 3px solid var(--Dourado);
+}
+
+
+
+
+table {
+    width: 90%;
     margin: auto;
     margin-top: 30px;
     background-color: var(--Branco);
+    border-radius: 12px;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 th, td {
-    border: 1px solid var(--Preto);
-    padding: 8px;
+    padding: 12px;
     text-align: left;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
 }
+
 th {
-    background-color: #f2f2f2;
+    background-color: #581A84;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
 }
 
 tr:hover {
-    background-color: var(--Prata);
+    background-color: rgba(88, 26, 132, 0.1);
+    transition: background-color 0.3s ease;
 }
-.topo{
-    display: flex;
-}
-.bx-edit{
-    font-size: 30px;
+
+.bx-edit {
+    font-size: 24px;
     color: #581A84;
+    transition: color 0.3s ease;
 }
-.bx-trash{
-    font-size: 30px;
-    color: red;
+
+.bx-edit:hover {
+    color: #3a1159;
+}
+
+.bx-trash {
+    font-size: 24px;
+    color: #ff4d4d;
+    transition: color 0.3s ease;
+}
+
+.bx-trash:hover {
+    color: #cc0000;
+}
+
+/* Estilo para os links de editar e excluir */
+a {
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.8;
 }
 
