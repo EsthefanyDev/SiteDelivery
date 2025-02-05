@@ -18,17 +18,14 @@
             <img src="../../img/Delivery Logotipo .png" alt="logo" width="80">
         </a>
         <h1>ADMINISTRADOR</h1>
-        <div class="sair">
-            <a href="Codigo-Sair_da_Conta.php" id="logout"><i class='bx bx-log-out-circle'></i></a>
-        </div>
     </header>
     <nav class="menu">
         <a href="#">Dashboard</a>
         <a href="gerenciar_pedidos.php">Pedidos</a>
         <a href="5pagina-Tabela_Clientes.php">Usuários</a>
-        <a href="#cadastro-produtos" class="active">Produtos</a>
+        <a href="../../html/pagina-Cadastro_Produtos.html" class="active">Produtos</a>
         <a href="relatorios.php">Relatórios</a>
-        <a id="inicio" href="../php/Paginas_PHP/1pagina-Index.php">Prime Delivery</a>
+        <a id="inicio" href="1pagina-Index.php">Prime Delivery</a>
     </nav> 
 
     <?php
@@ -58,7 +55,7 @@
                     <td><?php echo $dados['Descricao_Produto'];?></td>
                     <!-- <td><?php echo $dados['Imagem'];?></td> -->
                     <td><?php echo $dados['Tipo_Imagem'];?></td>
-                    <td><a href="7pagina-Editar_Produto.php?ID_Produto=<?php echo $dados['ID_Produto'];?>"><i class='bx bx-edit'></i></a></td>
+                    <td><a href="../Paginas_PHP/7pagina-Editar_Produto.php?ID_Produto=<?php echo $dados['ID_Produto'];?>"><i class='bx bx-edit'></i></a></td>
                     <td><a href="../Paginas_PHP/6pagina-Excluir_Produto.php?php echo $dados['ID_Produto'];?>"><i class='bx bx-trash'></i></a>
                     </td>    
                 </tr>
