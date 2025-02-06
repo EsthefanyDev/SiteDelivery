@@ -45,13 +45,10 @@ body{
  }
 .sair a{
     color:var(--Dourado);
-    font-size: 1.7rem;
-    margin-left: 1.7rem;
     cursor: pointer;
-}
-.sair i{
     font-size: 28px;
 }
+
 .sair a:hover{
     color: var(--Roxo);
 }
@@ -120,14 +117,14 @@ a.active {
 .box-cadastro h2{
     color: var(--Roxo);
     text-shadow: var(--text-shadow);
-    font-size: 25px;
+    font-size: 24px;
     margin-bottom: 20px;
 }
 .box-cadastro label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     color: var(--Roxo);
 }
 .box-cadastro input,
@@ -138,7 +135,7 @@ a.active {
     border: 2px solid var(--Dourado);
     border-radius: 4px;
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 14px;
 }
 .box-cadastro textarea {
     resize: vertical;

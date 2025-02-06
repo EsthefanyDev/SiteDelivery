@@ -1,23 +1,43 @@
 <?php
-    include "../conexaoDB.php";
+include "../conexaoDB.php";
 
-    $ID_Produto = $_GET['ID_Produto'];
+// Verifica se o ID do produto foi passado na URL
+if (!isset($_GET['ID_Produto'])) {
+    die("Erro: ID do produto não foi passado na URL.");
+}
 
-    $SQL = "SELECT  Nome_Produto FROM produtos WHERE ID_Produto=$ID_Produto"; 
+// Verifica se o ID do produto é um número válido
+if (!is_numeric($_GET['ID_Produto'])) {
+    die("Erro: ID do produto deve ser um número.");
+}
 
-    $produtos = $mysqli->query($SQL) or die("Erro na busca do produto");
+$ID_Produto = intval($_GET['ID_Produto']); // Converte para inteiro
 
-    if ($produtos->num_rows > 0){
+// Consulta o banco de dados para obter o nome do produto
+$SQL = "SELECT Nome_Produto FROM produtos WHERE ID_Produto = ?";
+$stmt = $mysqli->prepare($SQL);
 
-        $dados = $produtos->fetch_assoc();
+if ($stmt) {
+    $stmt->bind_param("i", $ID_Produto);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-        $Nome_Produto = $dados['Nome_Produto'];
-           
+    if ($result->num_rows > 0) {
+        $dados = $result->fetch_assoc();
+        $Nome_Produto = htmlspecialchars($dados['Nome_Produto']);
+    } else {
+        die("Erro: Produto não encontrado no banco de dados.");
     }
-    else die("Produto não encontrado");
+
+    $stmt->close();
+} else {
+    die("Erro ao preparar a consulta: " . $mysqli->error);
+}
+
+$mysqli->close();
 ?>
 <!DOCTYPE html>
-<html lang="ptbr">
+<html lang="pt-br">
 <head>
     <meta charset="utf-8"/>
     <title>Excluir Produto?</title>
@@ -25,7 +45,7 @@
 <style>
     body {
         font-family: Arial, sans-serif;
-        background-image: url(background-02.png);
+        background-image: url(../../img/Z-Background.png);
         margin: 0;
         padding: 0;
         display: flex;
@@ -65,13 +85,10 @@
 <body>
     <form action="../Produto/Codigo-Excluir_Produto.php" method="post">
         <input type="hidden" name="ID_Produto" value="<?php echo $ID_Produto; ?>">
-        <label>Deseja mesmo excluir o produto <?php echo $Nome_Produto;?>?</label><br>
+        <label>Deseja mesmo excluir o produto <?php echo $Nome_Produto; ?>?</label><br>
         <br><br>
         <input type="submit" value="Sim">
         <input type="button" onclick="history.go(-1)" value="Não">
     </form>
 </body>
 </html>
-
-
-
