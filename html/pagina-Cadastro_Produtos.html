@@ -1,0 +1,58 @@
+<?php
+    include('protecao.php');
+?>
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prime Delivery</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/estilo-cadastro_produtos.css">
+</head>
+<body>
+    <!------------- INICIO DA BARRA DE NAVEGAÇÃO SUPERIOR ------------->
+    <header class="topo-site">
+        <a href="1pagina-Index.php" class="logo">
+            <img src="../img/Delivery Logotipo .png" alt="logo" width="80">
+        </a>
+        <h1>ADMINISTRADOR</h1>
+        <div class="sair">
+            <a href="Codigo-Sair_da_Conta.php" id="logout"><i class='bx bx-log-out-circle'></i></a>
+        </div>
+    </header>
+    <nav class="menu">
+        <a href="#">Dashboard</a>
+        <a href="gerenciar_pedidos.php">Pedidos</a>
+        <a href="5pagina-Tabela_Clientes.php">Usuários</a>
+        <a href="#cadastro-produtos" class="active">Produtos</a>
+        <a href="relatorios.php">Relatórios</a>
+        <a id="inicio" href="../php/Paginas_PHP/1pagina-Index.php">Prime Delivery</a>
+    </nav> 
+    
+    <!--------------- INICIO CADASTRO DE PRODUTOS--------------->
+    <section class="cadastro-produtos">
+        <div class="box">
+            <img src="../img/database.png" width="200px" alt="">
+            <a href="../php/Paginas_PHP/5pagina-Tabela_Produtos.php" class="btn">Produtos Cadastrados</a>
+        </div>
+        <form class="box-cadastro" action="../php/Produto/Codigo-Cadastro_Produtos.php" method="post" enctype="multipart/form-data">
+            <h2>Cadastro de Produtos</h2>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="preco">Preço:</label>
+            <input type="number" id="preco" name="preco" step="0.01" required>
+            
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" name="descricao" required></textarea>
+            
+            <label for="imagem">Imagem do Produto:</label>
+            <input type="file" id="imagem" name="imagem" accept="image/*" required>
+            
+            <input type="submit" value="Cadastrar Produto">
+        </form>
+    </section>
+</body>
+</html>

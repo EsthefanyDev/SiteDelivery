@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+}
+:root {
+    --roxo-claro:#9B5CB5;
+    --Roxo: #581A84;
+    --Roxo-escuro: #480048;
+    --Prata: #C0C0C0;
+    --Dourado: #FFD700;
+    --Preto: #000;
+    --Branco: #FFF;
+    --text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+body{
+    background: url(../img/Z-Background.png);
+}
+
+
+/* ------------- INICIO DA BARRA DE NAVEGAÇÃO SUPERIOR ------------- */
+.topo-site{
+    display: flex;
+    background-color: var(--Preto);
+    align-items: center;
+    justify-content: center;
+
+}
+.topo-site h1{
+    color: whitesmoke;
+    font-size: 18px;
+    padding: 10px;
+    border-left: 4px solid var(--Dourado);
+    margin: 5px;
+}
+.sair{
+    position: absolute;
+    margin-left: 90%;
+    justify-content: center;
+    align-items: center;
+ }
+.sair a{
+    color:var(--Dourado);
+    cursor: pointer;
+    font-size: 28px;
+}
+
+.sair a:hover{
+    color: var(--Roxo);
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to bottom, #581A84, #000);
+}
+.menu a {
+    color: var(--Dourado);
+    font-size: 16px;
+    margin: 0 30px;
+    padding: 10px;
+    
+}
+.menu a:hover{
+    color: rgb(226, 192, 0);
+}
+
+a.active {
+    border-bottom: 3px solid var(--Dourado);
+}
+.cadastro-produtos {
+    display: flex;
+    max-width: 85%;
+    margin: 15px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* -------------- INICIO DA AREA DE TEXTO CADASTRO DE PRODUTOS -------------- */
+.box{
+    background-color: var(--Roxo);
+    padding: 20px;
+    width: 30%;
+    border-radius: 8px;
+    text-align: center;   
+}
+.box img{
+    margin: 60px auto;
+}
+.btn{
+    display: inline-block;
+    font-size: 16px;
+    color: var(--Roxo);
+    background-color:var(--Dourado);
+    margin-bottom:30px;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.btn:hover{
+    background-color: rgba(255, 217, 0, 0.788);
+}
+
+
+/* ------ INICIO DO FORMULARIO CADASTRO DE PRODUTOS ------ */
+.box-cadastro {
+    display: grid;
+    background-color: #fff; 
+    padding:20px;
+    margin: auto;
+}
+.box-cadastro h2{
+    color: var(--Roxo);
+    text-shadow: var(--text-shadow);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.box-cadastro label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--Roxo);
+}
+.box-cadastro input,
+.box-cadastro textarea {
+    width: auto;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 2px solid var(--Dourado);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.box-cadastro textarea {
+    resize: vertical;
+    height: 60px;
+}
+
+
+/* Botão */
+.box-cadastro input[type="submit"] {
+    width: 600px;
+    margin: 10px auto;
+    background-color: var(--Roxo);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-weight:500;
+}
+.box-cadastro input[type="submit"]:hover {
+    background-color: var(--Roxo-escuro);
+    color: white;
+}
+
+
+
+
+
+/* ------------ INICIO DAS CONFIG RESPOSIVIDADE ------------ */
+@media only screen and (max-width: 768px) {
+    .topo-site {
+        padding: 1rem 5%;
+    }
+    .menu-site {
+        display: flex;
+        justify-content:center;
+        width: 100%;
+        background-color: var(--Preto);
+        z-index: 999;
+        text-align: center;
+    }
+    #contato1,
+    #sobre1{
+        display: none;
+    }
+    .menu-site a {
+        margin: 0;
+        padding: 1rem;
+        color: var(--Dourado);
+        font-size: 1.2rem;
+    }
+    .icons {
+        display: block;
+    }
+    .banner img {
+        width: 100%;
+        height: 200px;
+    }
+    .cadastro-produtos {
+        flex-direction: column;
+        padding: 2rem;
+    }
+    .box-textos {
+        width: 100%;
+        height: auto;
+    }
+    .box-cadastro {
+        width: 100%;
+    }
+    .sobre {
+        flex-direction: column;
+    }
+    .text {
+        padding: 2rem;
+        margin: 2rem;
+    }
+    .motinha img {
+        width: 100%;
+    }
+}
