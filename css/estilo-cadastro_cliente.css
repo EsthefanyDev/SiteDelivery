@@ -20,8 +20,6 @@
 body{
     background: url(../img/Z-Background.png);
 }
-
-
 /* ------------- INICIO DA BARRA DE NAVEGAÇÃO SUPERIOR ------------- */
 .topo-site{
     display: flex;
@@ -71,6 +69,8 @@ body{
 a.active {
     border-bottom: 3px solid var(--Dourado);
 }
+
+
 .cadastro-produtos {
     display: flex;
     max-width: 70%;
@@ -79,11 +79,11 @@ a.active {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-/* -------------- INICIO DA AREA DE TEXTO CADASTRO DE PRODUTOS -------------- */
+* -------------- INICIO DA AREA DE TEXTO CADASTRO DE PRODUTOS -------------- */
 .box{
     background-color: var(--Roxo);
     padding: 20px;
-    width: 35%;
+    width: 30%;
     border-radius: 8px;
     text-align: center;   
 }
@@ -106,8 +106,34 @@ a.active {
     background-color: rgba(255, 217, 0, 0.788);
 }
 
+/* -------------- INICIO DA AREA DE TEXTO CADASTRO -------------- */
+.box{
+    background-color: var(--Roxo);
+    padding: 20px;
+    width: 30%;
+    border-radius: 8px;
+    text-align: center;   
+}
+.box img{
+    margin: 60px auto;
+}
+.btn{
+    display: inline-block;
+    font-size: 16px;
+    color: var(--Roxo);
+    background-color:var(--Dourado);
+    margin-bottom:30px;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.btn:hover{
+    background-color: rgba(255, 217, 0, 0.788);
+}
 
-/* ------ INICIO DO FORMULARIO CADASTRO DE PRODUTOS ------ */
+/* ------ INICIO DO FORMULARIO CADASTRO ------ */
 .box-cadastro {
     width: auto;
     display: flex;
@@ -128,9 +154,8 @@ a.active {
     font-size: 14px;
     color: var(--Roxo);
 }
-.box-cadastro input,
-.box-cadastro textarea {
-    width: auto;
+.box-cadastro input{
+    width: 350px;
     padding: 5px;
     margin-bottom: 10px;
     border: 2px solid var(--Dourado);
@@ -138,10 +163,7 @@ a.active {
     box-sizing: border-box;
     font-size: 14px;
 }
-.box-cadastro textarea {
-    resize: vertical;
-    height: 60px;
-}
+
 
 
 /* Botão */
@@ -193,10 +215,7 @@ a.active {
     .icons {
         display: block;
     }
-    .banner img {
-        width: 100%;
-        height: 200px;
-    }
+
     .cadastro-produtos {
         flex-direction: column;
         padding: 2rem;
@@ -208,14 +227,5 @@ a.active {
     .box-cadastro {
         width: 100%;
     }
-    .sobre {
-        flex-direction: column;
-    }
-    .text {
-        padding: 2rem;
-        margin: 2rem;
-    }
-    .motinha img {
-        width: 100%;
-    }
+    
 }

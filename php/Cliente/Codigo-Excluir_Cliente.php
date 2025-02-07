@@ -1,5 +1,5 @@
 <?php
-    include "conexaoDB.php";
+    include "../conexaoDB.php";
 
     $ID_Cliente   = $_POST['ID_Cliente'];
     
@@ -9,5 +9,5 @@
 
     $mysqli->query($SQL) or die("Query falhou");
 
-    header("Location: 5pagina-Tabela_Clientes.php");
+    header("Location: ../Paginas_PHP/5pagina-Tabela_Clientes.php");
 ?>
