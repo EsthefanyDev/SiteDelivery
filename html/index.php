@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 // Conexão com o banco de dados
 $conexaoD = mysqli_connect("localhost", "root", "", "prime_delivery");
 
@@ -13,7 +13,7 @@ $resultado = $conexaoD->query($sql);
 if (!$resultado) {
     die('Erro na consulta: ' . $conexaoD->error);
 }
-?> -->
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -149,39 +149,34 @@ if (!$resultado) {
             <img src="../img/Delivery Logotipo .png" alt="Prime Delivery" width="120">
             <div class="footer__social">
               <a href="#" class="footer__social-link bx bxl-facebook-circle"></a>
-              <a href="#" class="footer__social-link bx bxl-twitter"></a>
-              <a href="#" class="footer__social-link bx bxl-linkedin"></a>
               <a href="#" class="footer__social-link bx bxl-instagram-alt"></a>
             </div>
           </div>
-      
+          
           <!-- Seção de Contato -->
           <div class="footer__contact">
-            <h3 class="footer__title">Faça seu pedido</h3>
-            <p class="footer__info bx bx-phone">(91) 6666 - 6666</p>
-            <p class="footer__info bx bxl-whatsapp">(91) 6666 - 6666</p>
-            <a href="mailto:contato@primedelivery.com" class="footer__link">
-              <i class="bx bx-envelope"></i>contato@primedelivery.com
-            </a>
+            <h3>Faça seu pedido</h3>
+            <p><i class="bx bx-phone"></i>(91) 6666 - 6666</p>
+            <p><i class="bx bxl-whatsapp"></i>(91) 6666 - 6666</p>
+            <a href="mailto:contato@primedelivery.com"><i class="bx bx-envelope"></i>contato@primedelivery.com</a>
           </div>
-      
+          
           <!-- Seção de Localização -->
           <div class="footer__location">
-            <h3 class="footer__title">Localização</h3>
-            <p class="footer__address">
+            <h3>Localização</h3>
+            <p>
               Rua da desesperança, nº66 <br>
               Bairro da Desolação <br>
               Cidade do Lamento Noturno
             </p>
           </div>
         </div>
-      
+        
         <!-- Direitos Autorais -->
-        <div class="direitos">
+        <div class="footer__copyright">
           <p>&copy; 2023 - Todos os direitos reservados</p>
         </div>
       </footer>
-
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
