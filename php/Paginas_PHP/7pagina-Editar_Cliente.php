@@ -34,32 +34,31 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        background-image: url(background-02.png);
+        background-image: url(../../img/Z-Background.png);
     }
     div {
         display: flex;
         color:#FFD700; 
         padding: 10px;
         width: 100%;
+        align-itens:center;
+        text-align: center;
     }
-    div a, i{
-        font-size: 20px;
-        font-weight: 600;
+
+    div i{
+        display: static;
+        font-size: 40px;
         color: #FFD700;
-        margin: 10px;
+        margin: 20px;
         text-decoration: none;
     }
-    div a:hover {
-        text-decoration: underline;
-    }
+    
     form {
         background-color: #fff;
-        width: 300px;
-        padding: 20px;
+        width: 400px;
+        padding: 30px;
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        border-style:double ;
-        border-color: #FFD700;
     }
     h1{
         color: #581A84;
@@ -74,10 +73,11 @@
     input {
         width: 100%;
         padding: 8px;
-        margin-bottom: 15px;
+        margin: 3px 0 10px;
         box-sizing: border-box;
-        border: 1px solid #ccc;
+        border: 2px solid #ccc;
         border-radius: 4px;
+        font-size: 16px;
     }
     input[type="submit"] {
         background-color: #581A84;
@@ -92,7 +92,7 @@
     </style>
 <body>
     <div>
-        <a href="5pagina-Tabela_Clientes.php"><i class='bx bx-left-arrow-circle'></i>Voltar</a><br><br>
+        <a href="5pagina-Tabela_Clientes.php"><i class='bx bx-left-arrow-circle'></i></a>
     </div>
 
     <form action="../Cliente/Codigo-Editar_Cliente.php" method="post">
@@ -100,16 +100,16 @@
 
         <input type="hidden" name="ID_Cliente" value="<?php echo $ID_Cliente; ?>">
 
-        <label>Nome_Cliente:</label><br>
+        <label>Nome do Cliente:</label><br>
         <input type="text" name="Nome_Cliente" value="<?php echo $Nome_Cliente;?>"><br>
         
         <label>Celular:</label><br>
         <input type="text" name="Celular" value="<?php echo $Celular;?>"><br>
 
-        <label>Senha_Cliente:</label><br>
+        <label>Senha:</label><br>
         <input type="text" name="Senha_Cliente" value="<?php echo $Senha_Cliente;?>"><br>
 
-        <label>Celular:</label><br>
+        <label>Endereço:</label><br>
         <input type="text" name="Endereco_Cliente" value="<?php echo $Endereco_Cliente;?>"><br>
 
         <br><br>

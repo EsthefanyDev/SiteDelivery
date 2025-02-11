@@ -38,24 +38,26 @@
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        width: 50%;
+        width: 500px;
         text-align: center;
-        border-style: double;
     }
-    label {
-        font-weight: bold;
-        margin-bottom: 15px;
+    h3 {
+        font-size:20px;
+        margin-bottom: 20px;
         display: block;
+    }
+    span{
+        color:  #581A84;
     }
     input[type="submit"], input[type="button"] {
         background-color: #581A84;
         color: white;
-        padding: 10px 20px;
-        font-size: 16px;
+        padding: 10px 30px;
+        font-size: 18px;
         cursor: pointer;
         border: none;
         border-radius: 4px;
-        margin: 0 10px;
+        margin: 10px 40px;
     }
     input[type="submit"]:hover, input[type="button"]:hover {
         background-color: #480048;
@@ -66,10 +68,8 @@
     <form action="../Cliente/Codigo-Excluir_Cliente.php" method="post">
         <input type="hidden" name="ID_Cliente" value="<?php echo $ID_Cliente; ?>">
 
-        <label>Deseja mesmo excluir o cliente <?php echo $Nome_Cliente;?>?</label><br>
-        
-        <br><br>
-
+        <h3>Deseja mesmo excluir o cliente <span><?php echo $Nome_Cliente;?></span>?</h3>
+        <hr>
         <input type="submit" value="Sim">
         <input type="button" onclick="history.go(-1)" value="Não">
         
