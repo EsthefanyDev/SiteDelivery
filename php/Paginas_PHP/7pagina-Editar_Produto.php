@@ -10,7 +10,7 @@ $ID_Produto = intval($_GET['ID_Produto']);
 
 // Usando prepared statements para evitar SQL injection
 $SQL = "SELECT * FROM produtos WHERE ID_Produto = ?";
-$stmt = $mysqli->prepare($SQL);
+$stmt = $conexao->prepare($SQL);
 $stmt->bind_param("i", $ID_Produto);
 $stmt->execute();
 $result = $stmt->get_result();

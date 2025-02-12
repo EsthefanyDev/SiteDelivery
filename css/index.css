@@ -138,17 +138,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 170px;
-    color: var(--Roxo-escuro);
-    background-color: #FFD51E;
-    box-shadow: var(--text-shadow);
-    font-size: 1.1rem;
-    font-weight: bold;
-    border-radius: 50rem;
-    border-bottom-right-radius: 0px;
-    padding: 5px;
-    margin: 10px;
-    gap: 15px;
 }
 .combos__link i{
     font-size: 29px;
@@ -175,11 +164,13 @@ body {
     background-color: var(--Branco);
     border-radius: 10px 10px 0 0;
     padding: auto;
-    width: 220px;
+    width: 250px;
     text-align: center;
     justify-content: center;
     text-align: center;
     box-shadow: var(--text-shadow);
+    justify-content: space-between;
+    min-height: 350px; 
 }
 .product img{
     width: 100%;
@@ -188,12 +179,15 @@ body {
 .product__name{
     font-size: 1.2rem;
     color: var(--Roxo-escuro);
+    margin-bottom: 10px;
 }
 .product__description{
     text-align: center;
+    padding:0 7px;
     font-size: .7rem;
     color: darkslategrey;
     font-weight: 600;
+    flex-grow: 1; /* Faz o conteúdo ocupar o espaço disponível */
 }
 .product__price span{
     font-size: .7rem;
@@ -205,13 +199,14 @@ body {
     font-weight: 700;
     color: #f56b1b;
     text-align: justify;
-    margin: 10px;
+    margin: 8px;
 }
 .quantity-control {
     margin: 5px;
     display: flex;
     align-items: center;
     gap: 8px;
+    justify-content: center; /* Centraliza os botões de quantidade */
 }
 
 .quantity-button {
@@ -251,6 +246,7 @@ body {
     font-size: 12px;
     font-weight: 600;
     transition: background-color 0.3s ease;
+    width: 100%; /* Faz o botão ocupar a largura total do card */
 }
 .add-to-cart:hover {
     background-color: #218838; 

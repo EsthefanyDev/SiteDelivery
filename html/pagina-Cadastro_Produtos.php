@@ -1,6 +1,3 @@
-<?php
-    include('protecao.php');
-?>
 <!DOCTYPE html>
 <html lang="Pt-br">
 <head>
@@ -39,6 +36,9 @@
         </div>
         <form class="box-cadastro" action="../php/Produto/Codigo-Cadastro_Produtos.php" method="post" enctype="multipart/form-data">
             <h2>Cadastro de Produtos</h2>
+
+          
+
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
             
@@ -50,6 +50,29 @@
             
             <label for="imagem">Imagem do Produto:</label>
             <input type="file" id="imagem" name="imagem" accept="image/*" required>
+            <label for="categoria">Categoria:</label>
+            <select name="categoria" id="categoria">
+                <option value="">Selecione uma categoria</option>
+                <?php
+                include('..\php\conexaoDB.php'); // Certifique-se de que a conexão está correta
+
+                $sql = "SELECT ID_Categoria, Nome_Categoria FROM Categorias";
+                $resultado = $conexao->query($sql);
+
+                if ($resultado->num_rows > 0) {
+                    while ($row = $resultado->fetch_assoc()) {
+                        echo "<option value='{$row['ID_Categoria']}'>{$row['Nome_Categoria']}</option>";
+                    }
+                } else {
+                    echo "<option value=''>Nenhuma categoria encontrada</option>";
+                }
+
+                $conexao->close();
+                ?>
+            </select>
+
+
+
             
             <input type="submit" value="Confirmar">
         </form>

@@ -15,7 +15,7 @@ $ID_Produto = intval($_GET['ID_Produto']); // Converte para inteiro
 
 // Consulta o banco de dados para obter o nome do produto
 $SQL = "SELECT Nome_Produto FROM produtos WHERE ID_Produto = ?";
-$stmt = $mysqli->prepare($SQL);
+$stmt = $conexao->prepare($SQL);
 
 if ($stmt) {
     $stmt->bind_param("i", $ID_Produto);
@@ -34,7 +34,7 @@ if ($stmt) {
     die("Erro ao preparar a consulta: " . $mysqli->error);
 }
 
-$mysqli->close();
+$conexao->close();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

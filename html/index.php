@@ -1,17 +1,21 @@
 <?php
-// Conexão com o banco de dados
-$conexaoD = mysqli_connect("localhost", "root", "", "prime_delivery");
-
-if ($conexaoD->connect_error) {
-    die('Erro na conexão: ' . $conexaoD->connect_error);
+include('../php/conexaoDB.php');
+$sql = "SELECT * FROM Produtos";
+$resultado = $conexao->query($sql);
+if (!$resultado) {
+    die('Erro na consulta: ' . $conexao->error);
 }
 
-// Consulta ao banco de dados
-$sql = "SELECT * FROM Produtos";
-$resultado = $conexaoD->query($sql);
+$sqlCombos = "
+    SELECT p.* 
+    FROM Produtos p
+    INNER JOIN Categorias c ON p.fk_Categoria_ID_Categoria = c.ID_Categoria
+    WHERE c.Nome_Categoria = 'Combos'
+";
+$resultadoCombos = $conexao->query($sqlCombos);
 
-if (!$resultado) {
-    die('Erro na consulta: ' . $conexaoD->error);
+if (!$resultadoCombos) {
+    die('Erro na consulta: ' . $conexao->error);
 }
 ?>
 <!DOCTYPE html>
@@ -38,7 +42,7 @@ if (!$resultado) {
     </style>
 </head>
 <body>
-    <!-- Header -->
+    <!-- Cabeçalho -->
     <header class="header">
         <div class="header__container">
             <div class="header__logo">
@@ -51,21 +55,13 @@ if (!$resultado) {
                 <a href="#contato" class="header__nav-link">Contato</a>
             </nav>
             <div class="header__actions">
-                <a href="../html/pagina-Login.html" class="header__button">
-                    <i class="bx bxs-user"></i>
-                    Entrar
-                </a>
-                <a href="../html/3pagina-Cadastro_Clientes.html" class="header__button user-plus">
-                    <i class="bx bxs-user-plus"></i>
-                    Cadastre-se
-                </a>
+                <a href="../html/3pagina-Cadastro_Clientes.html" class="header__button user-plus"><i class="bx bxs-user-plus"></i>Cadastre-se</a>
+                <a href="../html/pagina-Login.html" class="header__button"><i class="bx bxs-user"></i>Entrar</a>
             </div>
         </div>
     </header>
-
-    <!-- Main Content -->
     <main>
-        <!-- Banner Carousel -->
+        <!-- Carrossel de Banner -->
         <section class="carousel">
             <div class="carousel__slide">
                 <img src="../img/slides/pizza.jpg" alt="Pizza">
@@ -88,30 +84,36 @@ if (!$resultado) {
         <section class="combos">
             <h2 class="combos__title">Nossos Combos</h2>
             <ul class="combos__list">
-                <li class="combos__item">
-                    <img src="../img/combos/Combo-Familia-300x300.png" alt="Combo Família">
-                    <a href="#" class="combos__link">
-                        <i class='bx bxs-cart-add'></i><span>R$48,59</span>
-                    </a>
-                </li>
-                <li class="combos__item">
-                    <img src="../img/combos/Combo-amigos-300x300.png" alt="Combo Amigos">
-                    <a href="#" class="combos__link">
-                        <i class='bx bxs-cart-add'></i><span>R$21,00</span>
-                    </a>
-                </li>
-                <li class="combos__item">
-                    <img src="../img/combos/Combo-Love-300x300.png" alt="Combo Love">
-                    <a href="#" class="combos__link">
-                        <i class='bx bxs-cart-add'></i><span>R$25,00</span>
-                    </a>
-                </li>
-                <li class="combos__item">
-                    <img src="../img/combos/Combo-Full-300x300.png" alt="Combo Full">
-                    <a href="#" class="combos__link">
-                        <i class='bx bxs-cart-add'></i><span>R$28,00</span>
-                    </a>
-                </li>
+                <?php while ($combo = $resultadoCombos->fetch_assoc()): ?>
+                    <li class="combos__item">
+                        <img src="../php/Produto/exibir_imagem.php?id=<?= $combo['ID_Produto'] ?>" alt="<?= htmlspecialchars($combo['Nome_Produto']) ?>">
+                        
+                            <h3 class="combo__name"><?= htmlspecialchars($combo['Nome_Produto']) ?></h3>
+                            
+                            <p class="combo__description"><?= htmlspecialchars($combo['Descricao_Produto']) ?></p>
+                            <span id="preço">R$ <?= number_format($combo['Preco_Produto'], 2, ',', '.') ?></span> 
+                        <a href="#" class="combos__link">
+                            
+                            <div class="quantity-control" data-product-id="<?= $combo['ID_Produto'] ?>">
+                                <button type="button" class="quantity-button decrease">
+                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                        <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </button>
+                                <input type="tel" class="quantity-input" value="0">
+                                <button type="button" class="quantity-button increase">
+                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                        <line x1="12" y1="4" x2="12" y2="20" stroke="currentColor" stroke-width="2" />
+                                        <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </button>
+                                <button type="button" class="add-to-cart" data-product-id="<?= $combo['ID_Produto'] ?>">
+                                    Adicionar
+                                </button>
+                            </div>
+                        </a>
+                    </li>
+                <?php endwhile; ?>
             </ul>
         </section>
 
@@ -143,7 +145,6 @@ if (!$resultado) {
                             Adicionar
                         </button>
                         </div>
-                        
                     </div>
                 <?php endwhile; ?>
             </div>

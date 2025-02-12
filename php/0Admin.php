@@ -9,11 +9,11 @@ if(isset($_POST['Usuario']) || isset($_POST['Senha'])) {
         echo "Preencha sua Senha";
     } else {
         
-        $Usuario = $mysqli->real_escape_string($_POST['Usuario']);
-        $Senha = $mysqli->real_escape_string($_POST['Senha']);
+        $Usuario = $conexao->real_escape_string($_POST['Usuario']);
+        $Senha = $conexao->real_escape_string($_POST['Senha']);
 
         $sql_code = "SELECT * FROM Admin WHERE Usuario = '$Usuario' AND Senha = '$Senha'";
-        $sql_query = $mysqli->query($sql_code) or die("Falhha na execucao" . $mysqli->error);
+        $sql_query = $conexao->query($sql_code) or die("Falhha na execucao" . $conexao->error);
 
         $quantidade = $sql_query->num_rows;
 

@@ -11,84 +11,87 @@ USE prime_delivery;
 -- 📌 TABELA CLIENTE
 -- ==============================================
 CREATE TABLE Cliente (
-    ID_Cliente INT NOT NULL AUTO_INCREMENT, -- ID único para cada cliente
-    Nome_Cliente VARCHAR(90) NOT NULL,      -- Nome do cliente
-    Senha_Cliente VARCHAR(255) NOT NULL,    -- Senha do cliente (armazenada de forma segura com hash)
-    Endereco_Cliente VARCHAR(90) NOT NULL,  -- Endereço do cliente
-    Celular VARCHAR(20) NOT NULL UNIQUE,    -- Celular único para cada cliente
-    PRIMARY KEY (ID_Cliente)                -- Chave primária
+    ID_Cliente INT NOT NULL AUTO_INCREMENT,
+    Nome_Cliente VARCHAR(90) NOT NULL,
+    Senha_Cliente VARCHAR(255) NOT NULL,
+    Endereco_Cliente VARCHAR(90) NOT NULL,
+    Celular VARCHAR(20) NOT NULL UNIQUE,
+    PRIMARY KEY (ID_Cliente)
 );
 
--- ✅ Índice para acelerar buscas pelo nome do cliente
 CREATE INDEX idx_nome_cliente ON Cliente (Nome_Cliente);
-
-DESC Cliente;
 
 -- ==============================================
 -- 📌 TABELA PEDIDOS
 -- ==============================================
 CREATE TABLE Pedidos (
-    ID_pedidos INT NOT NULL AUTO_INCREMENT, -- ID único para cada pedido
-    Data_pedido DATETIME NOT NULL,          -- Data e hora do pedido
-    fk_Cliente_ID_Cliente INT NOT NULL,     -- Referência ao cliente que fez o pedido
-    PRIMARY KEY (ID_pedidos),               -- Chave primária
-
-    -- 🔗 Chave estrangeira vinculando cada pedido a um cliente
+    ID_pedidos INT NOT NULL AUTO_INCREMENT,
+    Data_pedido DATETIME NOT NULL,
+    fk_Cliente_ID_Cliente INT NOT NULL,
+    PRIMARY KEY (ID_pedidos),
     CONSTRAINT FK_Pedidos_Cliente
         FOREIGN KEY (fk_Cliente_ID_Cliente)
         REFERENCES Cliente (ID_Cliente)
-        ON DELETE CASCADE  -- Se um cliente for excluído, seus pedidos também serão removidos
+        ON DELETE CASCADE
 );
 
--- ✅ Índice para melhorar a velocidade de consultas pelo cliente nos pedidos
 CREATE INDEX idx_fk_cliente_pedidos ON Pedidos (fk_Cliente_ID_Cliente);
 
-DESC Pedidos;
+-- ==============================================
+-- 📌 TABELA CATEGORIAS
+-- ==============================================
+CREATE TABLE Categorias (
+    ID_Categoria INT NOT NULL AUTO_INCREMENT,
+    Nome_Categoria VARCHAR(50) NOT NULL UNIQUE,
+    PRIMARY KEY (ID_Categoria)
+);
+
+INSERT INTO Categorias (Nome_Categoria) VALUES
+('Pizzas'),
+('Hambúrgueres'),
+('Acompanhamentos'),
+('Bebidas');
+('Combos');
+
+CREATE INDEX idx_nome_categoria ON Categorias (Nome_Categoria);
 
 -- ==============================================
 -- 📌 TABELA PRODUTOS
 -- ==============================================
 CREATE TABLE Produtos (
-    ID_Produto INT NOT NULL AUTO_INCREMENT,  -- ID único para cada produto
-    Preco_Produto DECIMAL(10,2) NOT NULL,    -- Preço do produto (10 dígitos no total, 2 decimais)
-    Descricao_Produto TEXT,                  -- Descrição do produto
-    Imagem LONGBLOB,                         -- imagem do produto
-    Tipo_Imagem VARCHAR(50),                 -- Tipo da imagem
-    Nome_Produto VARCHAR(90) NOT NULL UNIQUE,-- Nome do produto (deve ser único)
-    PRIMARY KEY (ID_Produto)                 -- Chave primária
+    ID_Produto INT NOT NULL AUTO_INCREMENT,
+    Nome_Produto VARCHAR(90) NOT NULL UNIQUE,
+    fk_Categoria_ID_Categoria INT NOT NULL,
+    Preco_Produto DECIMAL(10,2) NOT NULL,
+    Descricao_Produto TEXT,
+    Imagem LONGBLOB,
+    Tipo_Imagem VARCHAR(50),
+    PRIMARY KEY (ID_Produto),
+    CONSTRAINT FK_Produtos_Categoria
+        FOREIGN KEY (fk_Categoria_ID_Categoria)
+        REFERENCES Categorias (ID_Categoria)
+        ON DELETE CASCADE
 );
 
--- ✅ Índice para melhorar a busca por nome do produto
 CREATE INDEX idx_nome_produto ON Produtos (Nome_Produto);
 
-DESC Produtos;
-
 -- ==============================================
--- 📌 TABELA CONTEM (Relaciona Pedidos e Produtos)
+-- 📌 TABELA CONTEM
 -- ==============================================
 CREATE TABLE Contem (
-    Valor_Total DECIMAL(10,2) NOT NULL,     -- Valor total do item do pedido (quantidade * preço unitário)
-    fk_produtos_ID_Produto INT NOT NULL,    -- Referência ao produto
-    fk_Pedidos_ID_pedidos INT NOT NULL,     -- Referência ao pedido
-    PRIMARY KEY (fk_produtos_ID_Produto, fk_Pedidos_ID_pedidos), -- Chave primária composta
-
-    -- 🔗 Chave estrangeira vinculando cada item a um produto
+    Valor_Total DECIMAL(10,2) NOT NULL,
+    fk_produtos_ID_Produto INT NOT NULL,
+    fk_Pedidos_ID_pedidos INT NOT NULL,
+    PRIMARY KEY (fk_produtos_ID_Produto, fk_Pedidos_ID_pedidos),
     CONSTRAINT FK_Contem_Produto
         FOREIGN KEY (fk_produtos_ID_Produto)
         REFERENCES Produtos (ID_Produto)
-        ON DELETE CASCADE,                  -- Se um produto for excluído, os registros relacionados também serão
-
-    -- 🔗 Chave estrangeira vinculando cada item a um pedido
+        ON DELETE CASCADE,
     CONSTRAINT FK_Contem_Pedido
         FOREIGN KEY (fk_Pedidos_ID_pedidos)
         REFERENCES Pedidos (ID_pedidos)
-        ON DELETE CASCADE                   -- Se um pedido for excluído, os registros relacionados também serão removidos
+        ON DELETE CASCADE
 );
 
--- ✅ Índices para melhorar buscas nas relações entre pedidos e produtos
 CREATE INDEX idx_fk_pedido_contem ON Contem (fk_Pedidos_ID_pedidos);
 CREATE INDEX idx_fk_produto_contem ON Contem (fk_produtos_ID_Produto);
-
-DESC Contem;
-
-

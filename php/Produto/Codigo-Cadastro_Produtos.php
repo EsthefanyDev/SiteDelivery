@@ -73,18 +73,19 @@
         $nome = isset($_POST['nome']) ? sanitizeInput($_POST['nome']) : null;
         $preco = isset($_POST['preco']) ? (float)$_POST['preco'] : null;
         $descricao = isset($_POST['descricao']) ? sanitizeInput($_POST['descricao']) : null;
+        $categoria_d = isset($_POST['categoria']) ? (int)$_POST['categoria'] : null; // CORRIGIDO PONTO-E-VÍRGULA
 
         // Verifica se todos os campos obrigatórios foram preenchidos
-        if (empty($nome) || empty($preco) || empty($descricao)) {
+        if (empty($nome) || empty($preco) || empty($descricao) || empty($categoria_d)) {
             echo '<div class="mensagem erro">Todos os campos são obrigatórios.</div>';
-            echo '<a href="cadastro_produto.php">Tentar novamente</a>';
+            echo '<a href="../../html/pagina-Cadastro_Produtos.html">Tentar novamente</a>';
             exit();
         }
 
         // Verifica se o arquivo de imagem foi enviado
         if (!isset($_FILES['imagem']) || $_FILES['imagem']['error'] !== UPLOAD_ERR_OK) {
             echo '<div class="mensagem erro">Erro no upload da imagem.</div>';
-            echo '<a href="cadastro_produto.php">Tentar novamente</a>';
+            echo '<a href="../../html/pagina-Cadastro_Produtos.html">Tentar novamente</a>';
             exit();
         }
 
@@ -106,17 +107,18 @@
         }
 
         // Prepara a query SQL usando prepared statements para prevenir SQL injection
-        $sql = "INSERT INTO Produtos (Nome_Produto, Preco_Produto, Descricao_Produto, Imagem, Tipo_Imagem) VALUES (?, ?, ?, ?, ?)";
-        $stmt = $mysqli->prepare($sql);
+        $sql = "INSERT INTO Produtos (Nome_Produto, Preco_Produto, Descricao_Produto, Imagem, Tipo_Imagem, fk_Categoria_ID_Categoria) 
+                VALUES (?, ?, ?, ?, ?, ?)";
+        $stmt = $conexao->prepare($sql); // ALTERADO PARA USAR A VARIÁVEL CORRETA
 
         if ($stmt === false) {
-            echo '<div class="mensagem erro">Erro na preparação da query: ' . $mysqli->error . '</div>';
+            echo '<div class="mensagem erro">Erro na preparação da query: ' . $conexao->error . '</div>';
             echo '<a href="../../html/pagina-Cadastro_Produtos.html">Tentar novamente</a>';
             exit();
         }
 
         // Vincula os parâmetros à query
-        $stmt->bind_param('sdsss', $nome, $preco, $descricao, $imagemBinaria, $fileType);
+        $stmt->bind_param('sdsssi', $nome, $preco, $descricao, $imagemBinaria, $fileType, $categoria_d);
 
         // Executa a query
         if ($stmt->execute()) {
@@ -129,7 +131,7 @@
 
         // Fecha a statement e a conexão
         $stmt->close();
-        $mysqli->close();
+        $conexao->close();
     } else {
         echo '<div class="mensagem erro">Método de requisição inválido.</div>';
         echo '<a href="../../html/pagina-Cadastro_Produtos.html">Voltar ao formulário</a>';

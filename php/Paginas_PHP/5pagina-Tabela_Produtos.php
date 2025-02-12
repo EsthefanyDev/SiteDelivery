@@ -1,7 +1,7 @@
 <?php 
     include "../conexaoDB.php";
     $sql = "SELECT * FROM produtos ORDER BY Nome_Produto"; 
-    $produtos = $mysqli->query($sql) or die("Erro na busca dos Produtos"); 
+    $produtos = $conexao->query($sql) or die("Erro na busca dos Produtos"); 
 ?>
 <!DOCTYPE html>
 <html lang="ptbr">
@@ -23,9 +23,9 @@
         <a href="#">Dashboard</a>
         <a href="gerenciar_pedidos.php">Pedidos</a>
         <a href="5pagina-Tabela_Clientes.php">Usuários</a>
-        <a href="../../html/pagina-Cadastro_Produtos.html" class="active">Produtos</a>
+        <a href="../../html/pagina-Cadastro_Produtos.php" class="active">Produtos</a>
         <a href="relatorios.php">Relatórios</a>
-        <a id="inicio" href="1pagina-Index.php">Prime Delivery</a>
+        <a id="inicio" href="../../html/index.php">Prime Delivery</a>
     </nav> 
 
     <?php
@@ -65,7 +65,7 @@
         </table>    
         <?php
             }
-            $mysqli->close();
+            $conexao->close();
         ?>
     </body>
 </html>

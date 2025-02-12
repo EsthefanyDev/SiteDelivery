@@ -6,11 +6,11 @@ $password = "";
 $database = "prime_delivery";
 
 // Conexão com o banco de dados
-$mysqli = new mysqli($host, $user, $password, $database);
+$conexao = new mysqli($host, $user, $password, $database);
 
 // Verifica erro de conexão
-if ($mysqli->connect_error) {
-    die("Erro na conexão: " . $mysqli->connect_error);
+if ($conexao->connect_error) {
+    die("Erro na conexão: " . $conexao->connect_error);
 }
 
 // Pega o ID do produto na URL
@@ -21,7 +21,7 @@ if (!$id) {
 
 // Consulta para buscar a imagem e o tipo MIME
 $sql = "SELECT Imagem, Tipo_Imagem FROM Produtos WHERE ID_Produto = ?";
-$stmt = $mysqli->prepare($sql);
+$stmt = $conexao->prepare($sql);
 $stmt->bind_param("i", $id);
 $stmt->execute();
 $stmt->store_result();
@@ -41,5 +41,5 @@ if ($stmt->num_rows > 0) {
 
 // Fecha a conexão
 $stmt->close();
-$mysqli->close();
+$conexao->close();
 ?>

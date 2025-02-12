@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Verifica se o nome do produto já existe (exceto para o produto atual)
     $sql_check = "SELECT ID_Produto FROM produtos WHERE Nome_Produto = ? AND ID_Produto != ?";
-    $stmt_check = $mysqli->prepare($sql_check);
+    $stmt_check = $conexao->prepare($sql_check);
     $stmt_check->bind_param("si", $Nome_Produto, $ID_Produto);
     $stmt_check->execute();
     $stmt_check->store_result();
@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 Preco_Produto = ?, 
                 Descricao_Produto = ? 
                 WHERE ID_Produto = ?";
-        $stmt = $mysqli->prepare($sql);
+        $stmt = $conexao->prepare($sql);
         $stmt->bind_param(
             "sdsi",
             $Nome_Produto,
@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $stmt->close();
-    $mysqli->close();
+    $conexao->close();
 
     header("Location: ../Paginas_PHP/5pagina-Tabela_Produtos.php");
     exit();
