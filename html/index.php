@@ -123,8 +123,27 @@ if (!$resultado) {
                     <div class="product">
                         <img src="../php/Produto/exibir_imagem.php?id=<?= $row['ID_Produto'] ?>" alt="<?= $row['Nome_Produto'] ?>">
                         <h3 class="product__name"><?= $row['Nome_Produto'] ?></h3>
-                        <p class="product__price">Preço: R$ <?= number_format($row['Preco_Produto'], 2, ',', '.') ?></p>
                         <p class="product__description"><?= $row['Descricao_Produto'] ?></p>
+                        <p class="product__price"><span>Preço:</span> <br> R$ <?= number_format($row['Preco_Produto'], 2, ',', '.') ?></p>
+                        <div class="quantity-control" data-product-id="<?= $row['ID_Produto'] ?>">
+                            <button type="button" class="quantity-button decrease">
+                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" />
+                                </svg>
+                            </button>
+                            <input type="tel" class="quantity-input" value="0">
+                            <button type="button" class="quantity-button increase">
+                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <line x1="12" y1="4" x2="12" y2="20" stroke="currentColor" stroke-width="2" />
+                                    <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" />
+                                </svg>
+                            </button>
+                            <!-- Botão "Adicionar ao Carrinho" -->
+                            <button type="button" class="add-to-cart" data-product-id="<?= $row['ID_Produto'] ?>">
+                            Adicionar
+                        </button>
+                        </div>
+                        
                     </div>
                 <?php endwhile; ?>
             </div>
@@ -178,6 +197,7 @@ if (!$resultado) {
         </div>
       </footer>
     <!-- Scripts -->
+    <script src="../js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
