@@ -1,8 +1,15 @@
 <?php 
     include "../conexaoDB.php";
-    $sql = "SELECT * FROM produtos ORDER BY Nome_Produto"; 
-    $produtos = $conexao->query($sql) or die("Erro na busca dos Produtos"); 
+  // Consulta com JOIN para buscar produtos e suas categorias
+    $sql = "
+    SELECT p.ID_Produto, p.Nome_Produto, p.Preco_Produto, p.Descricao_Produto, p.Imagem, p.Tipo_Imagem, c.Nome_Categoria
+    FROM Produtos p
+    INNER JOIN Categorias c ON p.fk_Categoria_ID_Categoria = c.ID_Categoria
+    ORDER BY p.Nome_Produto
+    ";
+    $produtos = $conexao->query($sql) or die("Erro na busca dos Produtos: " . $conexao->error);
 ?>
+
 <!DOCTYPE html>
 <html lang="ptbr">
 <head>
@@ -36,7 +43,8 @@
         <thead>
             <tr>
                 <th>Código</th>
-                <th width="200">Nome</th>
+                <th>Categoria</th>
+                <th>Nome</th>
                 <th>Preço</th>
                 <th>Descrição</th>
                 <th>imagem</th>
@@ -50,11 +58,13 @@
                 ?>  
                 <tr>
                     <td><?php echo $dados['ID_Produto'];?></td>
-                    <td><?php echo $dados['Nome_Produto'];?></td>
+                    <td><?php echo $dados['Nome_Categoria']; ?></td> 
+                    <td><?php echo $dados['Nome_Produto'];?></td>    
                     <td><?php echo $dados['Preco_Produto'];?></td>
                     <td><?php echo $dados['Descricao_Produto'];?></td>
-                    <!-- <td><?php echo $dados['Imagem'];?></td> -->
-                    <td><?php echo $dados['Tipo_Imagem'];?></td>
+                    <td>
+                        <img src="../Produto/exibir_imagem.php?id=<?php echo $dados['ID_Produto']; ?>" alt="Imagem do Produto" width="100">
+                    </td>
                     <td><a href="../Paginas_PHP/7pagina-Editar_Produto.php?ID_Produto=<?php echo $dados['ID_Produto'];?>"><i class='bx bx-edit'></i></a></td>
                     <td><a href="../Paginas_PHP/6pagina-Excluir_Produto.php?ID_Produto=<?php echo $dados['ID_Produto']; ?>"><i class='bx bx-trash'></i></a></td>   
                 </tr>

@@ -91,27 +91,25 @@ if (!$resultadoCombos) {
                             <h3 class="combo__name"><?= htmlspecialchars($combo['Nome_Produto']) ?></h3>
                             
                             <p class="combo__description"><?= htmlspecialchars($combo['Descricao_Produto']) ?></p>
-                            <span id="preço">R$ <?= number_format($combo['Preco_Produto'], 2, ',', '.') ?></span> 
-                        <a href="#" class="combos__link">
-                            
-                            <div class="quantity-control" data-product-id="<?= $combo['ID_Produto'] ?>">
-                                <button type="button" class="quantity-button decrease">
-                                    <svg width="24" height="24" viewBox="0 0 24 24">
-                                        <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" />
-                                    </svg>
-                                </button>
-                                <input type="tel" class="quantity-input" value="0">
-                                <button type="button" class="quantity-button increase">
-                                    <svg width="24" height="24" viewBox="0 0 24 24">
-                                        <line x1="12" y1="4" x2="12" y2="20" stroke="currentColor" stroke-width="2" />
-                                        <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" />
-                                    </svg>
-                                </button>
-                                <button type="button" class="add-to-cart" data-product-id="<?= $combo['ID_Produto'] ?>">
-                                    Adicionar
-                                </button>
-                            </div>
-                        </a>
+                            <span id="combo__price">R$ <?= number_format($combo['Preco_Produto'], 2, ',', '.') ?></span> 
+                        
+                        <div class="quantity-control" data-product-id="<?= $combo['ID_Produto'] ?>">
+                            <button type="button" class="quantity-button decrease">
+                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" />
+                                </svg>
+                            </button>
+                            <input type="tel" class="quantity-input" value="0">
+                            <button type="button" class="quantity-button increase">
+                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <line x1="12" y1="4" x2="12" y2="20" stroke="currentColor" stroke-width="2" />
+                                    <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" />
+                                </svg>
+                            </button>
+                            <button type="button" class="add-to-cart" data-product-id="<?= $combo['ID_Produto'] ?>">
+                                Adicionar
+                            </button>
+                        </div>
                     </li>
                 <?php endwhile; ?>
             </ul>

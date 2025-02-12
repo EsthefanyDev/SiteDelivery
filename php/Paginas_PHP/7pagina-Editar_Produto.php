@@ -9,7 +9,10 @@ if (!isset($_GET['ID_Produto']) || !is_numeric($_GET['ID_Produto'])) {
 $ID_Produto = intval($_GET['ID_Produto']);
 
 // Usando prepared statements para evitar SQL injection
-$SQL = "SELECT * FROM produtos WHERE ID_Produto = ?";
+$SQL = "SELECT p.*, c.Nome_Categoria 
+        FROM produtos p
+        INNER JOIN categorias c ON p.fk_Categoria_ID_Categoria = c.ID_Categoria
+        WHERE p.ID_Produto = ?";
 $stmt = $conexao->prepare($SQL);
 $stmt->bind_param("i", $ID_Produto);
 $stmt->execute();
@@ -20,12 +23,20 @@ if ($result->num_rows > 0) {
     $Nome_Produto = htmlspecialchars($dados['Nome_Produto']);
     $Preco_Produto = htmlspecialchars($dados['Preco_Produto']);
     $Descricao_Produto = htmlspecialchars($dados['Descricao_Produto']);
-    $Imagem = $dados['Imagem']; // Dados binários da imagem
-    $Tipo_Imagem = $dados['Tipo_Imagem']; // Tipo da imagem (ex: image/jpeg)
+    $Imagem = $dados['Imagem'];
+    $Tipo_Imagem = $dados['Tipo_Imagem'];
+    $Categoria_Atual = $dados['Nome_Categoria']; 
 } else {
     die("Produto não encontrado.");
 }
 
+// Busca todas as categorias disponíveis
+$SQL_Categorias = "SELECT ID_Categoria, Nome_Categoria FROM categorias";
+$resultadoCategorias = $conexao->query($SQL_Categorias);
+
+if (!$resultadoCategorias) {
+    die("Erro ao buscar categorias: " . $conexao->error);
+}
 $stmt->close();
 ?>
 <!DOCTYPE html>
@@ -81,7 +92,7 @@ $stmt->close();
         margin-bottom: 5px;
         color: #581A84;
     }
-    input {
+    input, select{
         width: 100%;
         padding: 8px;
         margin-bottom: 15px;
@@ -122,6 +133,15 @@ $stmt->close();
 
         <label>Descrição:</label><br>
         <input type="text" name="Descricao_Produto" value="<?php echo $Descricao_Produto; ?>"><br>
+        
+        <label>Categoria:</label><br>
+        <select name="Categoria">
+            <?php while ($categoria = $resultadoCategorias->fetch_assoc()): ?>
+                <option value="<?php echo $categoria['ID_Categoria']; ?>" <?php echo ($categoria['Nome_Categoria'] == $Categoria_Atual) ? 'selected' : ''; ?>>
+                    <?php echo htmlspecialchars($categoria['Nome_Categoria']); ?>
+                </option>
+            <?php endwhile; ?>
+        </select><br>
 
         <label>Imagem:</label><br>
         <input type="file" name="Imagem"><br>
