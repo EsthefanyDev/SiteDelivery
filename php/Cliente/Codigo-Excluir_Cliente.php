@@ -7,7 +7,7 @@
     $SQL = "DELETE FROM Cliente
             WHERE ID_Cliente = $ID_Cliente";
 
-    $mysqli->query($SQL) or die("Query falhou");
+    $conexao->query($SQL) or die("Query falhou");
 
     header("Location: ../Paginas_PHP/5pagina-Tabela_Clientes.php");
 ?>

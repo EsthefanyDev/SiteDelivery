@@ -116,7 +116,7 @@ body {
 .combos__list {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 3rem;
     padding: 0;
 }
 .combos__item {
@@ -129,7 +129,7 @@ body {
     padding: 5px;
 }
 .combos__item img{
-    width: 180px;
+    width: 100%;
     align-items: center;
     border-radius: 20px;
     box-shadow: var(--text-shadow);

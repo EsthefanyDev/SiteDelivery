@@ -11,10 +11,10 @@
      $sql = "UPDATE Cliente SET Nome_Cliente='$Nome_Cliente', Senha_Cliente='$Senha_Cliente', Endereco_Cliente='$Endereco_Cliente', Celular='$Celular'
              WHERE ID_Cliente = $ID_Cliente";
 
-     if ($mysqli->query($sql)) echo "Registro Salvo"; 
+     if ($conexao->query($sql)) echo "Registro Salvo"; 
      else echo "Erro ao salvar o registro";        
 
-     $mysqli->close();
+     $conexao->close();
 
      header("Location: ../Paginas_PHP/5pagina-Tabela_Clientes.php");
 

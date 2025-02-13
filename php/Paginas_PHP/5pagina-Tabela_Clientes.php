@@ -3,7 +3,7 @@
 
     $sql = "SELECT * FROM Cliente ORDER BY Nome_Cliente";
    
-    $Cliente = $mysqli->query($sql) or die("Erro na busca dos Clientes"); 
+    $Cliente = $conexao->query($sql) or die("Erro na busca dos Clientes"); 
 ?>
 <!DOCTYPE html>
 <html lang="ptbr">
@@ -28,7 +28,7 @@
         <a href="#">Dashboard</a>
         <a href="gerenciar_pedidos.php">Pedidos</a>
         <a href="../../html/3pagina-Cadastro_Clientes.html" class="active">Usuários</a>
-        <a href="../../html/pagina-Cadastro_Produtos.html">Produtos</a>
+        <a href="../../html/pagina-Cadastro_Produtos.php">Produtos</a>
         <a href="relatorios.php">Relatórios</a>
         <a id="inicio" href="../php/Paginas_PHP/1pagina-Index.php">Prime Delivery</a>
     </nav> 
@@ -69,7 +69,7 @@
     </table>    
     <?php
        }
-       $mysqli->close();
+       $conexao->close();
     ?>
 </body>
 </html>

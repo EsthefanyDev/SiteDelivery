@@ -5,7 +5,7 @@
 
     $SQL = "SELECT  Nome_Cliente FROM Cliente WHERE ID_Cliente=$ID_Cliente";
 
-    $Cliente = $mysqli->query($SQL) or die("Erro na busca do cliente");
+    $Cliente = $conexao->query($SQL) or die("Erro na busca do cliente");
 
     if ($Cliente->num_rows > 0){
 
