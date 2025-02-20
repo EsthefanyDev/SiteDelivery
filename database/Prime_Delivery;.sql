@@ -50,7 +50,7 @@ INSERT INTO Categorias (Nome_Categoria) VALUES
 ('Pizzas'),
 ('Hambúrgueres'),
 ('Acompanhamentos'),
-('Bebidas');
+('Bebidas'),
 ('Combos');
 
 CREATE INDEX idx_nome_categoria ON Categorias (Nome_Categoria);

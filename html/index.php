@@ -1,22 +1,23 @@
 <?php
 include('../php/conexaoDB.php');
-$sql = "SELECT * FROM Produtos";
-$resultado = $conexao->query($sql);
-if (!$resultado) {
-    die('Erro na consulta: ' . $conexao->error);
-}
 
-$sqlCombos = "
-    SELECT p.* 
-    FROM Produtos p
-    INNER JOIN Categorias c ON p.fk_Categoria_ID_Categoria = c.ID_Categoria
-    WHERE c.Nome_Categoria = 'Combos'
-";
-$resultadoCombos = $conexao->query($sqlCombos);
+function buscarProdutosPorCategoria($conexao, $categoria) {
+    $sql = "
+        SELECT p.* FROM Produtos p INNER JOIN Categorias c ON p.fk_Categoria_ID_Categoria = c.ID_Categoria WHERE c.Nome_Categoria = '$categoria'
+    ";
+    $resultado = $conexao->query($sql);
 
-if (!$resultadoCombos) {
-    die('Erro na consulta: ' . $conexao->error);
+    if (!$resultado) {
+        die('Erro na consulta: ' . $conexao->error);
+    }
+
+    return $resultado;
 }
+$combos = buscarProdutosPorCategoria($conexao, 'Combos');
+$pizzas = buscarProdutosPorCategoria($conexao, 'Pizzas');
+$hamburgueres = buscarProdutosPorCategoria($conexao, 'Hamburgueres');
+$acompanhamentos = buscarProdutosPorCategoria($conexao, 'Acompanhamentos');
+$bebidas = buscarProdutosPorCategoria($conexao, 'Bebidas');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -84,7 +85,7 @@ if (!$resultadoCombos) {
         <section class="combos">
             <h2 class="combos__title">Nossos Combos</h2>
             <ul class="combos__list">
-                <?php while ($combo = $resultadoCombos->fetch_assoc()): ?>
+                <?php while ($combo = $combos->fetch_assoc()): ?>
                     <li class="combos__item">
                         <img src="../php/Produto/exibir_imagem.php?id=<?= $combo['ID_Produto'] ?>" alt="<?= htmlspecialchars($combo['Nome_Produto']) ?>">
                         
@@ -118,34 +119,140 @@ if (!$resultadoCombos) {
         <!-- Produtos -->
         <section class="products" id="cardapio">
             <h2 class="products__title">Cardápio</h2>
-            <div class="products__grid">
-                <?php while ($row = $resultado->fetch_assoc()): ?>
-                    <div class="product">
-                        <img src="../php/Produto/exibir_imagem.php?id=<?= $row['ID_Produto'] ?>" alt="<?= $row['Nome_Produto'] ?>">
-                        <h3 class="product__name"><?= $row['Nome_Produto'] ?></h3>
-                        <p class="product__description"><?= $row['Descricao_Produto'] ?></p>
-                        <p class="product__price"><span>Preço:</span> <br> R$ <?= number_format($row['Preco_Produto'], 2, ',', '.') ?></p>
-                        <div class="quantity-control" data-product-id="<?= $row['ID_Produto'] ?>">
-                            <button type="button" class="quantity-button decrease">
-                                <svg width="24" height="24" viewBox="0 0 24 24">
-                                    <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" />
-                                </svg>
+
+            <!-- Seção de Pizzas -->
+            <div class="products__category">
+                <h3 class="products__category__title">Pizzas</h3>
+                <div class="products__grid">
+                    <?php while ($pizza = $pizzas->fetch_assoc()): ?>
+                        <div class="product">
+                            <img src="../php/Produto/exibir_imagem.php?id=<?= $pizza['ID_Produto'] ?>" alt="<?= $pizza['Nome_Produto'] ?>">
+                            <h3 class="product__name"><?= $pizza['Nome_Produto'] ?></h3>
+                            <p class="product__description"><?= $pizza['Descricao_Produto'] ?></p>
+                            <p class="product__price"><span>Preço:</span> <br> R$ <?= number_format($pizza['Preco_Produto'], 2, ',', '.') ?></p>
+                            <div class="quantity-control" data-product-id="<?= $pizza['ID_Produto'] ?>">
+                                <button type="button" class="quantity-button decrease">
+                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                        <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </button>
+                                <input type="tel" class="quantity-input" value="0">
+                                <button type="button" class="quantity-button increase">
+                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                        <line x1="12" y1="4" x2="12" y2="20" stroke="currentColor" stroke-width="2" />
+                                        <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </button>
+                                <!-- Botão "Adicionar ao Carrinho" -->
+                                <button type="button" class="add-to-cart" data-product-id="<?= $pizza['ID_Produto'] ?>">
+                                Adicionar
                             </button>
-                            <input type="tel" class="quantity-input" value="0">
-                            <button type="button" class="quantity-button increase">
-                                <svg width="24" height="24" viewBox="0 0 24 24">
-                                    <line x1="12" y1="4" x2="12" y2="20" stroke="currentColor" stroke-width="2" />
-                                    <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" />
-                                </svg>
-                            </button>
-                            <!-- Botão "Adicionar ao Carrinho" -->
-                            <button type="button" class="add-to-cart" data-product-id="<?= $row['ID_Produto'] ?>">
-                            Adicionar
-                        </button>
+                            </div>
                         </div>
-                    </div>
-                <?php endwhile; ?>
+                    <?php endwhile; ?>
+                </div>
             </div>
+
+            <!-- Seção de Hamburgueres -->
+            <div class="products__category">
+                <h3 class="products__category__title">Hamburgueres</h3>
+                <div class="products__grid">
+                    <?php while ($hamburguer = $hamburgueres->fetch_assoc()): ?>
+                        <div class="product">
+                            <img src="../php/Produto/exibir_imagem.php?id=<?= $hamburguer['ID_Produto'] ?>" alt="<?= $hamburguer['Nome_Produto'] ?>">
+                            <h3 class="product__name"><?= $hamburguer['Nome_Produto'] ?></h3>
+                            <p class="product__description"><?= $hamburguer['Descricao_Produto'] ?></p>
+                            <p class="product__price"><span>Preço:</span> <br> R$ <?= number_format($hamburguer['Preco_Produto'], 2, ',', '.') ?></p>
+                            <div class="quantity-control" data-product-id="<?= $hamburguer['ID_Produto'] ?>">
+                                <button type="button" class="quantity-button decrease">
+                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                        <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </button>
+                                <input type="tel" class="quantity-input" value="0">
+                                <button type="button" class="quantity-button increase">
+                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                        <line x1="12" y1="4" x2="12" y2="20" stroke="currentColor" stroke-width="2" />
+                                        <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </button>
+                                <!-- Botão "Adicionar ao Carrinho" -->
+                                <button type="button" class="add-to-cart" data-product-id="<?= $hamburguer['ID_Produto'] ?>">
+                                Adicionar
+                            </button>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+                </div>
+            </div>
+
+            <!-- Seção de Acompanhamentos -->
+            <div class="products__category">
+                <h3 class="products__category__title">Acompanhamentos</h3>
+                <div class="products__grid">
+                    <?php while ($acompanhamento = $acompanhamentos->fetch_assoc()): ?>
+                        <div class="product">
+                            <img src="../php/Produto/exibir_imagem.php?id=<?= $acompanhamento['ID_Produto'] ?>" alt="<?= $acompanhamento['Nome_Produto'] ?>">
+                            <h3 class="product__name"><?= $acompanhamento['Nome_Produto'] ?></h3>
+                            <p class="product__description"><?= $acompanhamento['Descricao_Produto'] ?></p>
+                            <p class="product__price"><span>Preço:</span> <br> R$ <?= number_format($acompanhamento['Preco_Produto'], 2, ',', '.') ?></p>
+                            <div class="quantity-control" data-product-id="<?= $acompanhamento['ID_Produto'] ?>">
+                                <button type="button" class="quantity-button decrease">
+                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                        <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </button>
+                                <input type="tel" class="quantity-input" value="0">
+                                <button type="button" class="quantity-button increase">
+                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                        <line x1="12" y1="4" x2="12" y2="20" stroke="currentColor" stroke-width="2" />
+                                        <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </button>
+                                <!-- Botão "Adicionar ao Carrinho" -->
+                                <button type="button" class="add-to-cart" data-product-id="<?= $acompanhamento['ID_Produto'] ?>">
+                                Adicionar
+                            </button>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+                </div>
+            </div>
+
+            <!-- Seção de Bebidas -->
+            <div class="products__category">
+                <h3 class="products__category__title">Bebidas</h3>
+                <div class="products__grid">
+                    <?php while ($bebida = $bebidas->fetch_assoc()): ?>
+                        <div class="product">
+                            <img src="../php/Produto/exibir_imagem.php?id=<?= $bebida['ID_Produto'] ?>" alt="<?= $bebida['Nome_Produto'] ?>">
+                            <h3 class="product__name"><?= $bebida['Nome_Produto'] ?></h3>
+                            <p class="product__description"><?= $bebida['Descricao_Produto'] ?></p>
+                            <p class="product__price"><span>Preço:</span> <br> R$ <?= number_format($bebida['Preco_Produto'], 2, ',', '.') ?></p>
+                            <div class="quantity-control" data-product-id="<?= $bebida['ID_Produto'] ?>">
+                                <button type="button" class="quantity-button decrease">
+                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                        <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </button>
+                                <input type="tel" class="quantity-input" value="0">
+                                <button type="button" class="quantity-button increase">
+                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                        <line x1="12" y1="4" x2="12" y2="20" stroke="currentColor" stroke-width="2" />
+                                        <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </button>
+                                <!-- Botão "Adicionar ao Carrinho" -->
+                                <button type="button" class="add-to-cart" data-product-id="<?= $bebida['ID_Produto'] ?>">
+                                Adicionar
+                            </button>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+                </div>
+            </div>
+
+        
         </section>
 
         <!-- About -->
